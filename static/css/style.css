@@ -11,3 +11,13 @@ body {
 .navbar {
     background-color: #28282B !important;
 }
+
+.navbar button {
+    color: #fff;
+    background-color: #28282B;
+}
+
+.nav-link {
+    color: #fff;
+    background-color: #28282B;
+}
