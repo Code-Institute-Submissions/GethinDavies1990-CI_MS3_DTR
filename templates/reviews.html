@@ -1,10 +1,12 @@
-{% entends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
-<h2>Test</h2>
+
+
     {% for review in reviews %}
         {{ review.review_name}}<br>
         {{ review.review_description}}<br>
         {{ review.author_name}}<br>
         {{ review.review_date}}<br>
     {% endfor %}
+
 {% endblock %}
