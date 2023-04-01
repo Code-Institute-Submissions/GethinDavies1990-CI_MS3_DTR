@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center text-white">Register</h3>
+<h3 class="text-center text-white heading">Register</h3>
 
 <div class="card register-card text-center d-flex align-items-center justify-content-center">
     <form method="POST" action="{{ url_for('register')}}">
@@ -26,7 +26,7 @@
             <label class="form-label" for="password">Password</label>
         </div>
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+        <button type="submit" class="btn btn-block mb-4">Register</button>
     </form>
 </div>
 
@@ -34,7 +34,7 @@
     <div class="col s12 text-center">
         <p class="center-align text-white">
             Already Registered?
-            <a href="{{ url_for('login') }}" class="text-danger">Log In</a>
+            <a href="{{ url_for('login') }}" class="logged-in-text">Log In</a>
         </p>
     </div>
 </div>

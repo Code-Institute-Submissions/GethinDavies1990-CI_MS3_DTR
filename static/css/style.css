@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     background-color: #28282B;
 }
@@ -22,9 +24,47 @@ body {
     background-color: #28282B;
 }
 
+.nav-item {
+    font-size: 12px;
+}
+
+.heading {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    margin-top: 60px;
+}
+
+.btn {
+    background-color: #F01D7F;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #F01D7F;
+}
+
+.registered-text,
+.logged-in-text {
+    color: #F01D7F;
+}
+
+.registered-text:hover,
+.logged-in-text:hover {
+    color: #fff;
+}
+
 .register-card {
     width: 50%;
     margin: 150px auto;
+    background-color: #28282B;
+    border-color: #F01D7F;
+    border-width: 10px;
+}
+
+i {
+    color: #F01D7F;
+    font-size: 16px;
 }
 
 .flashes h4 {
