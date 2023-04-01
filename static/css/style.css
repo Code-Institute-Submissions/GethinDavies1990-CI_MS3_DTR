@@ -21,3 +21,8 @@ body {
     color: #fff;
     background-color: #28282B;
 }
+
+.register-card {
+    width: 50%;
+    margin: 150px auto;
+}
