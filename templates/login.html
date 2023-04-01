@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center">Login</h3>
+<h3 class="text-center text-light">Login</h3>
 
 <div class="card register-card text-center d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('register')}}">
+    <form method="POST" action="{{ url_for('login')}}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
@@ -31,10 +31,10 @@
 </div>
 
 <div class="row">
-    <div class="col s12">
-        <p class="center-align">
+    <div class="col s12 text-center">
+        <p class=" center-align text-white">
             New Here?
-            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('register') }}" class="text-danger">Register</a>
         </p>
     </div>
 </div>
