@@ -26,3 +26,9 @@ body {
     width: 50%;
     margin: 150px auto;
 }
+
+.flashes h4 {
+    line-height: 2;
+    background-color: #F01D7F;
+    color: #fff;
+}

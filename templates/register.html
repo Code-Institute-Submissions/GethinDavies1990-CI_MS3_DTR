@@ -4,29 +4,25 @@
 <h3 class="text-center">Register</h3>
 
 <div class="card register-card text-center d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('register')}}" novalidate>
+    <form method="POST" action="{{ url_for('register')}}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
                 <i class="fas fa-user"></i>
                 <div class="form-outline">
-                    <input type="text" id="username" name="username" class="form-control" required />
+                    <input type="text" id="username" name="username" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required />
                     <label class="form-label" for="username">Username</label>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">Please choose a username.</div>
                 </div>
             </div>
         </div>
-        <!-- Email input -->
-        <i class="fas fa-at"></i>
-        <div class="form-outline mb-4">
-            <input type="email" id="email" name="email" class="form-control" required />
-            <label class="form-label" for="email">Email address</label>
-        </div>
         <!-- Password input -->
         <i class="fas fa-key"></i>
         <div class="form-outline mb-4">
-            <input type="password" id="password" name="password" class="form-control" required />
+            <input type="password" id="password" name="password" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required />
             <label class="form-label" for="password">Password</label>
         </div>
         <!-- Submit button -->
