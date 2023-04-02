@@ -2,26 +2,34 @@
 {% block content %}
 <h3 class="text-white">Add Review</h3>
 
-<form class="div review-form" method="POST" actiob="">
-    <i class="fas fa-pen"></i>
-    <div class="form-outline">
-        <input type="text" id="typeText" class="form-control" />
-        <label class="form-label" for="typeText">Author Name</label>
+<form class="div review-form" method="POST" action="">
+    <div class="row">
+        <i class="fas fa-pen"></i>
+        <div class="form-outline">
+            <input type="text" id="author_name" class="form-control" name="author_name" />
+            <label class="form-label" for="author_name">Author Name</label>
+        </div>
     </div>
-    <i class="fas fa-heading"></i>
-    <div class="form-outline">
-        <input type="text" id="typeText" class="form-control" />
-        <label class="form-label" for="typeText">Review Title</label>
+    <div class="row">
+        <i class="fas fa-heading"></i>
+        <div class="form-outline">
+            <input type="text" id="review_title" class="form-control" name="review_title" />
+            <label class="form-label" for="review_title">Review Title</label>
+        </div>
     </div>
-    <i class="fas fa-calendar"></i>
-    <div class="form-outline">
-        <input type="text" id="typeText" class="form-control" />
-        <label class="form-label" for="typeText">Review Date</label>
+    <div class="row">
+        <i class="fas fa-calendar"></i>
+        <div class="form-outline">
+            <input type="text" id="review_date" class="form-control" name="review_date" />
+            <label class="form-label" for="review_date">Review Date</label>
+        </div>
     </div>
-    <i class="far fa-message"></i>
-    <div class="form-outline">
-        <textarea class="form-control" id="textAreaExample" rows="20"></textarea>
-        <label class="form-label" for="textAreaExample">Review Content</label>
+    <div class="row">
+        <i class="far fa-message"></i>
+        <div class="form-outline">
+            <textarea class="form-control" id="review_description" rows="20" name="review_description"></textarea>
+            <label class="form-label" for="review_description">Review Content</label>
+        </div>
     </div>
 
 </form>
