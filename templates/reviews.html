@@ -1,60 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-{% for review in reviews %}
-{{ review.review_name}}<br>
-{{ review.review_description}}<br>
-{{ review.author_name}}<br>
-{{ review.review_date}}<br>
-{% endfor %}
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-        <div class="card h-100">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers" />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                </p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
+<div class="card">
+    {% for review in reviews %}
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
+            <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
         </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
-                alt="Los Angeles Skyscrapers" />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ review.film_name}}:{{ review.review_name}}</h5>
+            <p class="card-text">{{ review.review_description}} Author: {{ review.author_name}}.
+                Date:{{ review.review_date}}</p>
+            <a href="#!" class="btn btn-primary">Button</a>
         </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
-                alt="Palm Springs Road" />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first to show
-                    that equal height action.
-                </p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
