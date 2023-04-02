@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="card">
+<div class="card mb-3" style="max-width: 540px;">
     {% for review in reviews %}
-    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-        <a href="#!">
-            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-        </a>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">{{ review.film_name}}:{{ review.review_title}}</h5>
-        <p class="card-text">{{ review.review_description}} Author: {{ review.author_name}}.
-            Date:{{ review.review_date}}</p>
-        <a href="#!" class="btn btn-primary">Button</a>
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.film_name}}:{{ review.review_title}}</h5>
+                <p class="card-text">{{ review.review_description}}</p>
+                <p class="card-text"><small class="text-body-secondary">Author: {{ review.author_name}}</small></p>
+            </div>
+        </div>
     </div>
     {% endfor %}
 </div>

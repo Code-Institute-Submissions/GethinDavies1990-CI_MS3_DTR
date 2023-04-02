@@ -14,10 +14,6 @@ body {
     background-color: #28282B !important;
 }
 
-.navbar button {
-    color: #fff;
-    background-color: #28282B;
-}
 
 .nav-link {
     color: #fff;
@@ -25,7 +21,7 @@ body {
 }
 
 .nav-item {
-    font-size: 12px;
+    font-size: 9px;
 }
 
 .heading {
@@ -54,13 +50,6 @@ body {
     color: #fff;
 }
 
-.register-card {
-    width: 50%;
-    margin: 150px auto;
-    background-color: #28282B;
-    border-color: #F01D7F;
-    border-width: 10px;
-}
 
 i {
     color: #F01D7F;
@@ -71,4 +60,8 @@ i {
     line-height: 2;
     background-color: #F01D7F;
     color: #fff;
+}
+
+.form-select {
+    width: 25%;
 }
