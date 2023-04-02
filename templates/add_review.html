@@ -6,28 +6,35 @@
     <div class="row">
         <i class="fas fa-pen"></i>
         <div class="form-outline">
-            <input type="text" id="author_name" class="form-control" name="author_name" />
+            <input type="text" id="author_name" class="form-control" name="author_name" min-length="5" maxlength="50"
+                required />
             <label class="form-label" for="author_name">Author Name</label>
         </div>
     </div>
     <div class="row">
         <i class="fas fa-heading"></i>
         <div class="form-outline">
-            <input type="text" id="review_title" class="form-control" name="review_title" />
+            <input type="text" id="review_title" class="form-control" name="review_title" min-length="5" maxlength="500"
+                required />
             <label class="form-label" for="review_title">Review Title</label>
         </div>
     </div>
-    <div class="row">
-        <i class="fas fa-calendar"></i>
-        <div class="form-outline">
-            <input type="text" id="review_date" class="form-control" name="review_date" />
-            <label class="form-label" for="review_date">Review Date</label>
-        </div>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="genre" name="genre" data-mdb-toggle="dropdown"
+            aria-expanded="false">
+            Genre
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
     </div>
     <div class="row">
         <i class="far fa-message"></i>
         <div class="form-outline">
-            <textarea class="form-control" id="review_description" rows="20" name="review_description"></textarea>
+            <textarea class="form-control" id="review_description" rows="20" name="review_description" min-length="5"
+                maxlength="1000" required></textarea>
             <label class="form-label" for="review_description">Review Content</label>
         </div>
     </div>
