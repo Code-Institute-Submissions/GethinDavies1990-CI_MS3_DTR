@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="text-white">Add Review</h3>
+
+<form class="div review-form" method="POST" actiob="">
+    <i class="fas fa-pen"></i>
+    <div class="form-outline">
+        <input type="text" id="typeText" class="form-control" />
+        <label class="form-label" for="typeText">Author Name</label>
+    </div>
+    <i class="fas fa-heading"></i>
+    <div class="form-outline">
+        <input type="text" id="typeText" class="form-control" />
+        <label class="form-label" for="typeText">Review Title</label>
+    </div>
+    <i class="fas fa-calendar"></i>
+    <div class="form-outline">
+        <input type="text" id="typeText" class="form-control" />
+        <label class="form-label" for="typeText">Review Date</label>
+    </div>
+    <i class="far fa-message"></i>
+    <div class="form-outline">
+        <textarea class="form-control" id="textAreaExample" rows="20"></textarea>
+        <label class="form-label" for="textAreaExample">Review Content</label>
+    </div>
+
+</form>
+{% endblock %}
