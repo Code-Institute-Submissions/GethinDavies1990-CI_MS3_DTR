@@ -2,21 +2,20 @@
 {% block content %}
 <h3 class="text-white">Add Review</h3>
 
-
-<form class="review-form" method="POST" action="">
-    <div class="card text-bg-dark mb-3 col-8">
+<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+    <form class="review-form" method="POST" action="">
         <div class="row">
-            <div class="mb-3">
+            <div class="mb-2 mt-3">
                 <i class="fas fa-pen"></i>
-                <label class="text-white" for="author_name" class="form-label">Author Name</label>
+                <label for="author_name" class="form-label mb-2 mt-2">Author Name</label>
                 <input type="text" class="form-control" id="author_name" name="author_name" min-length="5"
                     maxlength="50" required>
             </div>
         </div>
         <div class="row">
-            <div class="mb-3">
+            <div class="mb-2">
                 <i class="fa-solid fa-heading"></i>
-                <label class="text-white" for="review_title" class="form-label">Review Title</label>
+                <label for="review_title" class="form-label mb-2 mt-2">Review Title</label>
                 <input type="text" class="form-control" id="review_title" name="review_title" min-length="5"
                     maxlength="50" required>
             </div>
@@ -24,12 +23,12 @@
         <div class="row">
             <div class="mb-3">
                 <i class="fa-solid fa-film"></i>
-                <label for="category_name">Select Category</label>
+                <label for="category_name" class=" mb-2 mt-2">Select Category</label>
                 <select id="category_name" name="category_name" class="form-select form-select-sm"
                     aria-label=".form-select-sm example" required>
                     <option selected>Choose Genre</option>
                     {% for category in categories %}
-                        <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
 
@@ -38,14 +37,13 @@
         <div class="row">
             <div class="mb-3">
                 <i class="fa-solid fa-quote-left"></i>
-                <label class="text-white" for="review_description" class="form-label">Review Content</label>
+                <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
                 <input type="text" class="form-control" id="review_description" name="review_description" min-length="5"
                     maxlength="1000" required>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Publish Review</button>
-    </div>
-</form>
+        <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review</button>
+    </form>
+</div>
 
-</form>
 {% endblock %}

@@ -5,8 +5,9 @@ body {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
     margin-top: -1px;
+    margin-left: 50px;
 }
 
 /* navbar */
@@ -18,10 +19,18 @@ body {
 .nav-link {
     color: #fff;
     background-color: #28282B;
+    justify-content: space-between;
 }
 
-.nav-item {
-    font-size: 9px;
+.navbar a {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-right: 50px;
+}
+
+.navbar a:hover {
+    color: #F01D7F;
 }
 
 .heading {
@@ -50,6 +59,9 @@ body {
     color: #fff;
 }
 
+.card {
+    margin: 50px auto;
+}
 
 i {
     color: #F01D7F;
@@ -60,8 +72,4 @@ i {
     line-height: 2;
     background-color: #F01D7F;
     color: #fff;
-}
-
-.form-select {
-    width: 25%;
 }
