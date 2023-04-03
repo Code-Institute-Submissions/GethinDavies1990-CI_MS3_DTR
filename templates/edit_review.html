@@ -9,7 +9,8 @@
             <div class="mb-2 mt-3">
                 <i class="fa-solid fa-clapperboard"></i>
                 <label for="film_name" class="form-label mb-2 mt-2">Film Name</label>
-                <input type="text" class="form-control" id="film_name" name="film_name" min-length="5" maxlength="50"
+                <input type="text" class="form-control" id="film_name" name="film_name"  value="{{ review.film_name}}"
+                min-length="5" maxlength="50"
                     required>
             </div>
         </div>
@@ -18,7 +19,7 @@
             <div class="mb-2">
                 <i class="fa-solid fa-heading"></i>
                 <label for="review_title" class="form-label mb-2 mt-2">Review Title</label>
-                <input type="text" class="form-control" id="review_title" name="review_title" min-length="5"
+                <input type="text" class="form-control" id="review_title" name="review_title" value="{{ review.review_title }}" min-length="5"
                     maxlength="50" required>
             </div>
         </div>
@@ -31,7 +32,11 @@
                     aria-label=".form-select-sm example" required>
                     <option selected>Choose Genre</option>
                     {% for category in categories %}
-                    <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == review.category_name %}
+                        <option value="{{ category.catgeory_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                        <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
             </div>
@@ -42,7 +47,7 @@
                 <i class="fa-solid fa-quote-left"></i>
                 <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
                 <textarea type="text" class="form-control" id="review_description" name="review_description"
-                    min-length="5" maxlength="1000" rows="15" required>
+                    min-length="5" maxlength="1000" rows="15" required>{{- review.review_description -}}
                 </textarea>
             </div>
             <!-- Submit Review Button -->
