@@ -43,6 +43,7 @@ body {
     background-color: #F01D7F;
     color: #fff;
     font-weight: 600;
+    padding: 7px;
 }
 
 .btn:hover {
@@ -78,5 +79,6 @@ i {
 
 .icon-btn {
     color: #fff;
-    padding-left: 5px;
+    margin-left: 5px;
+    line-height: 22px;
 }
