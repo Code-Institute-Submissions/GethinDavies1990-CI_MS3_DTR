@@ -42,6 +42,7 @@ body {
 .btn {
     background-color: #F01D7F;
     color: #fff;
+    font-weight: 600;
 }
 
 .btn:hover {
@@ -66,10 +67,16 @@ body {
 i {
     color: #F01D7F;
     font-size: 16px;
+    padding-right: 5px;
 }
 
 .flashes h4 {
     line-height: 2;
     background-color: #F01D7F;
     color: #fff;
+}
+
+.icon-btn {
+    color: #fff;
+    padding-left: 5px;
 }

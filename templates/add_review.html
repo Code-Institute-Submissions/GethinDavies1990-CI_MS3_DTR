@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="text-white">Add Review</h3>
+<h3 class="text-white text-center">Add Review</h3>
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form class="review-form" method="POST" action="">
+    <form class="review-form" method="POST" action="{{ url_for('add_review')}}">
         <!-- Author Name -->
         <div class="row">
             <div class="mb-2 mt-3">
@@ -11,6 +11,15 @@
                 <label for="author_name" class="form-label mb-2 mt-2">Author Name</label>
                 <input type="text" class="form-control" id="author_name" name="author_name" min-length="5"
                     maxlength="50" required>
+            </div>
+        </div>
+        <!-- Film Name -->
+        <div class="row">
+            <div class="mb-2 mt-3">
+                <i class="fa-solid fa-clapperboard"></i>
+                <label for="film_name" class="form-label mb-2 mt-2">Film Name</label>
+                <input type="text" class="form-control" id="film_name" name="film_name" min-length="5" maxlength="50"
+                    required>
             </div>
         </div>
         <!-- Review Title -->
@@ -22,7 +31,7 @@
                     maxlength="50" required>
             </div>
         </div>
-        <!-- Category -->
+        <!-- Category selection -->
         <div class="row">
             <div class="mb-3">
                 <i class="fa-solid fa-film"></i>
@@ -46,7 +55,8 @@
                 </textarea>
             </div>
             <!-- Submit Review Button -->
-            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review</button>
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
+                    class="fa-solid fa-plus icon-btn"></i></button>
     </form>
 </div>
 
