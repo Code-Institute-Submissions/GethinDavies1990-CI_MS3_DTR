@@ -4,6 +4,7 @@
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form class="review-form" method="POST" action="">
+        <!-- Author Name -->
         <div class="row">
             <div class="mb-2 mt-3">
                 <i class="fas fa-pen"></i>
@@ -12,6 +13,7 @@
                     maxlength="50" required>
             </div>
         </div>
+        <!-- Review Title -->
         <div class="row">
             <div class="mb-2">
                 <i class="fa-solid fa-heading"></i>
@@ -20,6 +22,7 @@
                     maxlength="50" required>
             </div>
         </div>
+        <!-- Category -->
         <div class="row">
             <div class="mb-3">
                 <i class="fa-solid fa-film"></i>
@@ -31,18 +34,19 @@
                     <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
-
             </div>
         </div>
+        <!-- Review Description -->
         <div class="row">
             <div class="mb-3">
                 <i class="fa-solid fa-quote-left"></i>
                 <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
-                <input type="text" class="form-control" id="review_description" name="review_description" min-length="5"
-                    maxlength="1000" required>
+                <textarea type="text" class="form-control" id="review_description" name="review_description"
+                    min-length="5" maxlength="1000" rows="15" required>
+                </textarea>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review</button>
+            <!-- Submit Review Button -->
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review</button>
     </form>
 </div>
 
