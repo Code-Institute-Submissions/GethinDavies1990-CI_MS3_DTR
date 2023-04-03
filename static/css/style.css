@@ -33,6 +33,10 @@ body {
     color: #F01D7F;
 }
 
+.navbar-toggler {
+    color: #F01D7F;
+}
+
 .heading {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
