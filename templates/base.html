@@ -33,6 +33,7 @@
               <a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a>
               {% if session.user %}
               <a class="nav-link" href="{{ url_for('add_review') }}">NEW REVIEW</a>
+              <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
               <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
               <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
                   class="far fa-user"></i></a>
