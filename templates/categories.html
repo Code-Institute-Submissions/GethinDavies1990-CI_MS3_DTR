@@ -2,30 +2,16 @@
 {% block content %}
 
 <h3 class="text-white text-center">Manage Categories</h3>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="card text-bg-dark">
-        <img src="..." class="card-img" alt="...">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
+    {% for category in categories %}
+        <div class="card text-bg-dark">
+            <img src="..." class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">{{ category.category_name }}</h5>
+            </div>
         </div>
-    </div>
-    <div class="card text-bg-dark">
-        <img src="..." class="card-img" alt="...">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
