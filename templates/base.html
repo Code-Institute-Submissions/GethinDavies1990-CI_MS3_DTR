@@ -33,12 +33,12 @@
               <a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a>
               {% if session.user %}
                 <a class="nav-link" href="{{ url_for('add_review') }}">NEW REVIEW</a>
-              {% if session.user|lower =="admin|lower" %}
-                <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
-              {% endif %}
-                <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
-                <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
-                  class="far fa-user"></i></a>
+                  {% if session.user|lower == "admin"|lower %}
+                    <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
+                  {% endif %}
+                    <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
+                    <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
+                      class="far fa-user"></i></a>
               {% else %}
                 <a class="nav-link" href="{{ url_for('login') }}">LOGIN</a>
                 <a class="nav-link" href="{{ url_for('register') }}">REGISTER</a>
