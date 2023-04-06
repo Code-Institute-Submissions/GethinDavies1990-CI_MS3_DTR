@@ -17,7 +17,7 @@
             <img src="..." class="card-img" alt="...">
             <div class="card-img-overlay">
                 <h5 class="card-title">{{ category.category_name }}</h5>
-                <a href="#" class="btn btn-secondary btn-sm">Edit<i
+                <a href="{{ url_for('edit_category', category_id=category._id)}}" class="btn btn-secondary btn-sm">Edit<i
                         class="fa-solid fa-pen-to-square icon-btn"></i></a>
                 <a href="#" class="btn btn-secondary btn-sm">Delete<i class="fa-solid fa-trash icon-btn"></i></a>
             </div>
