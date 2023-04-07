@@ -42,6 +42,10 @@ def register():
 
 @authentication.route('/login', methods=['GET', "POST"])
 def login():
+    """
+    This function will login the user if they use a matched
+    username and password. The user is redirected to their profile page.
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -68,6 +72,10 @@ def login():
 
 @authentication.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    This function will render the profile page of the logged in user
+    and display their profile information.
+    """
     # grab session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -80,6 +88,10 @@ def profile(username):
 
 @authentication.route("/logout")
 def logout():
+    """
+    This function logs the user out of their 
+    session and will be redirected to the login page.
+    """
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
