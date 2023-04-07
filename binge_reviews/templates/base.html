@@ -21,7 +21,7 @@
       <!-- Nav Bar -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{ url_for('get_reviews') }}"><img class="logo"
+          <a class="navbar-brand" href="{{ url_for('reviews.get_reviews') }}"><img class="logo"
               src="{{ url_for('static', filename='images/logo.png')}}" alt="Binge Reviews Logo" loading="lazy" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,19 +29,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="{{ url_for('get_reviews') }}">HOME</a>
-              <a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a>
+              <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">HOME</a>
+              <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">REVIEWS</a>
               {% if session.user %}
-                <a class="nav-link" href="{{ url_for('add_review') }}">NEW REVIEW</a>
-                  {% if session.user|lower == "admin"|lower %}
-                    <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
-                  {% endif %}
-                    <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
-                    <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
-                      class="far fa-user"></i></a>
+              <a class="nav-link" href="{{ url_for('reviews.add_review') }}">NEW REVIEW</a>
+              {% if session.user|lower == "admin"|lower %}
+              <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
+              {% endif %}
+              <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
+              <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
+                  class="far fa-user"></i></a>
               {% else %}
-                <a class="nav-link" href="{{ url_for('login') }}">LOGIN</a>
-                <a class="nav-link" href="{{ url_for('register') }}">REGISTER</a>
+              <a class="nav-link" href="{{ url_for('login') }}">LOGIN</a>
+              <a class="nav-link" href="{{ url_for('register') }}">REGISTER</a>
               {% endif %}
             </div>
           </div>

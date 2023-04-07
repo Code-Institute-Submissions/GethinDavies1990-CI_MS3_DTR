@@ -2,6 +2,7 @@ from flask import (Flask, flash,
                    render_template, redirect,
                    request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
+from binge_reviews import mongo
 
 
 # Create a reviews object as a blueprint
