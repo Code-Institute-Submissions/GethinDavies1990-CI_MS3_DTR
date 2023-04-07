@@ -1,7 +1,7 @@
 import os
 from flask import (Flask, flash,
                    render_template, redirect,
-                   request, session, url_for)
+                   request, session, url_for, Blueprint)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -33,7 +33,7 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
-@ app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # check if username already exsists in db
@@ -57,7 +57,7 @@ def register():
     return render_template("register.html")
 
 
-@ app.route('/login', methods=['GET', "POST"])
+@app.route('/login', methods=['GET', "POST"])
 def login():
     if request.method == "POST":
         # check if username exists in db
@@ -83,7 +83,7 @@ def login():
     return render_template("login.html")
 
 
-@ app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab session user's username from db
     username = mongo.db.users.find_one(
@@ -95,7 +95,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@ app.route("/logout")
+@app.route("/logout")
 def logout():
     # remove user from session cookies
     flash("You have been logged out")
@@ -103,7 +103,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@ app.route("/add_review", methods=["GET", "POST"])
+@app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
         review = {
@@ -121,7 +121,7 @@ def add_review():
     return render_template("add_review.html", categories=categories)
 
 
-@ app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
 
     if request.method == "POST":
@@ -141,20 +141,20 @@ def edit_review(review_id):
         "edit_review.html", review=review, categories=categories)
 
 
-@ app.route("/delete_review/<review_id>")
+@app.route("/delete_review/<review_id>")
 def delete_review(review_id):
     mongo.db.reviews.delete_one({"_id": ObjectId(review_id)})
     flash("Review Successfully Removed")
     return redirect(url_for('get_reviews'))
 
 
-@ app.route("/get_categories")
+@app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
-@ app.route("/add_category", methods=["GET", "POST"])
+@app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
         category = {
@@ -167,7 +167,7 @@ def add_category():
     return render_template("add_category.html")
 
 
-@ app.route("/edit_category/<category_id>", methods=["POST", "GET"])
+@app.route("/edit_category/<category_id>", methods=["POST", "GET"])
 def edit_category(category_id):
     if request.method == "POST":
         submit = {"$set": {
@@ -181,7 +181,7 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
-@ app.route("/delete_category/<category_id>")
+@app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
