@@ -29,14 +29,18 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
+            "fav_film": request.form.get("fav_film")
         }
         mongo.db.users.insert_one(register)
 
         # put user into 'session' cokkie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
-        return redirect(url_for("authentication.profile", username=session["user"]))
+        return redirect(
+            url_for("authentication.profile", username=session["user"]))
     return render_template("register.html")
 
 
@@ -57,7 +61,8 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for("authentication.profile", username=session["user"]))
+                return redirect(url_for(
+                    "authentication.profile", username=session["user"]))
             else:
                 #  invalid password match
                 flash("Incorrect Username and/or Password")
@@ -89,7 +94,7 @@ def profile(username):
 @authentication.route("/logout")
 def logout():
     """
-    This function logs the user out of their 
+    This function logs the user out of their
     session and will be redirected to the login page.
     """
     # remove user from session cookies
