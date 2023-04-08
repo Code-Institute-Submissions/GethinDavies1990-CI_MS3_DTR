@@ -48,6 +48,8 @@ body {
     color: #fff;
     font-weight: 600;
     padding: 7px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .btn:hover {
@@ -85,4 +87,15 @@ i {
     color: #fff;
     margin-left: 5px;
     line-height: 22px;
+}
+
+.search-container {
+    width: 90%;
+    text-align: center;
+}
+
+.search-bar {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
