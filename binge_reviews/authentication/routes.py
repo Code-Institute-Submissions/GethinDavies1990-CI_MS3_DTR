@@ -25,7 +25,7 @@ def register():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("register"))
+            return redirect(url_for("authentication.register"))
 
         register = {
             "username": request.form.get("username").lower(),
@@ -36,7 +36,7 @@ def register():
         # put user into 'session' cokkie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("authentication.profile", username=session["user"]))
     return render_template("register.html")
 
 
@@ -57,15 +57,15 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for("profile", username=session["user"]))
+                return redirect(url_for("authentication.profile", username=session["user"]))
             else:
                 #  invalid password match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+                return redirect(url_for("authentication.login"))
         else:
             #  username doesn't exist
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+            return redirect(url_for("authentication.login"))
 
     return render_template("login.html")
 
@@ -83,7 +83,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))
+    return redirect(url_for("authentication.login"))
 
 
 @authentication.route("/logout")
@@ -95,4 +95,4 @@ def logout():
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("authentication.login"))

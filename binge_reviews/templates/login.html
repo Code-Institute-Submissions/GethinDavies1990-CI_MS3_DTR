@@ -4,7 +4,7 @@
 <h3 class="text-center text-light heading">Login</h3>
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('login')}}">
+    <form method="POST" action="{{ url_for('authentication.login')}}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
@@ -32,7 +32,7 @@
     <div class="col s12 text-center">
         <p class=" center-align text-white">
             New Here?
-            <a href="{{ url_for('register') }}" class="registered-text">Register</a>
+            <a href="{{ url_for('authentication.register') }}" class="registered-text">Register</a>
         </p>
     </div>
 </div>
