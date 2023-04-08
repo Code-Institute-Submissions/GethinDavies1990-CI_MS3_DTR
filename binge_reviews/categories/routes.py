@@ -11,12 +11,20 @@ categories = Blueprint('categories', __name__)
 
 @categories.route("/get_categories")
 def get_categories():
+    """
+    This function will display all the catgories
+    in a grid section on the page
+    """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
 @categories.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """
+    This function lets the user add new catagories to the
+    application.
+    """
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -30,6 +38,10 @@ def add_category():
 
 @categories.route("/edit_category/<category_id>", methods=["POST", "GET"])
 def edit_category(category_id):
+    """
+    This function will allow the admin user
+    to edit a category name and image.
+    """
     if request.method == "POST":
         submit = {"$set": {
             "category_name": request.form.get("category_name")
@@ -44,6 +56,10 @@ def edit_category(category_id):
 
 @categories.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """
+    This function allows the admin user to delete
+    categories.
+    """
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("categories.get_categories"))

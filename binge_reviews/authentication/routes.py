@@ -15,7 +15,7 @@ def register():
     if succesfull on registration will be redirected to their
     profile page. The users password is encrypted. If the
     username already exists they are redirected back
-    to the register page, and will be promted with an alert
+    to the register page, and will be prompted with an alert
     to make them aware it is already in use.
     """
     if request.method == "POST":
