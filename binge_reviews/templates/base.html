@@ -34,14 +34,14 @@
               {% if session.user %}
               <a class="nav-link" href="{{ url_for('reviews.add_review') }}">NEW REVIEW</a>
               {% if session.user|lower == "admin"|lower %}
-              <a class="nav-link" href="{{ url_for('get_categories') }}">MANAGE CATEGORIES</a>
+              <a class="nav-link" href="{{ url_for('categories.get_categories') }}">MANAGE CATEGORIES</a>
               {% endif %}
-              <a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a>
-              <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"><i
+              <a class="nav-link" href="{{ url_for('authentication.logout') }}">LOG OUT</a>
+              <a class="nav-link" href="{{ url_for('authentication.profile', username=session['user']) }}"><i
                   class="far fa-user"></i></a>
               {% else %}
-              <a class="nav-link" href="{{ url_for('login') }}">LOGIN</a>
-              <a class="nav-link" href="{{ url_for('register') }}">REGISTER</a>
+              <a class="nav-link" href="{{ url_for('authentication.login') }}">LOGIN</a>
+              <a class="nav-link" href="{{ url_for('authentication.register') }}">REGISTER</a>
               {% endif %}
             </div>
           </div>
