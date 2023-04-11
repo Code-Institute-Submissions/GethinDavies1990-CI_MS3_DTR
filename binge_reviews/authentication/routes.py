@@ -3,6 +3,8 @@ from flask import (Flask, flash,
                    request, session, url_for, Blueprint)
 from werkzeug.security import generate_password_hash, check_password_hash
 from binge_reviews import mongo
+import gridfs
+
 
 # Create authentication object as a blueprint
 authentication = Blueprint('authentication', __name__)
