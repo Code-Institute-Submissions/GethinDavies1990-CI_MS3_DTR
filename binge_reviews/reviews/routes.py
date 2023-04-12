@@ -32,14 +32,20 @@ def search():
 
 
 @reviews.route("/add_review", methods=["GET", "POST"])
-def add_review():
+def add_review() -> object:
     """
     This function allows the user to add reviews to the
     application. On succesfull submission the user is 
     redirected to the reviews.html page.
     """
+
+    if 'review_image' in request.files:
+        review_image = request.files['review_image']
+        mongo.save_file(review_image.filename, review_image)
+
     if request.method == "POST":
         review = {
+            "review_image": review_image.filename,
             "film_name": request.form.get("film_name"),
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),

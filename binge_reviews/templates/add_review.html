@@ -3,7 +3,7 @@
 <h3 class="text-white text-center">Add Review</h3>
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form class="review-form" method="POST" action="{{ url_for('reviews.add_review')}}">
+    <form class="review-form" method="POST" enctype="multipart/form-data" action="{{ url_for('reviews.add_review')}}">
         <!-- Film Name -->
         <div class="row">
             <div class="mb-2 mt-3">
@@ -13,41 +13,46 @@
                     required>
             </div>
         </div>
-        <!-- Review Title -->
         <div class="row">
-            <div class="mb-2">
-                <i class="fa-solid fa-heading"></i>
-                <label for="review_title" class="form-label mb-2 mt-2">Review Title</label>
-                <input type="text" class="form-control" id="review_title" name="review_title" min-length="5"
-                    maxlength="50" required>
+            <div class="">
+                <input class="form-control validate" type="file" id="review_image" name="review_image" value="file"
+                    required>
             </div>
-        </div>
-        <!-- Category selection -->
-        <div class="row">
-            <div class="mb-3">
-                <i class="fa-solid fa-film"></i>
-                <label for="category_name" class=" mb-2 mt-2">Select Category</label>
-                <select id="category_name" name="category_name" class="form-select form-select-sm"
-                    aria-label=".form-select-sm example" required>
-                    <option selected>Choose Genre</option>
-                    {% for category in categories %}
-                    <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
-                </select>
+            <!-- Review Title -->
+            <div class="row">
+                <div class="mb-2">
+                    <i class="fa-solid fa-heading"></i>
+                    <label for="review_title" class="form-label mb-2 mt-2">Review Title</label>
+                    <input type="text" class="form-control" id="review_title" name="review_title" min-length="5"
+                        maxlength="50" required>
+                </div>
             </div>
-        </div>
-        <!-- Review Description -->
-        <div class="row">
-            <div class="mb-3">
-                <i class="fa-solid fa-quote-left"></i>
-                <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
-                <textarea type="text" class="form-control" id="review_description" name="review_description"
-                    min-length="5" maxlength="1000" rows="15" required>
+            <!-- Category selection -->
+            <div class="row">
+                <div class="mb-3">
+                    <i class="fa-solid fa-film"></i>
+                    <label for="category_name" class=" mb-2 mt-2">Select Category</label>
+                    <select id="category_name" name="category_name" class="form-select form-select-sm"
+                        aria-label=".form-select-sm example" required>
+                        <option selected>Choose Genre</option>
+                        {% for category in categories %}
+                        <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <!-- Review Description -->
+            <div class="row">
+                <div class="mb-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
+                    <textarea type="text" class="form-control" id="review_description" name="review_description"
+                        min-length="5" maxlength="1000" rows="15" required>
                 </textarea>
-            </div>
-            <!-- Submit Review Button -->
-            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
-                    class="fa-solid fa-plus icon-btn"></i></button>
+                </div>
+                <!-- Submit Review Button -->
+                <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
+                        class="fa-solid fa-plus icon-btn"></i></button>
     </form>
 </div>
 
