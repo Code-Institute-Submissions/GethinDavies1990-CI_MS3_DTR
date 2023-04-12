@@ -60,6 +60,16 @@ def add_review() -> object:
     return render_template("add_review.html", categories=categories)
 
 
+@reviews.route('/file/<filename>')
+def file(filename):
+    return mongo.db.reviews.send_file(filename)
+
+
+@reviews.route('/reviews/<reviews>')
+def reviews(reviews):
+    reviews = mongo.db.reviews.review_image(filename)
+
+
 @reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     """
