@@ -3,6 +3,7 @@ from flask import (Flask, flash,
                    request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
 from binge_reviews import mongo
+from binge_reviews.util import util
 
 
 # Create a reviews object as a blueprint
@@ -40,7 +41,10 @@ def add_review() -> object:
     """
 
     if request.method == "POST":
+        # Store Review image in S3 Bucket
+        image_url = util.upload_image('review_image')
         review = {
+            "review_image": image_url,
             "film_name": request.form.get("film_name"),
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),
