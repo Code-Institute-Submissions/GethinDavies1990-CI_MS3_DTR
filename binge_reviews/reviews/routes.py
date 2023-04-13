@@ -39,13 +39,8 @@ def add_review() -> object:
     redirected to the reviews.html page.
     """
 
-    if 'review_image' in request.files:
-        review_image = request.files['review_image']
-        mongo.save_file(review_image.filename, review_image)
-
     if request.method == "POST":
         review = {
-            "review_image": review_image.filename,
             "film_name": request.form.get("film_name"),
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),
@@ -58,16 +53,6 @@ def add_review() -> object:
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_review.html", categories=categories)
-
-
-@reviews.route('/file/<filename>')
-def file(filename):
-    return mongo.db.reviews.send_file(filename)
-
-
-@reviews.route('/reviews/<reviews>')
-def reviews(reviews):
-    reviews = mongo.db.reviews.review_image(filename)
 
 
 @reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
