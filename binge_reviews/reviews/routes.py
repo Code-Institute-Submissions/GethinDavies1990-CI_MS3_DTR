@@ -14,11 +14,18 @@ reviews = Blueprint('reviews', __name__)
 @reviews.route("/get_reviews")
 def get_reviews():
     """
-    This function will display all the reviews posted 
+    This function will display all the reviews posted
     by users.
     """
     reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
+
+
+@reviews.route("/get_review/<review_id>",)
+def get_review(review_id):
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+
+    return render_template("review.html", review=review)
 
 
 @reviews.route("/search", methods=["GET", "POST"])
