@@ -19,6 +19,7 @@ def register() -> object:
     username already exists they are redirected back
     to the register page, and will be prompted with an alert
     to make them aware it is already in use.
+    :return render_template of profile.html
     """
     if request.method == "POST":
         # check if username already exsists in db
@@ -85,7 +86,12 @@ def profile(username):
     """
     This function will render the profile page of the logged in user
     and display their profile information.
+    :param username: username of user
+    :return render_template of profile.html
     """
+    # if user not logged in, redirect to login page
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
     # grab session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
