@@ -24,11 +24,10 @@ def register():
         # check if username already exsists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        #  If user already exists, redirects them to register page
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("authentication.register"))
-
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
@@ -36,11 +35,15 @@ def register():
             "last_name": request.form.get("last_name"),
             "fav_film": request.form.get("fav_film")
         }
-        mongo.db.users.insert_one(register)
-
-        # put user into 'session' cokkie
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful")
+        try:
+            # Insert the user in to the register object
+            mongo.db.users.insert_one(register)
+            # put user into 'session' cokkie
+            session["user"] = request.form.get("username").lower()
+            flash("Registration Successful")
+        except Exception as e:
+            flash("An exception occured when adding user: " +
+                  gettattr(e, 'message', repr(e)))
         return redirect(
             url_for("authentication.profile", username=session["user"]))
     return render_template("register.html")
