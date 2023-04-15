@@ -102,7 +102,7 @@ def profile(username):
     return redirect(url_for("authentication.login"))
 
 
-@authentication.route("update_profile/<username>", methods=["GET", "POST"])
+@authentication.route("/update_profile/<username>", methods=["GET", "POST"])
 def update_profile(username: object) -> object:
     """
     This function updates users profile with updated informatiob
@@ -116,23 +116,23 @@ def update_profile(username: object) -> object:
         user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         #  Create an object update_profile with updated information
-        update_profile = {
+        update_profile = {"$set": {
             "username": session['user'],
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
             "fav_film": request.form.get("fav_film")
-        }
+        }}
         try:
             # Update the user information in the users collection
             mongo.db.users.update_one({"username": username}, update_profile)
             flash("Profile Successfully Updated")
         except Exception as e:
             flash("An exception occured when adding user: " +
-                  gettattr(e, 'message', repr(e)))
+                  getattr(e, 'message', repr(e)))
         # Find user and redirect them to their updated profile page
-        user = mongo.db.usersfind_one({"username": username})
-        return render_template("authentication/profile.html",
+        user = mongo.db.users.find_one({"username": username})
+        return render_template("profile.html",
                                username=session['user'], user=user)
 
 

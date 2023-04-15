@@ -69,7 +69,7 @@ def add_review() -> object:
 @reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     """
-    This fucntion allows the user to edit their own
+    This funntion allows the user to edit their own
     review, the user must be in session and can only edit their
     own reviews.
     """
