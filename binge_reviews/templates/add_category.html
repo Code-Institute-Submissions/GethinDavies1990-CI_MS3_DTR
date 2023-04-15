@@ -4,7 +4,8 @@
 
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form class="review-form" method="POST" action="{{ url_for('categories.add_category')}}">
+    <form class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
+        action="{{ url_for('categories.add_category')}}">
         <!-- Category Name -->
         <div class="row">
             <div class="mb-2 mt-3">
@@ -13,10 +14,15 @@
                 <input type="text" class="form-control" id="category_name" name="category_name" min-length="3"
                     maxlength="25" required>
             </div>
-        </div>
-        <!-- Submit Review Button -->
-        <button type="submit" class="btn btn-primary mb-2 mt-2">Add Category<i
-                class="fa-solid fa-plus icon-btn"></i></button>
+            <div class="row">
+                <div class="">
+                    <input class="form-control validate" type="file" id="category_image" name="category_image"
+                        value="file" required>
+                </div>
+            </div>
+            <!-- Submit Category Button -->
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Add Category<i
+                    class="fa-solid fa-plus icon-btn"></i></button>
     </form>
 </div>
 

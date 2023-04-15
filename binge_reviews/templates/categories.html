@@ -16,7 +16,7 @@
 <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for category in categories %}
     <div class="card text-bg-dark">
-        <img src="..." class="card-img" alt="...">
+        <img src="{{ category.category_image }}" alt="{{ category.category_image }}" class="img-fluid card-img">
         <div class="card-img-overlay">
             <h5 class="card-title">{{ category.category_name }}</h5>
             {% if session.user|lower == "admin"|lower %}

@@ -3,6 +3,7 @@ from flask import (Flask, flash,
                    request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
 from binge_reviews import mongo
+from binge_reviews.util import util
 
 
 # Create a reviews object as a blueprint
@@ -20,13 +21,18 @@ def get_categories():
 
 
 @categories.route("/add_category", methods=["GET", "POST"])
-def add_category():
+def add_category() -> object:
     """
-    This function lets the user add new catagories to the
+    This function lets the user add new catagories and images to the
     application.
     """
+
     if request.method == "POST":
+        # Store category image in AWS s3 bucket
+        image_url = util.upload_image('category_image')
+
         category = {
+            "category_image": image_url,
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
@@ -43,7 +49,9 @@ def edit_category(category_id):
     to edit a category name and image.
     """
     if request.method == "POST":
+        image_url = util.upload_image('category_image')
         submit = {"$set": {
+            "category_image": image_url,
             "category_name": request.form.get("category_name")
         }}
         mongo.db.categories.update_one({"_id": ObjectId(category_id)}, submit)
