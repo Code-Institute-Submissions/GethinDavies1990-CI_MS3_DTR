@@ -21,13 +21,11 @@ def create_app():
     categories blueprint routes
     """
     # Import routes
-    # from binge_reviews.administration.routes import administration
     from binge_reviews.authentication.routes import authentication
     from binge_reviews.categories.routes import categories
     # from binge_reviews.errors.routes import errors
     from binge_reviews.reviews.routes import reviews
     # Register routes with app
-    # app.register_blueprint(administration)
     app.register_blueprint(authentication)
     app.register_blueprint(categories)
     # app.register_blueprint(errors)

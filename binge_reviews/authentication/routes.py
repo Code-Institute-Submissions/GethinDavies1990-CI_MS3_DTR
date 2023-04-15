@@ -11,7 +11,7 @@ authentication = Blueprint('authentication', __name__)
 
 
 @authentication.route("/register", methods=["GET", "POST"])
-def register():
+def register() -> object:
     """
     This function registers new users to the website and
     if succesfull on registration will be redirected to their
@@ -50,7 +50,7 @@ def register():
 
 
 @authentication.route('/login', methods=['GET', "POST"])
-def login():
+def login() -> object:
     """
     This function will login the user if they use a matched
     username and password. The user is redirected to their profile page.
