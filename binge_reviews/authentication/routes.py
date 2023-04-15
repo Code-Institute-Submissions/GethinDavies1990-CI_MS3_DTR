@@ -81,6 +81,18 @@ def login() -> object:
     return render_template("login.html")
 
 
+@ authentication.route("/logout")
+def logout():
+    """
+    This function logs the user out of their
+    session and will be redirected to the login page.
+    """
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("authentication.login"))
+
+
 @authentication.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
@@ -136,13 +148,20 @@ def update_profile(username: object) -> object:
                                username=session['user'], user=user)
 
 
-@ authentication.route("/logout")
-def logout():
+@authentication.route("/delete_profile/<username>")
+def delete_profile(username: object) -> object:
     """
-    This function logs the user out of their
-    session and will be redirected to the login page.
+    This function deletes the profile of the user
+    :param username: username of the user
+    :return redirect to homepage
     """
-    # remove user from session cookies
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("authentication.login"))
+    try:
+        # Delete users collection from db
+        mongo.db.users.delete_one({"username": username})
+        # redirects user to the homepage
+        flash("Your account has been deleted and you have been logged out")
+        session.pop("user")
+    except Exception as e:
+        flash("An exception occured when delting user: " +
+              getattr(e, 'message'), repr(e))
+    return redirect(url_for("reviews.get_reviews"))

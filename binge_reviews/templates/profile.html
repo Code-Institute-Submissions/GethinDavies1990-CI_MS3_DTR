@@ -50,6 +50,9 @@
         </div>
         <!-- Submit button -->
         <button type="submit" class="btn btn-block mb-4">Save Changes</button>
+        <a href="{{ url_for('authentication.delete_profile', username=username)}}"
+            class="btn btn-secondary btn-sm">Delete<i class="fa-solid fa-pen-to-square icon-btn"></i></a>
+
     </form>
 </div>
 
