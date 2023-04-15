@@ -31,11 +31,9 @@
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">HOME</a>
               <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">REVIEWS</a>
+              <a class="nav-link" href="{{ url_for('categories.get_categories') }}">CATEGORIES</a>
               {% if session.user %}
               <a class="nav-link" href="{{ url_for('reviews.add_review') }}">NEW REVIEW</a>
-              {% if session.user|lower == "admin"|lower %}
-              <a class="nav-link" href="{{ url_for('categories.get_categories') }}">MANAGE CATEGORIES</a>
-              {% endif %}
               <a class="nav-link" href="{{ url_for('authentication.logout') }}">LOG OUT</a>
               <a class="nav-link" href="{{ url_for('authentication.profile', username=session['user']) }}"><i
                   class="far fa-user"></i></a>

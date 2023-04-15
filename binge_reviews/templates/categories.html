@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-white text-center">Manage Categories</h3>
+<h3 class="text-white text-center">Categories</h3>
 
+{% if session.user|lower == "admin"|lower %}
 <div class="row text-center">
     <div class="col-12">
         <a href="{{ url_for('categories.add_category')}}" class="btn">
@@ -10,6 +11,7 @@
         </a>
     </div>
 </div>
+{% endif %}
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for category in categories %}
@@ -17,10 +19,12 @@
         <img src="..." class="card-img" alt="...">
         <div class="card-img-overlay">
             <h5 class="card-title">{{ category.category_name }}</h5>
+            {% if session.user|lower == "admin"|lower %}
             <a href="{{ url_for('categories.edit_category', category_id=category._id)}}"
                 class="btn btn-secondary btn-sm">Edit<i class="fa-solid fa-pen-to-square icon-btn"></i></a>
             <a href="{{ url_for('categories.delete_category', category_id=category._id)}}"
                 class="btn btn-secondary btn-sm">Delete<i class="fa-solid fa-pen-to-square icon-btn"></i></a>
+            {% endif %}
         </div>
     </div>
     {% endfor %}
