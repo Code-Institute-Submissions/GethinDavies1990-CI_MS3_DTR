@@ -3,7 +3,8 @@ from flask import (Flask, flash,
                    request, session, url_for, Blueprint)
 from werkzeug.security import generate_password_hash, check_password_hash
 from binge_reviews import mongo
-import gridfs
+from bson.objectid import ObjectId
+from binge_reviews.util import util
 
 
 # Create authentication object as a blueprint
@@ -34,7 +35,8 @@ def register() -> object:
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
-            "fav_film": request.form.get("fav_film")
+            "fav_film": request.form.get("fav_film"),
+            "author_bio": request.form.get("author_bio")
         }
         try:
             # Insert the user in to the register object
@@ -134,7 +136,7 @@ def update_profile(username: object) -> object:
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
-            "fav_film": request.form.get("fav_film")
+            "fav_film": request.form.get("fav_film"),
         }}
         try:
             # Update the user information in the users collection

@@ -4,7 +4,8 @@
 <h3 class="text-center text-light heading">{{ username }}'s Profile</h3>
 
 <div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('authentication.update_profile', username=username) }}">
+    <form method="POST" enctype="multipart/form-data"
+        action="{{ url_for('authentication.update_profile', username=username) }}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
