@@ -3,7 +3,7 @@
 
 <div class="row">
     <h3 class="text-center text-white ">Reviews</h3>
-    <div class="row search-container">
+    <div class="row search-container mb-3 col-8 d-flex align-items-center justify-content-center">
         <form action="{{ url_for('reviews.search') }}" method="POST" class="col">
             <div class="row">
                 <div class="input-field">
@@ -11,14 +11,20 @@
                     <input type="text" name="query" minlength="3" class="validate search-bar"
                         placeholder="Search Reviews" required>
                 </div>
-                <div class="col">
-                    <a href="{{ url_for('reviews.get_reviews') }}" class="btn from">Reset</a>
-                    <button class="btn" type="submit">
-                        <i class="fas fa-search left icon-btn"></i>
-                        Search
-                    </button>
+                <div class="row button-container">
+                    <div class="col-sm-12 col-md-6">
+                        <button class="sec-btn button">
+                            <a href="{{ url_for('reviews.get_reviews') }}">Reset</a>
+                        </button>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <button class="pri-btn button" type="submit">
+                            Search
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </form>
     </div>
 </div>
