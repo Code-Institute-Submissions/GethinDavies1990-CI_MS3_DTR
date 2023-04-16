@@ -17,7 +17,7 @@ def get_categories():
     in a grid section on the page
     """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    return render_template("categories/categories.html", categories=categories)
 
 
 @categories.route("/add_category", methods=["GET", "POST"])
@@ -37,7 +37,7 @@ def add_category() -> object:
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
-        return redirect(url_for('categories.get_categories'))
+        return redirect(url_for('categories/categories.get_categories'))
 
     return render_template("add_category.html")
 
@@ -59,7 +59,7 @@ def edit_category(category_id):
         return redirect(url_for('categories.get_categories'))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template("categories/edit_category.html", category=category)
 
 
 @categories.route("/delete_category/<category_id>")

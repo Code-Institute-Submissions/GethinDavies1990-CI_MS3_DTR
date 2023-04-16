@@ -18,14 +18,14 @@ def get_reviews():
     by users.
     """
     reviews = list(mongo.db.reviews.find())
-    return render_template("reviews.html", reviews=reviews)
+    return render_template("reviews/reviews.html", reviews=reviews)
 
 
 @reviews.route("/get_review/<review_id>",)
 def get_review(review_id):
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
 
-    return render_template("review.html", review=review)
+    return render_template("reviews/review.html", review=review)
 
 
 @reviews.route("/search", methods=["GET", "POST"])
@@ -36,7 +36,7 @@ def search():
     """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    return render_template("reviews.html", reviews=reviews)
+    return render_template("reviews/reviews.html", reviews=reviews)
 
 
 @reviews.route("/add_review", methods=["GET", "POST"])
@@ -63,7 +63,7 @@ def add_review() -> object:
         return redirect(url_for('reviews.get_reviews'))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_review.html", categories=categories)
+    return render_template("reviews/add_review.html", categories=categories)
 
 
 @reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -87,7 +87,7 @@ def edit_review(review_id):
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_review.html", review=review, categories=categories)
+        "reviews/edit_review.html", review=review, categories=categories)
 
 
 @reviews.route("/delete_review/<review_id>")
