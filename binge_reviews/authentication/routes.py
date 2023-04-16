@@ -47,7 +47,7 @@ def register() -> object:
                   gettattr(e, 'message', repr(e)))
         return redirect(
             url_for("authentication.profile", username=session["user"]))
-    return render_template("register.html")
+    return render_template("authentication/register.html")
 
 
 @authentication.route('/login', methods=['GET', "POST"])
@@ -78,7 +78,7 @@ def login() -> object:
             flash("Incorrect Username and/or Password")
             return redirect(url_for("authentication.login"))
 
-    return render_template("login.html")
+    return render_template("authentication/login.html")
 
 
 @ authentication.route("/logout")
@@ -109,7 +109,8 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "authentication/profile.html", username=username)
 
     return redirect(url_for("authentication.login"))
 
@@ -144,7 +145,7 @@ def update_profile(username: object) -> object:
                   getattr(e, 'message', repr(e)))
         # Find user and redirect them to their updated profile page
         user = mongo.db.users.find_one({"username": username})
-        return render_template("profile.html",
+        return render_template("authentication/profile.html",
                                username=session['user'], user=user)
 
 
