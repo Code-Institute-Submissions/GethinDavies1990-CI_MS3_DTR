@@ -31,6 +31,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
+                    <h3>{{ review.rating }}/5</h3>
                     <h5 class="card-title">{{ review.film_name}}<br>{{ review.review_title}}</h5>
                     <h2> <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
                             class="text-dark">{{ review.film_name }}</a></h2>

@@ -56,7 +56,8 @@ def add_review() -> object:
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),
             "review_description": request.form.get("review_description"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "rating": request.form.get("rating")
         }
         mongo.db.reviews.insert_one(review)
         flash("Review Published")
@@ -79,7 +80,8 @@ def edit_review(review_id):
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),
             "review_description": request.form.get("review_description"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "rating": request.form.get("rating")
         }}
         mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Edited")

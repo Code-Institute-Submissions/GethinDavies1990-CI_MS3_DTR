@@ -53,6 +53,9 @@
                     min-length="5" maxlength="1000" rows="15" required>{{- review.review_description -}}
                 </textarea>
             </div>
+            <!-- Review Rating -->
+            <label for="rating" name="rating" class="form-label">Rating out of 5</label>
+            <input type="range" class="form-range" min="1" max="5" id="rating" name="rating">
             <!-- Cancel Changes Button -->
             <div class="row">
                 <div class="col">
