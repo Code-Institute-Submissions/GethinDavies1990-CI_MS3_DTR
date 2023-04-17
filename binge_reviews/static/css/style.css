@@ -84,7 +84,51 @@ a {
 #featured-review-header {
     text-align: end;
     font-weight: 400;
+    color: #fff;
+}
+
+.film-title {
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 50px;
     color: #F01D7F;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 5px;
+    position: relative;
+}
+
+.film-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 1px;
+    width: 0;
+    background: #F01D7F;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.film-title:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.film-title:hover {
+    color: #Fff;
+}
+
+.film-snippet {
+    font-weight: 400;
+    margin: 20px 2px 20px 5px;
+    font-style: italic;
+
 }
 
 /* Buttons */

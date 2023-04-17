@@ -36,10 +36,14 @@
             </div>
             <div class="col-md-6">
                 <div class="card-body">
-                    <h3 id="featured-review-header">Featured Review</h3>
-                    <h3> <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}</a>
+
+                    <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons">
+                            new_releases
+                        </span><br>Featured Review</h3>
+                    <h3><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                            class="film-title">{{ review.film_name }}</a>
                     </h3>
-                    <h5 class="card-title">{{ review.review_title}}</h5>
+                    <h5 class="film-snippet">"{{ review.review_title}}"</h5>
                     <h4>{{ review.rating }}<span class="material-symbols-outlined material-icons">
                             star
                         </span></h4>
