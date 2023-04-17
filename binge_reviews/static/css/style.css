@@ -73,14 +73,9 @@ a {
     margin-top: 60px;
 }
 
-.button-container {
-    width: 50%;
-    margin: 0 auto;
-}
-
 .button {
-    width: 100%;
-    margin: 5px auto;
+    width: 30%;
+    margin: 20px auto;
     border-radius: 15px;
     height: 30px;
     font-size: 14px;
@@ -149,22 +144,36 @@ i {
     color: #F01D7F;
 }
 
+.input-field {
+    width: 100%;
+    margin: 20px auto 8px;
+}
+
+.search-button-container {
+    text-align: left;
+}
+
 .search-container {
-    width: 90%;
-    text-align: center;
-    margin: 5px auto;
+    width: 50%;
+    margin: 2px auto;
 }
 
 .search-bar {
-    width: 50%;
+    width: 80%;
     margin: 20px auto 8px;
     background-color: #28282B;
     border: 1px solid #F01D7F;
     border-radius: 15px;
-    height: 20px;
-    padding: 10px 23px 12px 30px;
+    height: 30px;
+    padding: 10px 13px 12px 30px;
 }
 
 .search-bar:hover {
     border: 1px solid #fff;
+}
+
+/* Google material icons */
+
+.material-icons {
+    color: #F01D7F;
 }
