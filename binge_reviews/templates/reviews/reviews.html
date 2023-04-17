@@ -4,14 +4,14 @@
 <h3 class="text-center text-white ">Reviews</h3>
 <div class="search-container">
     <div class="row">
-        <form action=" {{ url_for('reviews.search') }}" method="POST" class="col-6">
+        <form action=" {{ url_for('reviews.search') }}" method="POST" class="col-md-6 col-lg-6 col-sm-12">
             <span class="material-symbols-outlined material-icons">
                 search
             </span>
             <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
                 required>
         </form>
-        <div class="col-6 search-button-container">
+        <div class="col-md-6 col-lg-6 col-sm-12 search-button-container">
             <button class="pri-btn button" type="submit">
                 Search
             </button>
@@ -27,14 +27,14 @@
 
 <div class="featured-review">
     {% for review in reviews %}
-    <div class="card mb-3 text-bg-dark" style="max-width: 540px;">
+    <div class="card mb-3 text-bg-dark">
         <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <a href="/get_reviews/{{ review._id }}">
                     <img src="{{ review.review_image }}" alt="{{ review.film_name }}" class="img-fluid card-img-top">
                 </a>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="card-body">
                     <h3>{{ review.rating }}/5</h3>
                     <h5 class="card-title">{{ review.film_name}}<br>{{ review.review_title}}</h5>

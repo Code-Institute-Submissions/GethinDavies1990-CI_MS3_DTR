@@ -73,8 +73,18 @@ a {
     margin-top: 60px;
 }
 
+/* Reviews/Honmepage */
+
+.featured-review {
+    width: 80%;
+    height: 100vh;
+    margin: 2px auto;
+}
+
+/* Buttons */
+
 .button {
-    width: 30%;
+    width: 40%;
     margin: 20px auto;
     border-radius: 15px;
     height: 30px;
@@ -154,7 +164,7 @@ i {
 }
 
 .search-container {
-    width: 50%;
+    width: 90%;
     margin: 2px auto;
 }
 
