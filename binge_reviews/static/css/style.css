@@ -76,9 +76,15 @@ a {
 /* Reviews/Honmepage */
 
 .featured-review {
-    width: 80%;
+    width: 95%;
     height: 100vh;
     margin: 2px auto;
+}
+
+#featured-review-header {
+    text-align: end;
+    font-weight: 400;
+    color: #F01D7F;
 }
 
 /* Buttons */
