@@ -27,12 +27,13 @@
     {% if loop.first %}
     <div class="card mb-3 text-bg-dark">
         <div class="row g-0">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">
-                    <img src="{{ review.review_image }}" alt="{{ review.film_name }}" class="img-fluid card-img-top">
+                    <img src="{{ review.review_image }}" alt="{{ review.film_name }}"
+                        class="img-fluid card-img-top feat-review-img">
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card-body">
                     <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons">
                             new_releases
@@ -66,8 +67,8 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
     {% for review in reviews %}
     <div class="col">
-        <div class="card h-100 text-bg-dark">
-            <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.review_image }}">
+        <div class="card text-bg-dark h-100">
+            <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
             <div class="card-body">
                 <h5 class="card-title">{{ review.film_name }}</h5>
                 <p class="card-text">{{ review.review_title }}</p>
