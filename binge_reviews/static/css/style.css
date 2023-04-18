@@ -15,6 +15,7 @@ a {
     color: #F01D7F;
 }
 
+
 /* navbar */
 .navbar {
     background-color: #000 !important;
@@ -75,10 +76,15 @@ a {
 /* Reviews/Honmepage */
 
 .featured-review,
-.reviews-all {
+.review-set {
     width: 95%;
     height: 100vh;
-    margin: 2px auto;
+    margin: 60px auto;
+    align-items: center;
+}
+
+.review-set {
+    margin-top: 5px;
 }
 
 #featured-review-header {
@@ -89,9 +95,11 @@ a {
 
 .card-title {
     text-align: left;
+    font-size: 16px;
 }
 
-.star-rating {
+.rating-container {
+    width: 95%;
     text-align: end;
 }
 
@@ -141,12 +149,18 @@ a {
 
 /* Buttons */
 
-.button {
+.button,
+.card-btn {
     width: 40%;
     margin: 20px auto;
     border-radius: 15px;
     height: 30px;
     font-size: 14px;
+}
+
+.card-btn {
+    width: 80%;
+    margin: 10px auto;
 }
 
 .pri-btn {

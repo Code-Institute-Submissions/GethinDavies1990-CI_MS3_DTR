@@ -62,18 +62,23 @@
     {% endif %}
     {% endfor %}
 </div>
-
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+<hr>
+<div class="row row-cols-1 row-cols-md-4 g-4">
     {% for review in reviews %}
     <div class="col">
-        <div class="card text-bg-dark">
+        <div class="card h-100 text-bg-dark">
             <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.review_image }}">
-            <div class="card-body text-center">
+            <div class="card-body">
                 <h5 class="card-title">{{ review.film_name }}</h5>
-                <h5 class="star-rating">{{ review.rating }}<span class="material-symbols-outlined material-icons">
+                <p class="card-text">{{ review.review_title }}</p>
+            </div>
+            <div class="rating-container">
+                <p>{{ review.rating }}<span class="material-symbols-outlined material-icons">
                         star
-                    </span></h5>
-                <button class="pri-btn button text-white">
+                    </span></p>
+            </div>
+            <div class="card-footer text-center">
+                <button class="pri-btn button card-btn text-white">
                     <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
                 </button>
             </div>
@@ -81,6 +86,7 @@
     </div>
     {% endfor %}
 </div>
+
 
 
 
