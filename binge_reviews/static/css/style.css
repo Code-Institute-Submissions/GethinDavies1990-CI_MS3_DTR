@@ -87,6 +87,13 @@ a {
     color: #fff;
 }
 
+.card-title {
+    text-align: left;
+}
+
+.star-rating {
+    text-align: end;
+}
 
 .film-title {
     font-size: 32px;

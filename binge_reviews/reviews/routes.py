@@ -67,7 +67,7 @@ def add_review() -> object:
     return render_template("reviews/add_review.html", categories=categories)
 
 
-@reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
+@reviews.route("/edit_review/<review_id>", methods=["POST", "GET"])
 def edit_review(review_id):
     """
     This function allows the user to edit their own
@@ -75,7 +75,9 @@ def edit_review(review_id):
     own reviews.
     """
     if request.method == "POST":
+        image_url = util.upload_image('review_image')
         submit = {"$set": {
+            "review-image": image_url,
             "film_name": request.form.get("film_name"),
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),
