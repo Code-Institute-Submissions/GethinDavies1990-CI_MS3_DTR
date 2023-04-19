@@ -75,6 +75,10 @@ a {
 
 /* Reviews/Honmepage */
 
+.card {
+    margin-top: 30px;
+}
+
 .featured-review,
 .review-set {
     width: 95%;
@@ -85,12 +89,31 @@ a {
 
 .featured-review {
     height: 100vh;
-    vertical-align: middle;
+    width: 100%;
+    position: relative;
 }
 
+.review-set {
+    height: 100vh;
+}
+
+.review-collection {
+    height: 80%;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 .card-img {
-    opacity: 0.3;
+    opacity: 0.2;
+}
+
+.card-img-overlay {
+    height: 50%;
+    position: relative;
 }
 
 .review-set {
@@ -100,7 +123,7 @@ a {
 
 
 #featured-review-header {
-    text-align: end;
+    text-align: center;
     font-weight: 400;
     color: #fff;
 }
@@ -270,6 +293,7 @@ i {
 .search-container {
     width: 90%;
     margin: 2px auto;
+    height: 25vh;
 }
 
 .search-bar {
