@@ -77,30 +77,42 @@ a {
 
 .featured-review,
 .review-set {
-    width: 90%;
+    width: 95%;
     margin: 30px auto;
     align-items: center;
+    padding: 30px;
+}
+
+.featured-review {
+    height: 100vh;
 }
 
 .featured-review-card {
     background-color: #000 !important;
     border: 1px solid #F01D7F;
+    margin: 30px 10px;
 }
 
 .featured-review-card-body {
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .review-set {
-    margin-top: 5px;
-    height: 50vh;
+    margin-top: 30px;
+    height: 100vh;
 }
 
-.featured-review {
-    height: 80vh;
+.review-collection {
+    height: 100%;
 }
+
+.review-col {
+    height: 100%;
+}
+
+
 
 #featured-review-header {
     text-align: end;
@@ -126,7 +138,7 @@ a {
 }
 
 .review-img {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
 }
 
