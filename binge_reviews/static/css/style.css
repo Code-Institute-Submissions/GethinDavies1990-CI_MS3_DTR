@@ -85,25 +85,18 @@ a {
 
 .featured-review {
     height: 100vh;
+    vertical-align: middle;
 }
 
-.featured-review-card {
-    background-color: #000 !important;
-    border: 1px solid #F01D7F;
-    margin: 30px 10px;
-}
 
-.featured-review-card-body {
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
+.card-img {
+    opacity: 0.3;
 }
 
 .review-set {
     margin-top: 30px;
     height: 70vh;
 }
-
 
 
 #featured-review-header {
@@ -127,8 +120,8 @@ a {
 
 .feat-review-img {
     height: 100%;
-    width: auto;
     object-fit: cover;
+
 }
 
 .review-img {
