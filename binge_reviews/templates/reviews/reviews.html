@@ -27,13 +27,13 @@
     {% if loop.first %}
     <div class="card mb-3 text-bg-dark featured-review-card">
         <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-7">
                 <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">
                     <img src="{{ review.review_image }}" alt="{{ review.film_name }}"
                         class="img-fluid card-img-top feat-review-img">
                 </a>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-3">
                 <div class="card-body featured-review-card-body">
                     <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons">
                             new_releases
