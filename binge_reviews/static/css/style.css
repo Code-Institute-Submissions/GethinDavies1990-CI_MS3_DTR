@@ -101,17 +101,12 @@ a {
 
 .review-set {
     margin-top: 30px;
-    height: 100vh;
+    height: 70vh;
 }
 
 .review-collection {
     height: 100%;
 }
-
-.review-col {
-    height: 100%;
-}
-
 
 
 #featured-review-header {
@@ -134,21 +129,12 @@ a {
     height: 100%;
     width: auto;
     object-fit: cover;
-    float: left;
 }
 
 .review-img {
     object-fit: contain;
-    height: 100%;
 }
 
-.card-img-top {
-    height: 100%;
-}
-
-.review-card {
-    height: 150px;
-}
 
 .film-title {
     font-size: 32px;

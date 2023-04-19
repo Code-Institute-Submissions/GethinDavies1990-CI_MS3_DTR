@@ -65,10 +65,10 @@
 </div>
 <hr>
 <div class="review-set">
-    <div class="row row-cols-1 row-cols-md-4 g-4 review-collection">
+    <div class="row row-cols-1 row-cols-md-4 g-4 review-collection d-flex">
         {% for review in reviews %}
         <div class="col review-col ">
-            <div class="card text-bg-dark">
+            <div class="card text-bg-dark h-100">
                 <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
                 <div class="card-body ">
                     <h5 class="card-title">{{ review.film_name }}</h5>
