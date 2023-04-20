@@ -240,11 +240,15 @@ a {
 
 /* Publish Review Page */
 
-.add-review-form {
+.add-edit-review-form {
     width: 80%;
 }
 
-.add-review-card {
+.add-edit-review-card {
+    width: 80%;
+}
+
+.form-range {
     width: 80%;
 }
 
@@ -285,10 +289,15 @@ a {
     color: #F01D7F;
 }
 
+.add-edit-sec-btn,
 .sec-btn {
     background-color: #28282B;
     border: 1px solid #F01D7F;
     color: #F01D7F;
+}
+
+.add-edit-sec-btn {
+    width: 100%;
 }
 
 .sec-btn:hover {
@@ -430,5 +439,12 @@ form {
         margin-left: 1px;
     }
 
+    .add-edit-review-form {
+        width: 95%;
+    }
+
+    .add-edit-review-card {
+        width: 95%;
+    }
 
 }
