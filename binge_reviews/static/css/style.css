@@ -238,6 +238,16 @@ a {
     text-transform: capitalize;
 }
 
+/* Publish Review Page */
+
+.add-review-form {
+    width: 80%;
+}
+
+.add-review-card {
+    width: 80%;
+}
+
 /* Buttons */
 
 .button,

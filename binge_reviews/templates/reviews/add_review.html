@@ -1,28 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="text-white text-center">Add Review</h3>
+<h3 class="text-pink text-center">Add Review</h3>
 
-<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form class="review-form" method="POST" enctype="multipart/form-data" action="{{ url_for('reviews.add_review')}}">
+<div
+    class="register-login-card add-review-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+    <form class="add-review-form" method="POST" enctype="multipart/form-data"
+        action="{{ url_for('reviews.add_review')}}">
         <!-- Film Name -->
         <div class="row">
             <div class="mb-2 mt-3">
-                <i class="fa-solid fa-clapperboard"></i>
-                <label for="film_name" class="form-label mb-2 mt-2">Film Name</label>
+                <label for="film_name" class="form-label mb-2 mt-2"><span
+                        class="material-symbols-outlined material-icons icon">
+                        movie
+                    </span>Film Name</label>
                 <input type="text" class="form-control" id="film_name" name="film_name" min-length="5" maxlength="50"
                     required>
             </div>
         </div>
         <div class="row">
-            <div class="">
+            <div class="mb-2 mt-3">
+                <label for="review_image" class="form-label mb-2 mt-2"><span
+                        class="material-symbols-outlined material-icons icon">
+                        upload
+                    </span>Review Image</label>
                 <input class="form-control validate" type="file" id="review_image" name="review_image" value="file"
                     required>
             </div>
             <!-- Review Title -->
             <div class="row">
                 <div class="mb-2">
-                    <i class="fa-solid fa-heading"></i>
-                    <label for="review_title" class="form-label mb-2 mt-2">Review Title</label>
+                    <label for="review_title" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            title
+                        </span>Review Title</label>
                     <input type="text" class="form-control" id="review_title" name="review_title" min-length="5"
                         maxlength="50" required>
                 </div>
@@ -30,8 +40,10 @@
             <!-- Category selection -->
             <div class="row">
                 <div class="mb-3">
-                    <i class="fa-solid fa-film"></i>
-                    <label for="category_name" class=" mb-2 mt-2">Select Category</label>
+                    <label for="category_name" class=" mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            category
+                        </span>Select Category</label>
                     <select id="category_name" name="category_name" class="form-select form-select-sm"
                         aria-label=".form-select-sm example" required>
                         <option selected>Choose Genre</option>
@@ -44,8 +56,10 @@
             <!-- Review Description -->
             <div class="row">
                 <div class="mb-3">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <label for="review_description" class="form-label mb-2 mt-2">Review Content</label>
+                    <label for="review_description" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            description
+                        </span>Review Content</label>
                     <textarea type="text" class="form-control" id="review_description" name="review_description"
                         min-length="5" maxlength="5000" rows="15" required>
                 </textarea>
@@ -53,7 +67,7 @@
                 <label for="rating" name="rating" class="form-label">Rating out of 5</label>
                 <input type="range" class="form-range" min="1" max="5" id="rating" name="rating">
                 <!-- Submit Review Button -->
-                <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
+                <button type="submit" class="pri-btn button mb-5 mt-5">Publish Review <i
                         class="fa-solid fa-plus icon-btn"></i></button>
     </form>
 </div>
