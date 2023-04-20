@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center text-white heading">Register</h3>
+<h3 class="text-center text-pink heading"><span class="material-symbols-outlined material-icons icon-header">
+        person_add
+    </span>Register</h3>
 
-<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+<div class="register-login-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form method="POST" action="{{ url_for('authentication.register')}}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
-                <i class="fas fa-user"></i>
-                <label class="form-label mb-3 mt-3" for="username">Username</label>
+                <label class="form-label" for="username"><span class="material-symbols-outlined material-icons icon">
+                        person
+                    </span>Username</label>
                 <div class="form-outline">
                     <input type="text" id="username" name="username" minlength="5" maxlength="25"
                         pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
@@ -17,38 +20,45 @@
             </div>
         </div>
         <!-- Password input -->
-        <i class="fas fa-key"></i>
-        <label class="form-label mb-3 mt-3" for="password">Password</label>
+        <label class="form-label" for="password"><span class="material-symbols-outlined material-icons icon">
+                lock
+            </span>Password</label>
         <div class="form-outline mb-4">
             <input type="password" id="password" name="password" minlength="5" maxlength="25"
                 pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
         </div>
         <!-- First Name input -->
         <div class="col">
-            <i class="fas fa-user"></i>
-            <label class="form-label mb-3 mt-3" for="first_name">First Name</label>
+            <label class="form-label mb-3 mt-3" for="first_name"><span
+                    class="material-symbols-outlined material-icons icon">
+                    badge
+                </span>First Name</label>
             <div class="form-outline">
                 <input type="text" id="first_name" name="first_name" class="form-control" required />
             </div>
         </div>
         <!-- Last Name input -->
         <div class="col">
-            <i class="fas fa-user"></i>
-            <label class="form-label mb-3 mt-3" for="last_name">Last Name</label>
+            <label class="form-label mb-3 mt-3" for="last_name"><span
+                    class="material-symbols-outlined material-icons icon">
+                    badge
+                </span>Last Name</label>
             <div class="form-outline">
                 <input type="text" id="last_name" name="last_name" class="form-control" required />
             </div>
         </div>
         <!-- Favourtie film input -->
         <div class="col mb-4">
-            <i class="fa-solid fa-star"></i>
-            <label class="form-label mb-3 mt-3" for="fav_film">Favourite Film</label>
+            <label class="form-label mb-3 mt-3" for="fav_film"><span
+                    class="material-symbols-outlined material-icons icon">
+                    stars
+                </span>Favourite Film</label>
             <div class="form-outline">
                 <input type="text" id="fav_film" name="fav_film" class="form-control" required />
             </div>
         </div>
         <!-- Submit button -->
-        <button type="submit" class="btn btn-block mb-4">Register</button>
+        <button type="submit" class="pri-btn button mb-4">Register</button>
     </form>
 </div>
 

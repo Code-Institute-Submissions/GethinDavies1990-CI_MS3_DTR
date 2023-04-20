@@ -315,6 +315,22 @@ label {
     padding: 10px;
 }
 
+.register-login-card input {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #28282B;
+    border-bottom: 2px solid #F01D7F;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+form {
+    width: 50%;
+}
+
+
 /* Flashes */
 
 .flashes h4 {
@@ -360,6 +376,11 @@ label {
     font-size: 24px;
     vertical-align: bottom;
     margin-right: 5px;
+}
+
+.icon-header {
+    margin-right: 5px;
+    margin-top: 6px;
 }
 
 /* Media Queries */
