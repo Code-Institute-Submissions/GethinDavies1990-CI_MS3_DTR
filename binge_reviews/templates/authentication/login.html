@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center text-light heading">Login</h3>
+<h3 class="text-center text-pink heading mt-5 mb-5"><span class="material-symbols-outlined material-icons icon">
+        login
+    </span>Login</h3>
 
-<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+<div class="register-login-card card text-bg-dark mb-3 col-6 d-flex align-items-center justify-content-center">
     <form method="POST" action="{{ url_for('authentication.login')}}">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
-                <i class="fas fa-user"></i>
-                <label class="form-label mb-3 mt-3" for="username">Username</label>
+                <label class="form-label" for="username"><span class="material-symbols-outlined material-icons icon">
+                        person
+                    </span>Username</label>
                 <div class="form-outline">
                     <input type="text" id="username" name="username" minlength="5" maxlength="25"
                         pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
@@ -17,14 +20,15 @@
             </div>
         </div>
         <!-- Password input -->
-        <i class="fas fa-key"></i>
-        <label class="form-label mb-3 mt-3" for="password">Password</label>
-        <div class="form-outline mb-4">
+        <label class="form-label" for="password"><span class="material-symbols-outlined material-icons icon">
+                lock
+            </span>Password</label>
+        <div class="form-outline">
             <input type="password" id="password" name="password" minlength="5" maxlength="25"
                 pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
         </div>
         <!-- Submit button -->
-        <button type="submit" class="btn btn-block mb-4">Login</button>
+        <button type="submit" class="pri-btn button mb-4">Login</button>
     </form>
 </div>
 

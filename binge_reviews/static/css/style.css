@@ -289,6 +289,8 @@ a {
     color: #F01D7F;
 }
 
+/* Register - Login Page */
+
 .registered-text,
 .logged-in-text {
     color: #F01D7F;
@@ -299,12 +301,21 @@ a {
     color: #fff;
 }
 
-
-i {
-    color: #F01D7F;
-    font-size: 16px;
-    padding-right: 5px;
+.register-login-card {
+    margin: 30px auto;
+    background-color: #000 !important;
+    border: 1px solid #F01D7F;
 }
+
+.register-login-card button {
+    width: 100%;
+}
+
+label {
+    padding: 10px;
+}
+
+/* Flashes */
 
 .flashes h4 {
     line-height: 2;
@@ -312,13 +323,6 @@ i {
     color: #fff;
 }
 
-.icon-btn {
-    color: #fff;
-}
-
-.icon-btn:hover {
-    color: #F01D7F;
-}
 
 .input-field {
     width: 100%;
@@ -351,8 +355,11 @@ i {
 
 /* Google material icons */
 
-.material-icons {
+.icon {
     color: #F01D7F;
+    font-size: 24px;
+    vertical-align: bottom;
+    margin-right: 5px;
 }
 
 /* Media Queries */
@@ -371,5 +378,9 @@ i {
 
     .review-description {
         font-size: 16px;
+    }
+
+    .review-card {
+        width: 95%;
     }
 }

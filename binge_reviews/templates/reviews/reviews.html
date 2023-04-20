@@ -7,7 +7,7 @@
 <div class="search-container">
     <div class="row">
         <form action=" {{ url_for('reviews.search') }}" method="POST" class="col-md-6 col-lg-6 col-sm-12">
-            <span class="material-symbols-outlined material-icons">
+            <span class="material-symbols-outlined material-icons icon">
                 search
             </span>
             <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
@@ -31,13 +31,13 @@
         <img src="{{ review.review_image }}" class="card-img" alt="{{ review.film_name }}">
         <div class="card-img-overlay">
             <div class="overlay-text overlay-box">
-                <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons">
+                <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
                         new_releases
                     </span> Featured Review</h3>
                 <h5 class="card-title text-center"><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
                         class="film-title text-center">{{ review.film_name }}</a></h5>
                 <h5 class="film-snippet text-center">"{{ review.review_title}}"</h5>
-                <h4>{{ review.rating }}<span class="material-symbols-outlined material-icons">
+                <h4>{{ review.rating }}<span class="material-symbols-outlined material-icons icon">
                         star
                     </span></h4>
                 <p class="card-text"><small class="text-white">Author:
@@ -63,7 +63,7 @@
                     <p class="card-text">{{ review.review_title }}</p>
                 </div>
                 <div class="rating-container">
-                    <p>{{ review.rating }}<span class="material-symbols-outlined material-icons">
+                    <p>{{ review.rating }}<span class="material-symbols-outlined material-icons icon">
                             star
                         </span></p>
                 </div>
