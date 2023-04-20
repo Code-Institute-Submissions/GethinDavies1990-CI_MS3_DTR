@@ -408,4 +408,8 @@ form {
     .review-card {
         width: 95%;
     }
+
+    form {
+        width: 95%;
+    }
 }
