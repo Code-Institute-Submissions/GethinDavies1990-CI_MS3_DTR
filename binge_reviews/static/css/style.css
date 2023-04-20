@@ -16,6 +16,12 @@ a {
 }
 
 
+/* Text */
+
+.text-pink {
+    color: #F01D7F;
+}
+
 /* navbar */
 .navbar {
     background-color: #000 !important;
@@ -198,7 +204,7 @@ a {
 
 /* review page - each single review */
 .review-card {
-    width: 60%;
+    width: 80%;
     margin: 50px auto 30px;
     background-color: #000;
     color: #Fff;
@@ -215,6 +221,18 @@ a {
     font-size: 24px;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
+}
+
+.review-description {
+    margin: 30px 10px;
+}
+
+.reviewer-text {
+    display: block;
+}
+
+.reviewer-text::first-letter {
+    text-transform: capitalize;
 }
 
 /* Buttons */
@@ -335,4 +353,23 @@ i {
 
 .material-icons {
     color: #F01D7F;
+}
+
+/* Media Queries */
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+
+    .review-intro-text {
+        margin-bottom: 190px;
+    }
+
+    .review-title {
+        font-size: 1.2rem;
+    }
+
+    .review-description {
+        font-size: 16px;
+    }
 }
