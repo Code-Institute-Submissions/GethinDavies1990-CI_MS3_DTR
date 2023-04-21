@@ -112,6 +112,7 @@ a {
 
 .review-collection-card {
     border: 1px solid #F01D7F;
+    background-color: #000 !important;
 }
 
 .overlay-text {
