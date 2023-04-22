@@ -64,11 +64,15 @@
                         min-length="5" maxlength="5000" rows="15" required>
                 </textarea>
                 </div>
-                <label for="rating" name="rating" class="form-label">Rating out of 5</label>
-                <input type="range" class="form-range" min="1" max="5" id="rating" name="rating">
+                <div class="rating-field">
+                    <label for="rating">Rating out of 5:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
+                        class="rating-field" required>
+                </div>
                 <!-- Submit Review Button -->
                 <button type="submit" class="pri-btn button mb-5 mt-5">Publish Review <i
                         class="fa-solid fa-plus icon-btn"></i></button>
+            </div>
     </form>
 </div>
 

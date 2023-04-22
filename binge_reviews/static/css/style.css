@@ -253,9 +253,15 @@ a {
     width: 80%;
 }
 
-.form-range {
-    width: 80%;
+.rating-field {
+    width: 100%;
+    background-color: #000 !important;
+    margin: 10px auto;
+    border: 1px solid #F01D7F;
+    border-radius: 2px;
+    padding: 2px;
 }
+
 
 /* Buttons */
 
