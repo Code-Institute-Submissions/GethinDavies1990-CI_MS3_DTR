@@ -82,32 +82,18 @@ a {
     margin-top: 60px;
 }
 
-/* Reviews/Honmepage */
 
-.card {
-    margin-top: 30px;
-}
 
-.featured-review,
-.review-set {
-    width: 95%;
-    margin: 30px auto;
-    align-items: center;
-    padding: 30px;
+/* Reviews/Homepage */
+
+.review-section {
+    margin-top: 10px;
 }
 
 .featured-review {
-    height: 100vh;
     width: 100%;
-    position: relative;
-}
-
-.review-set {
-    height: 100vh;
-}
-
-.review-collection {
-    height: 80%;
+    margin: 10px;
+    justify-content: center;
 }
 
 .review-collection-card {
@@ -262,6 +248,12 @@ a {
     padding: 2px;
 }
 
+.rating-field input {
+    background-color: #fff !important;
+    border-radius: 2px;
+    margin: 5px;
+}
+
 
 /* Buttons */
 
@@ -388,13 +380,13 @@ form {
 
 .search-container {
     width: 90%;
-    margin: 2px auto;
-    height: 25vh;
+    margin: 10px auto;
+    height: 50px;
 }
 
 .search-bar {
     width: 80%;
-    margin: 20px auto 8px;
+    text-align: center;
     background-color: #28282B;
     border: 1px solid #F01D7F;
     border-radius: 15px;
