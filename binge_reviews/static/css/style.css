@@ -356,7 +356,7 @@ label {
 }
 
 form {
-    width: 50%;
+    width: 100%;
 }
 
 
@@ -371,27 +371,33 @@ form {
 
 .input-field {
     width: 100%;
-    margin: 20px auto 8px;
 }
 
 .search-button-container {
-    text-align: left;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-bar-container {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .search-container {
     width: 90%;
-    margin: 10px auto;
+    margin: 50px auto;
     height: 50px;
 }
 
 .search-bar {
-    width: 80%;
+    width: 100%;
     text-align: center;
     background-color: #28282B;
     border: 1px solid #F01D7F;
     border-radius: 15px;
     height: 30px;
     padding: 10px 13px 12px 30px;
+    margin: 20px auto;
 }
 
 .search-bar:hover {
@@ -448,6 +454,10 @@ form {
 
     .add-edit-review-card {
         width: 95%;
+    }
+
+    .search-container {
+        width: 100%;
     }
 
 }

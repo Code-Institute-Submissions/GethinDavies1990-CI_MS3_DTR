@@ -6,10 +6,12 @@
 <h3 class="text-center text-pink">Reviews</h3>
 <div class="search-container">
     <div class="row">
-        <form action=" {{ url_for('reviews.search') }}" method="POST" class="col-md-6 col-lg-6 col-sm-12">
-            <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
-                required>
-        </form>
+        <div class="search-bar-container col-md-6 col-lg-6 col-sm-12">
+            <form action=" {{ url_for('reviews.search') }}" method="POST">
+                <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
+                    required>
+            </form>
+        </div>
         <div class="col-md-6 col-lg-6 col-sm-12 search-button-container">
             <button class="pri-btn button" type="submit">
                 Search
@@ -22,7 +24,7 @@
 </div>
 <!-- Featured review section -->
 <section class="review-section">
-    <div class="featured-review">
+    <div class="featured-review col-12">
         {% for review in reviews|reverse %}
         {% if loop.first %}
         <div class="card text-bg-dark text-center">
