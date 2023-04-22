@@ -3,6 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 from flask import request
 from werkzeug.utils import secure_filename
+from datetime import datetime
 
 
 s3_bucket_name = "binge-reviews"
@@ -34,3 +35,14 @@ def upload_image(stored_file: str) -> str:
 
     image_url = s3_bucket_url + image_to_upload
     return image_url
+
+
+def get_timestamp() -> str:
+    """
+    This Function generates a timestamp.
+    :return timestamp:
+    """
+    now = datetime.now()
+    timestamp = now.strftime("%d %B, %Y")
+
+    return timestamp

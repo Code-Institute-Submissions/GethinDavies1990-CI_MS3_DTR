@@ -50,6 +50,8 @@ def add_review() -> object:
     if request.method == "POST":
         # Store Review image in S3 Bucket
         image_url = util.upload_image('review_image')
+        # Generate timestamp
+        timestamp = util.get_timestamp()
         review = {
             "review_image": image_url,
             "film_name": request.form.get("film_name"),
@@ -57,7 +59,8 @@ def add_review() -> object:
             "category_name": request.form.get("category_name"),
             "review_description": request.form.get("review_description"),
             "created_by": session["user"],
-            "rating": request.form.get("rating")
+            "rating": request.form.get("rating"),
+            "publish_date": timestamp
         }
         mongo.db.reviews.insert_one(review)
         flash("Review Published")
