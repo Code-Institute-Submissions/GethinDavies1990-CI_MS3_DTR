@@ -17,14 +17,6 @@
                     min-length="5" maxlength="50" required>
             </div>
         </div>
-        <div class="mb-2 mt-3">
-            <label for="review_image" class="form-label mb-2 mt-2"><span
-                    class="material-symbols-outlined material-icons icon">
-                    upload
-                </span>Review Image</label>
-            <input class="form-control validate" type="file" id="review_image" name="review_image" value="file"
-                required>
-        </div>
         <!-- Review Title -->
         <div class="row">
             <div class="mb-2">
@@ -44,13 +36,13 @@
                         category
                     </span>Select Category</label>
                 <select id="category_name" name="category_name" class="form-select form-select-sm"
-                    aria-label=".form-select-sm example" required>
-                    <option selected>Choose Genre</option>
+                    aria-label="form-select-sm example" required>
+                    <option value="disabled">Choose Genre</option>
                     {% for category in categories %}
                     {% if category.category_name == review.category_name %}
-                    <option value="{{ category.catgeory_name }}" selected>{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                     {% else %}
-                    <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endif %}
                     {% endfor %}
                 </select>
