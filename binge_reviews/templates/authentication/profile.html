@@ -1,75 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center text-pink heading"><span class="text-white">Update</span><br> {{ username }}'s Profile</h3>
+<h1 class="text-center text-pink">{{ username }}'s Profile</h1>
+
 <div class="row">
-    <div
-        class="register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form method="POST" enctype="multipart/form-data" class="add-edit-review-form"
-            action="{{ url_for('authentication.update_profile', username=username) }}">
-            <!--Username input -->
-            <div class="mb-4">
-                <div class="col">
-                    <label class="form-label mb-3 mt-3" for="username"><span
-                            class="material-symbols-outlined material-icons icon">
-                            person
-                        </span>Username</label>
-                    <div class="form-outline">
-                        <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                            pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" value="{{ username }}" required />
-                    </div>
-                </div>
-            </div>
-            <!-- Password input -->
-            <label class="form-label mb-3 mt-3" for="password"><span
-                    class="material-symbols-outlined material-icons icon">
-                    lock
-                </span>Password</label>
-            <div class="form-outline mb-4">
-                <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" value="{{ user.password }}" required />
-            </div>
-            <!-- First Name input -->
-            <div class="col">
-                <label class="form-label mb-3 mt-3" for="first_name"><span
-                        class="material-symbols-outlined material-icons icon">
-                        badge
-                    </span>First Name</label>
-                <div class="form-outline">
-                    <input type="text" id="first_name" name="first_name" class="form-control" value="
-                        {{- user.first_name -}}" required />
-                </div>
-            </div>
-            <!-- Last Name input -->
-            <div class=" col">
-                <label class="form-label mb-3 mt-3" for="last_name"><span
-                        class="material-symbols-outlined material-icons icon">
-                        badge
-                    </span>Last Name</label>
-                <div class="form-outline">
-                    <input type="text" id="last_name" name="last_name" class="form-control" value="{{ user.last_name }}"
-                        required />
-                </div>
-            </div>
-            <!-- Favourtie film input -->
-            <div class="col mb-4">
-                <label class="form-label mb-3 mt-3" for="fav_film"><span
-                        class="material-symbols-outlined material-icons icon">
-                        stars
-                    </span>Favourite Film</label>
-                <div class="form-outline">
-                    <input type="text" id="fav_film" name="fav_film" value="{{ user.fav_film }}" class="form-control"
-                        required />
-                </div>
-            </div>
-            <!-- Submit button -->
-            <div class="col">
-                <button type="submit" class="pri-btn button mb-4">Save Changes</button>
-                <a href="{{ url_for('authentication.delete_profile', username=username)}}"
-                    class="text-center delete-btn mb-2 mt-2">Delete</a>
-            </div>
-        </form>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-6">
+            <img src="{{ user.user_img }}" alt="{{ user.user_img }}" class="profile-img">
+        </div>
+        <div class="col-6">
+            <p class="text-white">Hey my name is <span class="text-pink">{{ user.first_name }}
+                    {{ user.last_name }}</span>.<br>
+                My Favourite film at the moment is <span class="text-pink">{{ user.fav_film|capitalize }}</span>
+            </p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+
     </div>
 </div>
-
 {% endblock %}

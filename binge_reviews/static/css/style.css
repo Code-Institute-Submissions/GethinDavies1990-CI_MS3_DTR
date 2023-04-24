@@ -341,6 +341,12 @@ a {
 
 /* Register - Login Page - Profile Page */
 
+.profile-img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .registered-text,
 .logged-in-text {
     color: #F01D7F;

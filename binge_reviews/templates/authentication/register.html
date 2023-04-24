@@ -7,7 +7,7 @@
 
 <div
     class="register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('authentication.register')}}">
+    <form method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data">
         <!--Username input -->
         <div class="row mb-4">
             <div class="col">
@@ -57,6 +57,13 @@
             <div class="form-outline">
                 <input type="text" id="fav_film" name="fav_film" class="form-control" required />
             </div>
+        </div>
+        <div class="mb-2 mt-3">
+            <label for="user_img" class="form-label mb-2 mt-2"><span
+                    class="material-symbols-outlined material-icons icon">
+                    upload
+                </span>Profile Image</label>
+            <input class="form-control validate" type="file" id="user_img" name="user_img" value="file" required>
         </div>
         <!-- Submit button -->
         <button type="submit" class="pri-btn button mb-4">Register</button>

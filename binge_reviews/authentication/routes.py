@@ -1,6 +1,6 @@
 from flask import (Flask, flash,
                    render_template, redirect,
-                   request, session, url_for, Blueprint,)
+                   request, session, url_for, Blueprint)
 from werkzeug.security import generate_password_hash, check_password_hash
 from binge_reviews import mongo
 from bson.objectid import ObjectId
@@ -23,6 +23,7 @@ def register() -> object:
     :return render_template of profile.html
     """
     if request.method == "POST":
+        image_url = util.upload_image('user_img')
         # check if username already exsists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -31,6 +32,7 @@ def register() -> object:
             flash("Username already exists")
             return redirect(url_for("authentication.register"))
         register = {
+            "user_img": image_url,
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),
@@ -38,15 +40,11 @@ def register() -> object:
             "fav_film": request.form.get("fav_film"),
             "author_bio": request.form.get("author_bio")
         }
-        try:
-            # Insert the user in to the register object
-            mongo.db.users.insert_one(register)
-            # put user into 'session' cokkie
-            session["user"] = request.form.get("username").lower()
-            flash("Registration Successful")
-        except Exception as e:
-            flash("An exception occured when adding user: " +
-                  gettattr(e, 'message', repr(e)))
+        # Insert the user in to the register object
+        mongo.db.users.insert_one(register)
+        # put user into 'session' cokkie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful")
         return redirect(
             url_for("authentication.profile", username=session["user"]))
     return render_template("authentication/register.html")
