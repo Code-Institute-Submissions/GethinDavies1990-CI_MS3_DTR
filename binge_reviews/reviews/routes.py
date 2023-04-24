@@ -78,9 +78,7 @@ def edit_review(review_id):
     own reviews.
     """
     if request.method == "POST":
-        image_url = util.upload_image('review_image')
         submit = {"$set": {
-            "review-image": image_url,
             "film_name": request.form.get("film_name"),
             "review_title": request.form.get("review_title"),
             "category_name": request.form.get("category_name"),

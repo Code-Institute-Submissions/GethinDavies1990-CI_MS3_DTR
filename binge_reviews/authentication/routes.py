@@ -95,8 +95,8 @@ def logout():
     return redirect(url_for("authentication.login"))
 
 
-@authentication.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+@authentication.route("/profile/<username>", methods=["GET"])
+def profile(username: object) -> object:
     """
     This function will render the profile page of the logged in user
     and display their profile information.
@@ -107,12 +107,12 @@ def profile(username):
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
     # grab session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    user = mongo.db.users.find_one(
+        {"username": username})
 
     if session["user"]:
         return render_template(
-            "authentication/profile.html", username=username)
+            "authentication/profile.html", username=session['user'], user=user)
 
     return redirect(url_for("authentication.login"))
 
@@ -120,7 +120,7 @@ def profile(username):
 @authentication.route("/update_profile/<username>", methods=["GET", "POST"])
 def update_profile(username: object) -> object:
     """
-    This function updates users profile with updated informatiob
+    This function updates users profile with updated information
     they ahve submitted
     :param username: username of the user
     :return render_template of profile.html
@@ -147,7 +147,7 @@ def update_profile(username: object) -> object:
                   getattr(e, 'message', repr(e)))
         # Find user and redirect them to their updated profile page
         user = mongo.db.users.find_one({"username": username})
-        return render_template("authentication/profile.html",
+        return render_template("authentication/update-profile.html",
                                username=session['user'], user=user)
 
 

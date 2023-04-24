@@ -285,6 +285,17 @@ a {
     margin: 10px auto;
 }
 
+.delete-btn {
+    width: 40%;
+    margin: 20px auto;
+    border-radius: 15px;
+    height: 30px;
+    font-size: 14px;
+    background-color: #28282B;
+    border: 1px solid #F01D7F;
+    color: #F01D7F;
+}
+
 .pri-btn {
     background-color: #F01D7F;
     border: 1px solid #fff;
