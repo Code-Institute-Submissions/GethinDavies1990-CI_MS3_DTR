@@ -3,20 +3,44 @@
 
 <h1 class="text-center text-pink">{{ username }}'s Profile</h1>
 
-<div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="col-6">
-            <img src="{{ user.user_img }}" alt="{{ user.user_img }}" class="profile-img">
-        </div>
-        <div class="col-6">
-            <p class="text-white">Hey my name is <span class="text-pink">{{ user.first_name }}
-                    {{ user.last_name }}</span>.<br>
-                My Favourite film at the moment is <span class="text-pink">{{ user.fav_film|capitalize }}</span>
-            </p>
-        </div>
+    <div class="col-12">
+        <img src="{{ user.user_img }}" alt="{{ user.user_img }}" class="rounded-circle">
+        <p class="text-white">Hey my name is <span class="text-pink">{{ user.first_name }}
+                {{ user.last_name }}</span>.<br>
+            My Favourite film at the moment is <span class="text-pink">{{ user.fav_film|capitalize }}</span>
+        </p>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12">
-
+    <h3 class="text-pink text-center mt-5 mb-5">{{ user.username }}'s Reviews</h3>
+    <div class="g-4 review-collection col-12">
+        {% for review in reviews %}
+        {% if session.user|lower == review.created_by|lower %}
+        <div class=" col-sm-3 col-md-3 col-lg-3">
+            <div class="card text-bg-dark h-100 review-collection-card">
+                <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
+                <div class="card-body ">
+                    <h5 class="card-title mb-auto">{{ review.film_name }}</h5>
+                    <p class="card-text">"{{ review.review_title }}"</p>
+                </div>
+                <div class="rating-container">
+                    <p>{{ review.rating }}<span class="material-symbols-outlined material-icons icon">
+                            star
+                        </span></p>
+                </div>
+                
+                <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                    class="pri-btn button card-btn text-center mb-1">Edit</a>
+                <a href="{{ url_for('reviews.delete_review', review_id=review._id)}}"
+                    class="sec-btn card-btn button text-center mt-2">Delete</a>
+                
+                <div class="card-footer text-center">
+                    <button class="pri-btn button card-btn text-white">
+                        <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

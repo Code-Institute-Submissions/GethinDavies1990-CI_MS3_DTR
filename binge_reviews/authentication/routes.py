@@ -107,10 +107,12 @@ def profile(username: object) -> object:
     # grab session user's username from db
     user = mongo.db.users.find_one(
         {"username": username})
+    reviews = list(mongo.db.reviews.find())
 
     if session["user"]:
         return render_template(
-            "authentication/profile.html", username=session['user'], user=user)
+            "authentication/profile.html", username=session['user'],
+            user=user, reviews=reviews)
 
     return redirect(url_for("authentication.login"))
 

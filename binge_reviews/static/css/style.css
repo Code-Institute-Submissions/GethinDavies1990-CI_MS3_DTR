@@ -341,10 +341,13 @@ a {
 
 /* Register - Login Page - Profile Page */
 
-.profile-img {
-    width: 100px;
-    object-fit: cover;
+.rounded-circle {
+    border: 1px solid;
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 30px;
 }
 
 .registered-text,
