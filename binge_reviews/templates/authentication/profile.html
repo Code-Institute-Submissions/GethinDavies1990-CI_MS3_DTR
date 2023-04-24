@@ -4,59 +4,7 @@
 <h3 class="text-center text-pink heading">{{ username }}'s Profile</h3>
 
 <div class="row">
-    <div
-        class="register-login-card add-edit-review-card card text-bg-dark mb-3 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
-        <form method="POST" enctype="multipart/form-data" class="add-edit-review-form"
-            action="{{ url_for('authentication.update_profile', username=username) }}">
-            <!--Username input -->
-            <div class="mb-4">
-                <div class="col">
-                    <i class="fas fa-user"></i>
-                    <label class="form-label mb-3 mt-3" for="username">Username</label>
-                    <div class="form-outline">
-                        <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                            pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
-                    </div>
-                </div>
-            </div>
-            <!-- Password input -->
-            <i class="fas fa-key"></i>
-            <label class="form-label mb-3 mt-3" for="password">Password</label>
-            <div class="form-outline mb-4">
-                <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
-            </div>
-            <!-- First Name input -->
-            <div class="col">
-                <i class="fas fa-user"></i>
-                <label class="form-label mb-3 mt-3" for="first_name">First Name</label>
-                <div class="form-outline">
-                    <input type="text" id="first_name" name="first_name" class="form-control" required />
-                </div>
-            </div>
-            <!-- Last Name input -->
-            <div class="col">
-                <i class="fas fa-user"></i>
-                <label class="form-label mb-3 mt-3" for="last_name">Last Name</label>
-                <div class="form-outline">
-                    <input type="text" id="last_name" name="last_name" class="form-control" required />
-                </div>
-            </div>
-            <!-- Favourtie film input -->
-            <div class="col mb-4">
-                <i class="fa-solid fa-star"></i>
-                <label class="form-label mb-3 mt-3" for="fav_film">Favourite Film</label>
-                <div class="form-outline">
-                    <input type="text" id="fav_film" name="fav_film" value="{{ username.fav_film }}"
-                        class="form-control" required />{{ username.fav_film }}
-                </div>
-            </div>
-            <!-- Submit button -->
-            <button type="submit" class="pri-btn button mb-4">Save Changes</button>
-            <a href="{{ url_for('authentication.delete_profile', username=username)}}"
-                class="text-center add-edit-sec-btn sec-btn button mb-2 mt-2">Delete</a>
-        </form>
-    </div>
+    <h1>{{ current_user.username}}</h1>
 </div>
 
 

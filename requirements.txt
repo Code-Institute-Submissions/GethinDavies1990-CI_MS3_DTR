@@ -8,6 +8,7 @@ colorama==0.4.4
 dnspython==2.3.0
 docutils==0.16
 Flask==2.2.3
+Flask-Login==0.6.2
 Flask-PyMongo==2.3.0
 itsdangerous==2.1.2
 jmespath==1.0.1

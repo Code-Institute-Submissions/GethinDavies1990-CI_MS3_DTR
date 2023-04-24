@@ -5,6 +5,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from binge_reviews import mongo
 from bson.objectid import ObjectId
 from binge_reviews.util import util
+from flask_login import (UserMixin, login_user, LoginManager,
+                         login_required, current_user)
 
 
 # Create authentication object as a blueprint

@@ -212,7 +212,7 @@ a {
 
 /* review page - each single review */
 .review-card {
-    width: 80%;
+    width: 90%;
     margin: 50px auto 30px;
     background-color: #000;
     color: #Fff;
@@ -482,5 +482,9 @@ form {
 @media only screen and (min-width: 321px) and (max-width: 768px) {
     .search-container {
         height: 20vh;
+    }
+
+    .review-card {
+        width: 95%;
     }
 }
