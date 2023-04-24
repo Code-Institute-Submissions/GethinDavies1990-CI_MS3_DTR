@@ -93,7 +93,7 @@ def logout():
     return redirect(url_for("authentication.login"))
 
 
-@authentication.route("/profile/<username>", methods=["GET"])
+@authentication.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username: object) -> object:
     """
     This function will render the profile page of the logged in user
@@ -118,12 +118,12 @@ def profile(username: object) -> object:
 
 
 @authentication.route("/update_profile/<username>", methods=["GET", "POST"])
-def update_profile(username: object) -> object:
+def update_profile(username):
     """
     This function updates users profile with updated information
-    they ahve submitted
+    they have submitted
     :param username: username of the user
-    :return render_template of profile.html
+    :return: a redirect to the updated profile page or a template for updating profile
     """
     # Create an object update_profile with updated information
     if request.method == "POST":
@@ -146,6 +146,10 @@ def update_profile(username: object) -> object:
             flash("An exception occured when adding user: " +
                   getattr(e, 'message', repr(e)))
         # Find user and redirect them to their updated profile page
+        user = mongo.db.users.find_one({"username": username})
+        return redirect(url_for('authentication.profile', username=username))
+    else:
+        # Get the user object
         user = mongo.db.users.find_one({"username": username})
         return render_template("authentication/update-profile.html",
                                username=session['user'], user=user)

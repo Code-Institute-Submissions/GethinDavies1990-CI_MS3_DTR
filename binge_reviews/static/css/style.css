@@ -341,6 +341,16 @@ a {
 
 /* Register - Login Page - Profile Page */
 
+.profile-img {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.profile-info {
+    margin: 10px auto;
+    padding: 10px;
+}
+
 .rounded-circle {
     border: 1px solid;
     border-radius: 50%;
