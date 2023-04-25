@@ -47,9 +47,10 @@
                         <p class="card-text">Author:
                             {{ review.created_by }}</p>
                     </div>
-                    <div class="col-12">
-                        <button class="pri-btn button text-white mt-auto feat-review-btn">
-                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
+                    <div class="col-8 text-center featured-review-btn-container">
+                        <button class="pri-btn button mt-auto">
+                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" type="submit">Full
+                                Review</a>
                         </button>
                     </div>
 
@@ -75,10 +76,10 @@
                 </div>
                 {% if session.user|lower == review.created_by|lower %}
                 <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
-                    class="pri-btn button card-btn text-center mb-1">Edit/Delete</a>
+                    class="pri-btn button text-center mb-1">Edit/Delete</a>
                 {% endif %}
                 <div class="card-footer text-center">
-                    <button class="pri-btn button card-btn text-white">
+                    <button class="pri-btn button text-white mt-auto">
                         <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
                     </button>
                 </div>
