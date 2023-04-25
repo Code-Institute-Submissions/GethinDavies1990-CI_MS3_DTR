@@ -101,7 +101,7 @@ a {
 }
 
 .review-collection-card {
-    border: 1px solid #F01D7F;
+    border: 1px solid #28282B;
     background-color: #000 !important;
 }
 
@@ -208,6 +208,17 @@ a {
 .card-title {
     font-size: 24px;
     color: #fff;
+}
+
+/* Modal */
+
+.modal-content {
+    background-color: #28282B;
+    border: 1px solid #F01D7F;
+}
+
+.modal-header {
+    background-color: #F01D7F;
 }
 
 /* review page - each single review */
