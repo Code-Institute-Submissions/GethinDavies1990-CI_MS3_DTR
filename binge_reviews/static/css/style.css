@@ -240,6 +240,7 @@ a {
 
 .review-description {
     margin: 30px 10px;
+    text-align: left;
 }
 
 .reviewer-text {
