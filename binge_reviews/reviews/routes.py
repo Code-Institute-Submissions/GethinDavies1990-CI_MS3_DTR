@@ -43,27 +43,31 @@ def search():
 def add_review() -> object:
     """
     This function allows the user to add reviews to the
-    application. On succesfull submission the user is 
+    application. On succesfull submission the user is
     redirected to the reviews.html page.
     """
 
     if request.method == "POST":
-        # Store Review image in S3 Bucket
-        image_url = util.upload_image('review_image')
-        # Generate timestamp
-        timestamp = util.get_timestamp()
-        review = {
-            "review_image": image_url,
-            "film_name": request.form.get("film_name"),
-            "review_title": request.form.get("review_title"),
-            "category_name": request.form.get("category_name"),
-            "review_description": request.form.get("review_description"),
-            "created_by": session["user"],
-            "rating": request.form.get("rating"),
-            "publish_date": timestamp
-        }
-        mongo.db.reviews.insert_one(review)
-        flash("Review Published")
+        try:
+            # Store Review image in S3 Bucket
+            image_url = util.upload_image('review_image')
+            # Generate timestamp
+            timestamp = util.get_timestamp()
+            review = {
+                "review_image": image_url,
+                "film_name": request.form.get("film_name"),
+                "review_title": request.form.get("review_title"),
+                "category_name": request.form.get("category_name"),
+                "review_description": request.form.get("review_description"),
+                "created_by": session["user"],
+                "rating": request.form.get("rating"),
+                "publish_date": timestamp
+            }
+            mongo.db.reviews.insert_one(review)
+            flash("Review Published")
+        except Exception as e:
+            flash("An exception occured when adding user: " +
+                  getattr(e, 'message', repr(e)))
         return redirect(url_for('reviews.get_reviews'))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -78,16 +82,20 @@ def edit_review(review_id):
     own reviews.
     """
     if request.method == "POST":
-        submit = {"$set": {
-            "film_name": request.form.get("film_name"),
-            "review_title": request.form.get("review_title"),
-            "category_name": request.form.get("category_name"),
-            "review_description": request.form.get("review_description"),
-            "created_by": session["user"],
-            "rating": request.form.get("rating")
-        }}
-        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, submit)
-        flash("Review Successfully Edited")
+        try:
+            submit = {"$set": {
+                "film_name": request.form.get("film_name"),
+                "review_title": request.form.get("review_title"),
+                "category_name": request.form.get("category_name"),
+                "review_description": request.form.get("review_description"),
+                "created_by": session["user"],
+                "rating": request.form.get("rating")
+            }}
+            mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, submit)
+            flash("Review Successfully Edited")
+        except Exception as e:
+            flash("An exception occured when adding user: " +
+                  getattr(e, 'message', repr(e)))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -99,7 +107,7 @@ def edit_review(review_id):
 def delete_review(review_id):
     """
     This function allows the user to delete their own reviews.
-    they will not be able to delete other user reviews. 
+    they will not be able to delete other user reviews.
     """
     mongo.db.reviews.delete_one({"_id": ObjectId(review_id)})
     flash("Review Successfully Removed")

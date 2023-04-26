@@ -22,12 +22,10 @@ def create_app():
     """
     # Import routes
     from binge_reviews.authentication.routes import authentication
-    from binge_reviews.categories.routes import categories
     from binge_reviews.errors.routes import errors
     from binge_reviews.reviews.routes import reviews
     # Register routes with app
     app.register_blueprint(authentication)
-    app.register_blueprint(categories)
     app.register_blueprint(errors)
     app.register_blueprint(reviews)
     # return app
