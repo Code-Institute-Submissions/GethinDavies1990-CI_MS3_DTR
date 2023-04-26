@@ -127,7 +127,7 @@ def update_profile(username):
     This function updates users profile with updated information
     they have submitted
     :param username: username of the user
-    :return: a redirect to the updated profile page or 
+    :return: a redirect to the updated profile page or
     a template for updating profile
     """
     # Create an object update_profile with updated information
