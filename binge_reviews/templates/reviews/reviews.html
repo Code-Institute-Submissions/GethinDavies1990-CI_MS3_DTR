@@ -7,14 +7,14 @@
 <h3 class="text-center text-pink">Reviews</h3>
 <div class="search-container">
     <div class="row">
-        <div class="search-bar-container col-md-6 col-lg-6 col-sm-12">
+        <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
             <form action=" {{ url_for('reviews.search') }}" method="POST">
                 <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
                     required>
             </form>
         </div>
-        <div class="col-md-6 col-lg-6 col-sm-12 search-button-container">
-            <button class="pri-btn button" type="submit">
+        <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
+            <button class="pri-btn button mt-1" type="submit">
                 Search
             </button>
             <button class="sec-btn button">
