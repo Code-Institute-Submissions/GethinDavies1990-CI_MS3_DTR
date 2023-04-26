@@ -40,11 +40,15 @@ def register() -> object:
             "fav_film": request.form.get("fav_film"),
             "author_bio": request.form.get("author_bio")
         }
-        # Insert the user in to the register object
-        mongo.db.users.insert_one(register)
-        # put user into 'session' cokkie
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful")
+        try:
+            # Insert the user in to the register object
+            mongo.db.users.insert_one(register)
+            # put user into 'session' cookie
+            session["user"] = request.form.get("username").lower()
+            flash("Registration Successful")
+        except Exception as e:
+            flash("An excpetion has occurred when adding new user: " +
+                  getattr(e, 'message', repr(e)))
         return redirect(
             url_for("authentication.profile", username=session["user"]))
     return render_template("authentication/register.html")
@@ -123,7 +127,8 @@ def update_profile(username):
     This function updates users profile with updated information
     they have submitted
     :param username: username of the user
-    :return: a redirect to the updated profile page or a template for updating profile
+    :return: a redirect to the updated profile page or 
+    a template for updating profile
     """
     # Create an object update_profile with updated information
     if request.method == "POST":
