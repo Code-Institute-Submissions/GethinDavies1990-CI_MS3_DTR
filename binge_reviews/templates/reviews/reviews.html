@@ -75,7 +75,7 @@
                             star
                         </span></p>
                 </div>
-                {% if session.user|lower == review.created_by|lower %}
+                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
                 <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
                     class="pri-btn button text-center mb-1">Edit/Delete</a>
                 {% endif %}
@@ -88,7 +88,6 @@
         </div>
         {% endfor %}
     </div>
-
 
 </section>
 
