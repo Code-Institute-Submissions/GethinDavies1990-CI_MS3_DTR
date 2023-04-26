@@ -289,7 +289,6 @@ a {
     vertical-align: middle;
 }
 
-
 .button,
 .card-btn {
     width: 150px;
@@ -345,7 +344,9 @@ a {
     color: #F01D7F;
 }
 
-
+.edit-category-buttons {
+    margin: 5px auto;
+}
 
 .sec-btn:hover {
     background-color: #28282B;
@@ -395,9 +396,6 @@ a {
     border: 1px solid none;
 }
 
-.register-login-card button {
-    width: 100%;
-}
 
 label {
     padding: 10px;
@@ -434,6 +432,7 @@ form {
     color: #fff;
 }
 
+/* Search Section */
 
 .input-field {
     width: 100%;
@@ -526,6 +525,11 @@ form {
         width: 100%;
         height: 20vh;
     }
+
+    .register-login-card {
+        width: 95%;
+    }
+
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
@@ -534,6 +538,10 @@ form {
     }
 
     .review-card {
+        width: 95%;
+    }
+
+    .register-login-card {
         width: 95%;
     }
 }

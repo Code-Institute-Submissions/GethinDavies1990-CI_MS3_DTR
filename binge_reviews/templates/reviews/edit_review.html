@@ -69,8 +69,9 @@
             <!-- Cancel Changes Button -->
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="{{ url_for('reviews.get_reviews') }}" type="submit"
-                        class="sec-btn button mb-2 mt-2 text-center">Cancel Changes</a>
+                    <button class="sec-btn button mb-2 mt-2 text-center"><a href="{{ url_for('reviews.get_reviews') }}"
+                            type="submit">Cancel Changes</a></button>
+
                 </div>
                 <!-- Submit Review Button -->
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -99,7 +100,7 @@
                 <div class="modal-footer">
                     <button type="button" class="pri-btn button" data-bs-dismiss="modal">Close</button>
                     <a href="{{ url_for('reviews.delete_review', review_id=review._id)}}"
-                        class="sec-btn card-btn button text-center mt-2">Delete</a>
+                        class="sec-btn button text-center mt-2">Delete</a>
                 </div>
             </div>
         </div>

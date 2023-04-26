@@ -4,13 +4,14 @@
 <h3 class="text-white text-center">Edit Category</h3>
 
 
-<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+<div
+    class="register-card register-login-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form class="review-form" method="POST" enctype="multipart/form-data"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
         <div class="row">
             <div class="mb-2 mt-3">
-                <i class="fa-solid fa-clapperboard"></i>
+                <i class="fa-solid fa-clapperboard text-pink"></i>
                 <label for="category_name" class="form-label mb-2 mt-2">Category Name</label>
                 <input type="text" class="form-control" value="{{ category.category_name }}" id="category_name"
                     name="category_name" min-length="3" maxlength="25" required>
@@ -23,13 +24,16 @@
             </div>
         </div>
         <!-- Cancel Edit Category Button -->
-        <div class="col">
-            <a href="{{ url_for('categories.get_categories') }}" type="submit"
-                class="btn btn-secondary mb-2 mt-2">Cancel <i class="fa-solid fa-xmark icon-btn"></i></a>
+        <div class="row edit-category-buttons">
+            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                <a href="{{ url_for('categories.get_categories') }}" type="submit"
+                    class="sec-btn button text-center mb-2 mt-2">Cancel</a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- Edit Category Button -->
+                <button type="submit" class="pri-btn button mb-2 mt-2">Edit Category</button>
+            </div>
         </div>
-        <!-- Edit Category Button -->
-        <button type="submit" class="btn btn-primary mb-2 mt-2">Edit Category<i
-                class="fa-solid fa-pen-to-square icon-btn"></i></button>
     </form>
 </div>
 
