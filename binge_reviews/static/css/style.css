@@ -531,7 +531,7 @@ form {
     }
 
     .button {
-        margin: 5px;
+        margin: 5px auto;
     }
 
 }
@@ -550,7 +550,7 @@ form {
     }
 
     .button {
-        margin: 5px;
+        margin: 5px auto;
     }
 }
 
