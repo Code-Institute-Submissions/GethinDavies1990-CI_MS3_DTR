@@ -18,7 +18,8 @@ def get_reviews():
     by users.
     """
     reviews = list(mongo.db.reviews.find())
-    return render_template("reviews/reviews.html", reviews=reviews)
+    user = list(mongo.db.users.find())
+    return render_template("reviews/reviews.html", reviews=reviews, user=user)
 
 
 @reviews.route("/get_review/<review_id>",)

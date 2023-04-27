@@ -34,32 +34,27 @@
                 <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
                         new_releases
                     </span> Featured Review</h3>
-                <div class="row">
-                    <div class="col-6">
-                        <h5 class="card-title"><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="film-title">{{ review.film_name }}</a></h5>
-                        <h5 class="card-title">{{ review.rating }}<span
-                                class="material-symbols-outlined material-icons icon">
-                                star
-                            </span></h5>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <h5 class="film-snippet">"{{ review.review_title}}"</h5>
-                        <p class="card-text">Author:
-                            {{ review.created_by }}</p>
-                    </div>
-                    <div class="col-8 text-center featured-review-btn-container">
-                        <button class="pri-btn button mt-auto" type="button">
-                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
-                                Review</a>
-                        </button>
-                    </div>
-
-                </div>
+                <h5 class="card-title text-center"><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                        class="film-title">{{ review.film_name }} <span
+                            class="text-white">{{ review.rating }}</span><span
+                            class="material-symbols-outlined material-icons icon-header">
+                            star
+                        </span></a></h5>
+                <h5 class="film-snippet">"{{ review.review_title}}"</h5>
+                <p class="card-text author-text">Author:
+                    {{ review.created_by }}</p><img src="{{ user.user_img }}" alt="{{ user.user_img }}"
+                    class="rounded-circle-featured-img">
+            </div>
+            <div class="col-8 text-center featured-review-btn-container">
+                <button class="pri-btn button mt-auto" type="button">
+                    <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
+                        Review</a>
+                </button>
             </div>
         </div>
-        {% endif %}
-        {% endfor %}
+    </div>
+    {% endif %}
+    {% endfor %}
     </div>
     <div class=" row g-4 review-collection">
         {% for review in reviews %}
@@ -67,13 +62,14 @@
             <div class="card text-bg-dark h-100 review-collection-card">
                 <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
                 <div class="card-body ">
-                    <h5 class="card-title mb-auto">{{ review.film_name }}</h5>
+                    <h5 class="card-title-small text-center"><a
+                            href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                            class="film-title">{{ review.film_name }} <span
+                                class="text-white">{{ review.rating }}</span><span
+                                class="material-symbols-outlined material-icons icon">
+                                star
+                            </span></a></h5>
                     <p class="card-text">"{{ review.review_title }}"</p>
-                </div>
-                <div class="rating-container">
-                    <p>{{ review.rating }}<span class="material-symbols-outlined material-icons icon">
-                            star
-                        </span></p>
                 </div>
                 {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
                 <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"

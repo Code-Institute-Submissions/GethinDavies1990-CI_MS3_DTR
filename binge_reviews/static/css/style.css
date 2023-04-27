@@ -127,8 +127,14 @@ a {
 
 
 #featured-review-header {
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
+    text-align: left;
+    font-size: 20px;
+}
+
+.featured-review-film-title {
+    font-size: 24px;
 }
 
 .card-title {
@@ -195,7 +201,7 @@ a {
 .film-snippet,
 .card-text {
     font-weight: 400;
-    text-align: right;
+    text-align: left;
     color: #fff;
     margin: 20px 2px 20px 10px;
     font-style: italic;
@@ -205,6 +211,41 @@ a {
     font-size: 24px;
     color: #fff;
 }
+
+.author-text {
+    text-align: right;
+    font-size: 20px;
+    color: #F01D7F;
+}
+
+.rounded-circle-featured-img {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 10px;
+}
+
+.card-title-small {
+    font-size: 16px;
+    text-align: center;
+    margin: 1px;
+}
+
+.card-title-small>a {
+    font-size: 16px;
+    text-align: center;
+}
+
+.card-title-small>.film-title {
+    margin: 1px;
+}
+
+.card-title-small>.icon-header {
+    font-size: 16px;
+}
+
 
 /* Modal */
 
