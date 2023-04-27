@@ -16,6 +16,28 @@ a {
 }
 
 
+/* form validation */
+
+.input-control input {
+    border: 5px solid yellow;
+    color: #fff;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+
 /* Text */
 
 .text-pink {
@@ -575,6 +597,10 @@ form {
         margin: 5px auto;
     }
 
+    .film-title {
+        font-size: 16px;
+    }
+
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
@@ -593,10 +619,18 @@ form {
     .button {
         margin: 5px auto;
     }
+
+    .film-title {
+        font-size: 19px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 995px) {
     .search-container {
         height: 20vh;
+    }
+
+    .film-title {
+        font-size: 16px;
     }
 }

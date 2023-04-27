@@ -7,64 +7,57 @@
     </span>Register</h3>
 
 <div
-    class="register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data">
+    class="form register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+    <form method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data" id="reg-form">
         <!--Username input -->
         <div class="row mb-4">
-            <div class="col">
-                <label class="form-label" for="username"><span class="material-symbols-outlined material-icons icon">
+            <div class="col input-control">
+                <label for="username"><span class="material-symbols-outlined material-icons icon">
                         person
                     </span>Username</label>
-                <div class="form-outline">
-                    <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                        pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
-                </div>
+                <input type="text" id="username" name="username" minlength="5" maxlength="25" required />
+                <div class="error"></div>
             </div>
         </div>
         <!-- Password input -->
-        <label class="form-label" for="password"><span class="material-symbols-outlined material-icons icon">
-                lock
-            </span>Password</label>
-        <div class="form-outline mb-4">
+        <div class="input-control">
+            <label for="password"><span class="material-symbols-outlined material-icons icon">
+                    lock
+                </span>Password</label>
             <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required />
+                pattern="^[a-zA-Z0-9]{5,25}$" required />
+            <div class="error"></div>
         </div>
         <!-- First Name input -->
-        <div class="col">
-            <label class="form-label mb-3 mt-3" for="first_name"><span
-                    class="material-symbols-outlined material-icons icon">
+        <div class="col input-control">
+            <label class="mb-3 mt-3" for="first_name"><span class="material-symbols-outlined material-icons icon">
                     badge
                 </span>First Name</label>
-            <div class="form-outline">
-                <input type="text" id="first_name" name="first_name" class="form-control" required />
-            </div>
+            <input type="text" id="first_name" name="first_name" required />
+            <div class="error"></div>
         </div>
         <!-- Last Name input -->
-        <div class="col">
-            <label class="form-label mb-3 mt-3" for="last_name"><span
-                    class="material-symbols-outlined material-icons icon">
+        <div class="col input-control">
+            <label class="mb-3 mt-3" for="last_name"><span class="material-symbols-outlined material-icons icon">
                     badge
                 </span>Last Name</label>
-            <div class="form-outline">
-                <input type="text" id="last_name" name="last_name" class="form-control" required />
-            </div>
+            <input type="text" id="last_name" name="last_name" required />
+            <div class="error"></div>
         </div>
         <!-- Favourtie film input -->
-        <div class="col mb-4">
-            <label class="form-label mb-3 mt-3" for="fav_film"><span
-                    class="material-symbols-outlined material-icons icon">
+        <div class="col mb-4 input-control">
+            <label class="mb-3 mt-3" for="fav_film"><span class="material-symbols-outlined material-icons icon">
                     stars
                 </span>Favourite Film</label>
-            <div class="form-outline">
-                <input type="text" id="fav_film" name="fav_film" class="form-control" required />
-            </div>
+            <input type="text" id="fav_film" name="fav_film" required />
+            <div class="error"></div>
         </div>
-        <div class="mb-2 mt-3">
-            <label for="user_img" class="form-label mb-2 mt-2"><span
-                    class="material-symbols-outlined material-icons icon">
+        <div class="mb-2 mt-3 input-control">
+            <label for=" user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
                     upload
                 </span>Profile Image</label>
-            <input class="form-control validate" type="file" id="user_img" name="user_img" value="file" required>
+            <input type="file" id="user_img" name="user_img" value="file" required>
+            <div class="error"></div>
         </div>
         <!-- Submit button -->
         <button type="submit" class="pri-btn button mb-4">Register</button>
