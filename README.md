@@ -47,4 +47,19 @@ I have structured the website into 18 pages, each with consistent styling throug
 
 ## Code Structure 
 - My project was built using the Blueprints structure
+- The blueprint structure is an object to structure a flask application into subsets. This helped keeping the site split into sections for organization and readability.
+- This link here really helped me to understand how to structure my website using blueprints. https://realpython.com/flask-blueprint/
+- The Project is structured as follows:
+    - Authentication: Contains a flask route for authentication code, Register/Login/Profile etc.
+    - Categories: Contains the routes for Adding categories, Edit Categories, and deleting categories. 
+    - Errors: Contains the routes for error pages, 400, 401, 404, 405, 500
+    - reviews: Contains the routes for the reviews code. add review, edit review, Delete review etc
+    - Static
+        - css( Styles css)
+        - images ( images used in the project)
+        - js ( Javascript used through the website)
+    - Templates: includes all the templates structured into subset folders for each route. Authentication/Categories/Errors/Reviews.
+    - Util: Code used to store the images in a AWS S3 bucket.
+    - app.py: That sets and runs the application
+    - a local env.py file, tha is not committed to source control - Tis ensures sensitive information is hidden in environment variables and never committed to repositories.
 
