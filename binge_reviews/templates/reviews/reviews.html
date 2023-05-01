@@ -41,9 +41,9 @@
                             star
                         </span></a></h5>
                 <h5 class="film-snippet">"{{ review.review_title}}"</h5>
-                <p class="card-text author-text">Author:
-                    {{ review.created_by }}</p><img src="{{ user.user_img }}" alt="{{ user.user_img }}"
-                    class="rounded-circle-featured-img">
+                <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
+                    {{ review.publish_date }}
+                </p>
             </div>
             <div class="col-8 text-center featured-review-btn-container">
                 <button class="pri-btn button mt-auto" type="button">
