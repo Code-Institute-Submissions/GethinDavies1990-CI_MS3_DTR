@@ -3,24 +3,9 @@
 {% block nav_home %}active{% endblock %}
 {% block content %}
 
-<div class="search-container">
-    <div class="row">
-        <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
-            <form action=" {{ url_for('reviews.search') }}" method="POST">
-                <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
-                    required>
-            </form>
-        </div>
-        <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
-            <button class="pri-btn button mt-1" type="submit">
-                Search
-            </button>
-            <button class="sec-btn button">
-                <a href="{{ url_for('reviews.get_reviews') }}">Reset</a>
-            </button>
-        </div>
-    </div>
-</div>
+<h1 class="text-center text-pink mb-4 mt-4">Welcome to Binge Reviews!</h1>
+<p class="text-center text-white mb-4">Binge reviews is a review webiste, for film and television fans to submit their
+    own reviews!</p>
 <!-- Featured review section -->
 <section class="review-section">
     <div class="featured-review text-center">
