@@ -32,7 +32,8 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">HOME</a>
-              <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">REVIEWS</a>
+              <a class="nav-link {{'active' if active_page == 'reviews' }}" aria-current="page"" href="
+                {{ url_for('reviews.get_reviews') }}">REVIEWS</a>
               {% if session.user|lower == "admin"|lower %}
               <a class="nav-link" href="{{ url_for('categories.get_categories') }}">CATEGORIES</a>
               {% else %}

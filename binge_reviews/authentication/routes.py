@@ -94,7 +94,7 @@ def logout():
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("authentication.login"))
+    return redirect(url_for("reviews.get_reviews"))
 
 
 @authentication.route("/profile/<username>", methods=["GET", "POST"])

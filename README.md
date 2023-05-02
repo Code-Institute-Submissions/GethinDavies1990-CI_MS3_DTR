@@ -152,4 +152,29 @@ client = boto3.client('s3',
 
 ## User stories for site user
 
-- 
+- User Story 1.1: As a regular user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices
+- User Story 1.2: As a regular user the navigation item selected is highlighted
+- User Story 1.3: As a regular user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
+- User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
+- User Story 2.1: As a regular user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
+- User Story 2.2: As a regular user I can view the websites terms and condition page by clicking on the link in the footer
+- User Story 3.1: As a regular user I can view a hero image with login and register buttons on the home/landing page
+- User Story 3.2: As a regular user I can view the latest reviews left bu users
+- User Story 3.3: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page
+- User Story 3.4: As a regular user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
+- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+- User Story 4.2: As a regular user my username must be a minimum of 5 characters, and a max of 25 characters.
+- User Story 4.3: As a regular user my password must be a minimum of 8 characters.
+- User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
+- User Story 4.5: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
+- User Story 4.6: As a regular user, when I am logged into the site, and I click the back button I am automatically redirected to the Login Page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
+- User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review decription content, and rate the film out of 5.
+- User Story 5.2: Add Review - As a regular user the review image I upload must be png or jpg format
+- User Story 5.3: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.4: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
+- User Story 5.6: View Review - As a regular user I can view a review by clicking on the 'Full review' button
+- User Story 5.7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
+- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
+- User Story 6.2: As a regular user I can update my profile password
+- User Story 6.3: As a regular user I can update my profile details: Username, First Name, Last Name, Favourite Film 
+- User Story 6.4: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile. 

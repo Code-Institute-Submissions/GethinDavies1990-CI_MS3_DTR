@@ -15,6 +15,9 @@ a {
     color: #F01D7F;
 }
 
+.active a {
+    color: #F01D7F;
+}
 
 /* form validation */
 
