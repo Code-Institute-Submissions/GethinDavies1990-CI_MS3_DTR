@@ -10,7 +10,18 @@ from binge_reviews.util import util
 reviews = Blueprint('reviews', __name__)
 
 
-@reviews.route("/")
+@reviews.route("/home")
+def go_home():
+    """
+    This function returns the user back to the homepage
+    """
+    reviews = list(mongo.db.reviews.find())
+    latest_reviews = list(mongo.db.reviews.find().
+                          sort("_id", -1).limit(4))
+    return render_template("home.html", reviews=reviews,
+                           latest_reviews=latest_reviews)
+
+
 @reviews.route("/get_reviews")
 def get_reviews():
     """
@@ -19,7 +30,9 @@ def get_reviews():
     """
     reviews = list(mongo.db.reviews.find())
     user = list(mongo.db.users.find())
-    return render_template("reviews/reviews.html", reviews=reviews, user=user)
+
+    return render_template("reviews/reviews.html",
+                           reviews=reviews, user=user)
 
 
 @reviews.route("/get_review/<review_id>",)

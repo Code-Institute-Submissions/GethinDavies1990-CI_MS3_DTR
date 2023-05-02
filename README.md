@@ -381,7 +381,8 @@ The footer is displayed on all pages of the website and has one section, I decid
 ### Phone Footer
 ![Phone Footer](binge_reviews/static/images/features/footer/phone-footer.jpg)
 
-
+### User Stories Feature 2
+- User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
 
 
 

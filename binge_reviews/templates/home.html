@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Reviews{% endblock %}
+{% block nav_home %}active{% endblock %}
+{% block content %}
+
+<div class="search-container">
+    <div class="row">
+        <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
+            <form action=" {{ url_for('reviews.search') }}" method="POST">
+                <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
+                    required>
+            </form>
+        </div>
+        <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
+            <button class="pri-btn button mt-1" type="submit">
+                Search
+            </button>
+            <button class="sec-btn button">
+                <a href="{{ url_for('reviews.get_reviews') }}">Reset</a>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Featured review section -->
+<section class="review-section">
+    <div class="featured-review text-center">
+        {% for review in reviews|reverse %}
+        {% if loop.first %}
+        <div class="card mb-3 review-collection-card">
+            <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
+            <div class="card-body">
+                <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
+                        new_releases
+                    </span> Featured Review</h3>
+                <h5 class="card-title text-center"><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                        class="film-title">{{ review.film_name }} <span
+                            class="text-white">{{ review.rating }}</span><span
+                            class="material-symbols-outlined material-icons icon-header">
+                            star
+                        </span></a></h5>
+                <h5 class="film-snippet">"{{ review.review_title}}"</h5>
+                <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
+                    {{ review.publish_date }}
+                </p>
+            </div>
+            <div class="col-8 text-center featured-review-btn-container">
+                <button class="pri-btn button mt-auto" type="button">
+                    <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
+                        Review</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+    <h3 class="text-center text-pink mb-4 mt-4">Latest Reviews</h3>
+    <div class=" row g-4 review-collection">
+        {% for review in latest_reviews %}
+        <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
+            <div class="card text-bg-dark h-100 review-collection-card">
+                <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
+                <div class="card-body ">
+                    <h5 class="card-title-small text-center"><a
+                            href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                            class="film-title">{{ review.film_name }} <span
+                                class="text-white">{{ review.rating }}</span><span
+                                class="material-symbols-outlined material-icons icon">
+                                star
+                            </span></a></h5>
+                    <p class="card-text">"{{ review.review_title }}"</p>
+                </div>
+                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
+                <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                    class="pri-btn button text-center mb-1">Edit/Delete</a>
+                {% endif %}
+                <div class="card-footer text-center">
+                    <button class="pri-btn button text-white mt-auto">
+                        <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+
+{% endblock %}
