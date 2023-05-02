@@ -120,3 +120,36 @@ The fields stored when they register are.
 - The fields stored are
     - Category Name(string) category_name
 ![Categories](binge_reviews/static/images/database-design/category-collection.jpg)
+
+# Amazon Web Services S3 Bucket
+I decided to use the Amazon S3 bucket to store the images urls for the imagery uploaded by the user. I found this video very helpful to implement this https://www.youtube.com/watch?v=tSfdQJvTKmk&t=528s
+
+The steps I made to implement this 
+1. Created a AWS account and created an S3 bucket called binge-reviews
+![S3 Bucket](binge_reviews/static/images/s3-bucket/s3-bucket.jpg)
+2. I created a user in AWS IAM, and gave the user the AmazonS3FullAccess permission
+3. I then gave the bucket policy the necessary permissions to allow my application to access the S3 bucket
+![Bucket Permissions](binge_reviews/static/images/s3-bucket/s3-bucket-policy.jpg)
+4. I imported the Boto3 python library (https://boto3.amazonaws.com/) in the util.py file I made a design decision to have an util.py in an util flask route python file that would be used to store code that could be used by multiple routes
+5. I stored variables in the top of the util.py file <br>
+<code>
+s3_bucket_name = "binge-reviews"
+s3_bucket_url = "https://binge-reviews.s3.eu-north-1.amazonaws.com/"
+client = boto3.client('s3',
+                      aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
+                      aws_secret_access_key=os.environ.get(
+                          "AWS_SECRET_ACCESS_KEY"))
+</code>
+
+6. A single function was written named upload_image that takes one parameter, the filename to store
+7. This single function is used by the reviews, categories, authentication routes to store the images in the S3 bucket
+8. This function stores a file in an AWS S3 bucket using boto3.
+9. The boto3 put_object method is used to store the image taking two parameters, the file name and actual file <code> s3.Bucket(s3_bucket_name).put_object(Key=image_to_upload, Body=image)</code>
+10. An image url is returned, and it is the image url that is stored in the mongodb for the relevant review, category or profile_img.
+![Image URL](binge_reviews/static/images/s3-bucket/image-example.jpg)
+
+# Scope
+
+## User stories for site user
+
+- 
