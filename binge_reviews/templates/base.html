@@ -31,27 +31,36 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">HOME</a>
-              <a class="nav-link {{'active' if active_page == 'reviews' }}" aria-current="page"" href="
-                {{ url_for('reviews.get_reviews') }}">REVIEWS</a>
-              {% if session.user|lower == "admin"|lower %}
-              <a class="nav-link" href="{{ url_for('categories.get_categories') }}">CATEGORIES</a>
-              {% else %}
-              {% endif %}
-              {% if session.user %}
-              <a class="nav-link" href="{{ url_for('reviews.add_review') }}">NEW REVIEW</a>
-              <a class="nav-link" href="{{ url_for('authentication.logout') }}">LOG OUT</a>
-              <a class="nav-link" href="{{ url_for('authentication.profile', username=session['user']) }}"><i
-                  class="far fa-user"></i></a>
-              {% else %}
-              <a class="nav-link" href="{{ url_for('authentication.login') }}">LOGIN</a>
-              <a class="nav-link" href="{{ url_for('authentication.register') }}">REGISTER</a>
+              <ul class="navbar-nav">
+                <li class="nav=item"><a class="nav-link" href="{{ url_for('reviews.get_reviews') }}">HOME</a></li>
+                <li class="nav=item"><a class="nav-link {% block nav_reviews %}{% endblock %}" aria-current="page"
+                    href="{{ url_for('reviews.get_reviews') }}">REVIEWS</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                <li class="nav=item"><a class="nav-link {% block nav_categories %}{% endblock %}" aria-current="page"
+                    href="{{ url_for('categories.get_categories') }}">CATEGORIES</a></li>
+                {% else %}
+                {% endif %}
+                {% if session.user %}
+                <li class="nav=item"><a class="nav-link {% block nav_new_review %}{% endblock %}" aria-current="page"
+                    href=" {{ url_for('reviews.add_review') }}">NEW REVIEW</a></li>
+                <li class="nav=item"><a class="nav-link" href="{{ url_for('authentication.logout') }}">LOG OUT</a></li>
+                <li class="nav=item"><a class="nav-link {% block nav_profile %}{% endblock %}" aria-current="page"
+                    href="{{ url_for('authentication.profile', username=session['user']) }}"><i
+                      class="far fa-user"></i></a></li>
+                {% else %}
+                <li class="nav=item"><a class="nav-link {% block nav_login %}{% endblock %}" aria-current="page" href="
+                    {{ url_for('authentication.login') }}">LOGIN</a></li>
+                <li class="nav=item"><a class="nav-link {% block nav_register %}{% endblock %}"
+                    aria-current="page"" href=" {{ url_for('authentication.register') }}">REGISTER</a>
+                </li>
+              </ul>
               {% endif %}
             </div>
           </div>
         </div>
       </nav>
     </header>
+
     <section>
       <!-- flash messages -->
       {% with messages = get_flashed_messages() %}

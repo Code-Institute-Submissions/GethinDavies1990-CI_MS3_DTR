@@ -303,6 +303,7 @@ Poppins was used for the smaller headings and also the p and a tags
 
 # Features
 
+## Feature 1 Navigation Bar
 
 
 

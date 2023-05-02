@@ -1,77 +1,78 @@
 {% extends "base.html" %}
 {% block title %}Register{% endblock %}
+{% block nav_register %}active{% endblock %}
 {% block content %}
 
-    <h3 class="text-center text-pink heading"><span class="material-symbols-outlined material-icons icon-header">
-            person_add
-        </span>Register</h3>
-    
-    <div
-        class="form register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data" id="form">
-            <!--Username input -->
-            <div class="row mb-4">
-                <div class="col input-control">
-                    <label for="username" id="username"><span class="material-symbols-outlined material-icons icon">
-                            person
-                        </span>Username</label>
-                    <input type="text" id="username" name="username" minlength="5" maxlength="25" required/>
-                    <div class="error"></div>
-                </div>
-            </div>
-            <!-- Password input -->
-            <div class="input-control">
-                <label for="password"><span class="material-symbols-outlined material-icons icon">
-                        lock
-                    </span>Password</label>
-                <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" required />
-                <div class="error"></div>
-            </div>
-            <!-- First Name input -->
+<h3 class="text-center text-pink heading"><span class="material-symbols-outlined material-icons icon-header">
+        person_add
+    </span>Register</h3>
+
+<div
+    class="form register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+    <form method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data" id="form">
+        <!--Username input -->
+        <div class="row mb-4">
             <div class="col input-control">
-                <label class="mb-3 mt-3" for="first_name"><span class="material-symbols-outlined material-icons icon">
-                        badge
-                    </span>First Name</label>
-                <input type="text" id="first_name" name="first_name" required />
+                <label for="username" id="username"><span class="material-symbols-outlined material-icons icon">
+                        person
+                    </span>Username</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="25" required />
                 <div class="error"></div>
             </div>
-            <!-- Last Name input -->
-            <div class="col input-control">
-                <label class="mb-3 mt-3" for="last_name"><span class="material-symbols-outlined material-icons icon">
-                        badge
-                    </span>Last Name</label>
-                <input type="text" id="last_name" name="last_name" required />
-                <div class="error"></div>
-            </div>
-            <!-- Favourtie film input -->
-            <div class="col mb-4 input-control">
-                <label class="mb-3 mt-3" for="fav_film"><span class="material-symbols-outlined material-icons icon">
-                        stars
-                    </span>Favourite Film</label>
-                <input type="text" id="fav_film" name="fav_film" required />
-                <div class="error"></div>
-            </div>
-            <div class="mb-2 mt-3 input-control">
-                <label for=" user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
-                        upload
-                    </span>Profile Image</label>
-                <input type="file" id="user_img" name="user_img" value="file" required>
-                <div class="error"></div>
-            </div>
-            <!-- Submit button -->
-            <button type="submit" class="pri-btn button mb-4">Register</button>
-        </form>
-    </div>
-    
-    <div class="row">
-        <div class="col s12 text-center">
-            <p class="center-align text-white">
-                Already Registered?
-                <a href="{{ url_for('authentication.login') }}" class="logged-in-text">Log In</a>
-            </p>
         </div>
+        <!-- Password input -->
+        <div class="input-control">
+            <label for="password"><span class="material-symbols-outlined material-icons icon">
+                    lock
+                </span>Password</label>
+            <input type="password" id="password" name="password" minlength="5" maxlength="25"
+                pattern="^[a-zA-Z0-9]{5,25}$" required />
+            <div class="error"></div>
+        </div>
+        <!-- First Name input -->
+        <div class="col input-control">
+            <label class="mb-3 mt-3" for="first_name"><span class="material-symbols-outlined material-icons icon">
+                    badge
+                </span>First Name</label>
+            <input type="text" id="first_name" name="first_name" required />
+            <div class="error"></div>
+        </div>
+        <!-- Last Name input -->
+        <div class="col input-control">
+            <label class="mb-3 mt-3" for="last_name"><span class="material-symbols-outlined material-icons icon">
+                    badge
+                </span>Last Name</label>
+            <input type="text" id="last_name" name="last_name" required />
+            <div class="error"></div>
+        </div>
+        <!-- Favourtie film input -->
+        <div class="col mb-4 input-control">
+            <label class="mb-3 mt-3" for="fav_film"><span class="material-symbols-outlined material-icons icon">
+                    stars
+                </span>Favourite Film</label>
+            <input type="text" id="fav_film" name="fav_film" required />
+            <div class="error"></div>
+        </div>
+        <div class="mb-2 mt-3 input-control">
+            <label for=" user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
+                    upload
+                </span>Profile Image</label>
+            <input type="file" id="user_img" name="user_img" value="file" required>
+            <div class="error"></div>
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="pri-btn button mb-4">Register</button>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col s12 text-center">
+        <p class="center-align text-white">
+            Already Registered?
+            <a href="{{ url_for('authentication.login') }}" class="logged-in-text">Log In</a>
+        </p>
     </div>
+</div>
 
 
 

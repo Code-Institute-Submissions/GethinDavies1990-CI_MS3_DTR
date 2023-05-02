@@ -114,6 +114,10 @@ a {
     color: #F01D7F;
 }
 
+.active {
+    color: #F01D7F !important;
+}
+
 .navbar-toggler {
     color: #F01D7F;
 }
