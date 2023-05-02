@@ -305,6 +305,60 @@ Poppins was used for the smaller headings and also the p and a tags
 
 ## Feature 1 Navigation Bar
 
+Description feature 1
+
+- The navigation bar us displayed on all pages. The nav bar was made using bootstrap 5.3 and is responsive on all device sizes. On Tablet and mobile devices it transforms into a hamburger menu.
+
+- When the user is not logged in, there are 5 navigation elements. The logo, 'Home', 'Reviews', 'Login' and 'Register'
+
+- When the user is logged in there are 6 navigation elements. The logo, 'Home', 'Reviews', 'New Review', 'Log out' and 'Profile page' The profile page uses a google icon 'User' instead of text.
+
+- When the admin user is logged in there are 7 navigation elements. The logo, 'Home', 'Reviews', 'New Review', 'Categories', 'Log out' and 'Profile page' The profile page uses a google icon 'User' instead of text.
+
+- Only logged in users can make a review.
+
+- Logged out users, can still see the reviews.
+
+- The logout button once clicked redirects the user to the 'Home/index' page
+
+### Nav Bar Logged out Desktop
+
+![Nav Bar Desktop Logged Out](binge_reviews/static/images/features/nav/desktop-logged-out-nav.jpg)
+
+### Nav Bar Logged In Desktop
+
+![Nav Bar Logged In desktop](binge_reviews/static/images/features/nav/desktop-logged-in-nav.jpg)
+
+### Nav Bar logged In Admin User
+
+![Nav Bar Admin Logged in](binge_reviews/static/images/features/nav/desktop-logged-in-nav-admin.jpg)
+
+### Nav Bar Logged out Tablet
+
+![Nav Bar Logged Out tablet](binge_reviews/static/images/features/nav/tablet-logged-out-nav.jpg)
+
+### Nav Bar Logged Out Tablet Expanded
+
+![Nav Bar Logged Out expanded](binge_reviews/static/images/features/nav/tablet-logged-out-nav-expanded.jpg)
+
+### Nav Bar logged In Expanded
+
+![Nav Bar Logged in Expanded](binge_reviews/static/images/features/nav/phone-logged-in-nav-expanded.jpg)
+
+### Nav Bar Logged In Phone
+
+![Nav Bar Logged In Phone](binge_reviews/static/images/features/nav/phone-logged-in-nav.jpg)
+
+### Nav Bar Logged Out Phone Expanded
+
+![Nav Bar Logged Out expanded](binge_reviews/static/images/features/nav/tablet-logged-out-nav-expanded.jpg)
+
+### Nav Bar logged In Phone
+
+![Nav Bar Logged in Expanded](binge_reviews/static/images/features/nav/phone-logged-in-nav-expanded.jpg)
+
+
+
 
 
 
