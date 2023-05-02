@@ -364,6 +364,22 @@ Description feature 1
 - User Story 1.3: As a regular user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
 - User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
 
+## Feature 2 Footer
+
+Description Feature 2
+
+The footer is displayed on all pages of the website and has one section, I decided to only display one feature in the footer to keep the website clean and minimal.
+
+1. Social Media Links
+
+### Desktop Footer
+![Desktop Footer](binge_reviews/static/images/features/footer/desktop-footer.jpg)
+
+### Tablet Footer
+![Tablet Footer](binge_reviews/static/images/features/footer/Tablet-footer.jpg)
+
+### Phone Footer
+![Phone Footer](binge_reviews/static/images/features/footer/phone-footer.jpg)
 
 
 
