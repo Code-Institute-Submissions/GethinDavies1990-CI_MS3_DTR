@@ -289,8 +289,20 @@ The colours chosen were to keep the design simple with a dark theme.
 <details><summary>#28282B Image</summary>
 <img src="binge_reviews/static/images/colours/grey.jpg">
 </details>
-
+<br>
 # Typography
+
+Rubik was mainly used for the main headers of the website
+
+![Rubik](binge_reviews/static/images/typography/rubik.jpg)
+
+Poppins was used for the smaller headings and also the p and a tags
+
+![Poppins](binge_reviews/static/images/typography/poppins.jpg)
+<br>
+
+# Features
+
 
 
 
