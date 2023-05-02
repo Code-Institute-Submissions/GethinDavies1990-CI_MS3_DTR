@@ -208,3 +208,69 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 6.2: As an Admin user I can update my profile password
 - User Story 6.3: As an Admin user I can update my profile details: Username, First Name, Last Name, Favourite Film 
 - User Story 6.4: As an Admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
+- User Story 7.1: As an Admin user I can delete reviews left by other users,
+- User Story 7.2: As an Admin user I can delete categories I have created
+- User Stories 7.3 As an Admin I can edit a category I have created
+
+# Wireframes
+## Desktop
+<br>
+<details><summary>Home</summary>
+<img src="binge_reviews/static/images/wireframes/desktop/desktop - homepage.png">
+</details>
+<br>
+<details><summary>Profile</summary>
+<img src="binge_reviews/static/images/wireframes/desktop/desktop - profile.png">
+</details>
+<br>
+<details><summary>Register</summary>
+<img src="binge_reviews/static/images/wireframes/desktop/desktop - Register.png">
+</details>
+<br>
+<details><summary>Review</summary>
+<img src="binge_reviews/static/images/wireframes/desktop/desktop - review.png">
+</details>
+<br>
+
+# Tablet 
+<br>
+<details><summary>Login</summary>
+<img src="binge_reviews/static/images/wireframes/tablet/tablet - Login.png">
+</details>
+<br>
+<details><summary>Profile</summary>
+<img src="binge_reviews/static/images/wireframes/tablet/tablet - profile.png">
+</details>
+<br>
+<details><summary>Register</summary>
+<img src="binge_reviews/static/images/wireframes/tablet/tablet - register.png">
+</details>
+<br>
+<details><summary>Review</summary>
+<img src="binge_reviews/static/images/wireframes/tablet/tablet - review.png">
+</details>
+<br>
+
+# Phone
+<br>
+<details><summary>Home</summary>
+<img src="binge_reviews/static/images/wireframes/phone/phone - homepage.png">
+</details>
+<br>
+<details><summary>Login</summary>
+<img src="binge_reviews/static/images/wireframes/phone/phone - login.png">
+</details>
+<br>
+<details><summary>Profile</summary>
+<img src="binge_reviews/static/images/wireframes/phone/phone - profile.png">
+</details>
+<br>
+<details><summary>Register</summary>
+<img src="binge_reviews/static/images/wireframes/phone/phone - register.png">
+</details>
+<br>
+
+
+
+
+
