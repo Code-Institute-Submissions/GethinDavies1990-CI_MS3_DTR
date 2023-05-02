@@ -61,5 +61,18 @@ I have structured the website into 18 pages, each with consistent styling throug
     - Templates: includes all the templates structured into subset folders for each route. Authentication/Categories/Errors/Reviews.
     - Util: Code used to store the images in a AWS S3 bucket.
     - app.py: That sets and runs the application
-    - a local env.py file, tha is not committed to source control - Tis ensures sensitive information is hidden in environment variables and never committed to repositories.
+    - a local env.py file, tha is not committed to source control - This ensures sensitive information is hidden in environment variables and never committed to repositories.
 
+# Database 
+- The website was built to be a data centric site, made with HTML, CSS, Javascript and the bootstrap framework was also used.
+- The backend of the website consists of the Python language, The flask framework, Jinja templates and MongoDb was used to store the data.
+
+## Database Model
+
+The first step in setting up my database was to map out a conceptual data model. 
+
+![Database Concept](binge_reviews/static/images/database-design/datebase-concept.jpg)
+
+Once the concept data model was designed, I then created the physical database models within MongoDB
+
+![Database Physical](binge_reviews/static/images/database-design/database-physical.jpeg)
