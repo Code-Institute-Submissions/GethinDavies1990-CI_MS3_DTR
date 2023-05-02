@@ -76,3 +76,28 @@ The first step in setting up my database was to map out a conceptual data model.
 Once the concept data model was designed, I then created the physical database models within MongoDB
 
 ![Database Physical](binge_reviews/static/images/database-design/database-physical.jpeg)
+
+## MongoDB Database information
+- One production database was created (binge_reviews) and it contains 3 collections
+    1. users
+    2. reviews
+    3. categories
+- A model.py file is included in the binge_reviews/models file to display the structure of the database in the python code. 
+- The databases were created manually in MongoDB at first
+- I then installed MongoDB connection directly into my IDE editor. This allowed me to check any data being added nto the database very quickly as opposed to logging into the mongodb website database each time. 
+
+## Users
+
+- The users collection is used to store user information when they register.
+The fields stored when they register are.
+    - Username(string) username
+    - Password(string)  password
+    - First Name(String) first_name
+    - Last Name(string) last_name
+    - Favorite Film(string) fav_film
+    - Author Bio(string) author_bio
+    - Profile Image(String) profile_img
+- Password - The users password is encrypted using a generate_password_hash from the werkzeug.security Python library.
+
+![user Collection](binge_reviews/static/images/database-design/user-collection.jpg)
+
