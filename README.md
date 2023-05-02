@@ -101,3 +101,17 @@ The fields stored when they register are.
 
 ![user Collection](binge_reviews/static/images/database-design/user-collection.jpg)
 
+## Reviews
+
+- The reviews is added by users of the website
+- The fields stored in the collection are.
+    - Review Image(string) review_image
+    - Film Name(String) film_name
+    - Review Title(string) review_title
+    - Category Name(string) category_name
+    - Review Description(string) review_description
+    - Created by(string) created_by
+    - Rating(Integer) rating
+    - Publish Date(string) publish_date
+![Review Collection](binge_reviews/static/images/database-design/review-collection.jpg)
+
