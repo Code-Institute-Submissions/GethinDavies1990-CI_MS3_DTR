@@ -115,3 +115,8 @@ The fields stored when they register are.
     - Publish Date(string) publish_date
 ![Review Collection](binge_reviews/static/images/database-design/review-collection.jpg)
 
+## Categories
+- The category information is added by the admin user only, i chose this decision to stop users added different variations of the same genre.
+- The fields stored are
+    - Category Name(string) category_name
+![Categories](binge_reviews/static/images/database-design/category-collection.jpg)
