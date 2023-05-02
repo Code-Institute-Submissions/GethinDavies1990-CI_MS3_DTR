@@ -232,7 +232,7 @@ The user stories overlap with regular users and admin users. The admin user does
 </details>
 <br>
 
-# Tablet 
+## Tablet 
 <br>
 <details><summary>Login</summary>
 <img src="binge_reviews/static/images/wireframes/tablet/tablet - Login.png">
@@ -251,7 +251,7 @@ The user stories overlap with regular users and admin users. The admin user does
 </details>
 <br>
 
-# Phone
+## Phone
 <br>
 <details><summary>Home</summary>
 <img src="binge_reviews/static/images/wireframes/phone/phone - homepage.png">
@@ -269,6 +269,32 @@ The user stories overlap with regular users and admin users. The admin user does
 <img src="binge_reviews/static/images/wireframes/phone/phone - register.png">
 </details>
 <br>
+
+# Colours
+The colours chosen were to keep the design simple with a dark theme.
+
+- #F01D7F - Hot pink for the logo, primary buttons, and outlines for elements
+<details><summary>#F01D7F Image</summary>
+<img src="binge_reviews/static/images/colours/pink.jpg">
+</details>
+<br>
+- #000 - Background for the main pages and also background of review cards
+<br>
+<details><summary>#F000 Image</summary>
+<img src="binge_reviews/static/images/colours/black.jpg">
+</details>
+<br>
+- #28282B - This was used as the background colour of the secondary buttons.
+<br>
+<details><summary>#28282B Image</summary>
+<img src="binge_reviews/static/images/colours/grey.jpg">
+</details>
+
+# Typography
+
+
+
+
 
 
 
