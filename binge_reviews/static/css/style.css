@@ -568,6 +568,12 @@ form {
     margin-top: 6px;
 }
 
+/* Footer */
+
+.social-icon:hover {
+    color: #F01D7F;
+}
+
 /* Media Queries */
 
 /* Mobile */

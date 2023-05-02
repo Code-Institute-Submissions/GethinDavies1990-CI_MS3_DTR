@@ -357,6 +357,12 @@ Description feature 1
 
 ![Nav Bar Logged in Expanded](binge_reviews/static/images/features/nav/phone-logged-in-nav-expanded.jpg)
 
+### User Stories Feature 1
+
+- User Story 1.1: As a regular user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices
+- User Story 1.2: As a regular user the navigation item selected is highlighted
+- User Story 1.3: As a regular user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
+- User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
 
 
 
