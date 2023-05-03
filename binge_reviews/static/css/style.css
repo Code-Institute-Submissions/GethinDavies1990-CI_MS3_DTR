@@ -38,24 +38,7 @@ a {
 
 /* form validation */
 
-.input-control input {
-    border: 5px solid yellow;
-    color: #fff;
-}
 
-.input-control.success input {
-    border-color: #09c372;
-}
-
-.input-control.error input {
-    border-color: #ff3860;
-}
-
-.input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
 
 
 /* Text */

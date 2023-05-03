@@ -388,12 +388,73 @@ The footer is displayed on all pages of the website and has one section, I decid
 
 ### Description feature 3
 
-The home page is displayed when the user accesses the website, on the homepage a 'Featured review' is present, this is the latest review published using the jinja for loop fucntion to loop through all the reviews, an 'If' statement is then nested to show the latest published review <br>
+The home page is displayed when the user accesses the website, on the homepage a 'Featured review'(hero image) is present, this is the latest review published using the jinja for loop function to loop through all the reviews, an 'If' statement is then nested to show. the latest published review. This keeps the homepage fresh an updated dynamically. <br>
 <code>{% for review in reviews|reverse %}<br>
         {% if loop.first %}<br>
         {% endif %}<br>
         {% endfor %}</code>
 
+![Hero Image](binge_reviews/static/images/features/homepage/hero-img.jpg)
+
+Below the featured review section the last 4 published reviews are displayed, this is dynamic and will update accordingly when new reviews are published.
+
+![Last 4 reviews](binge_reviews/static/images/features/homepage/latest-reviews.jpg)
+
+![Footer](binge_reviews/static/images/features/footer/desktop-footer.jpg)
+
+### User Stories Feature 3
+
+- User Story 3.1: As a regular user I can view a hero image with latest reviews
+- User Story 3.2: As a regular user I can view the latest reviews left by users
+- User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
+- User Story 3.1: As an Admin user I can view a hero image with latest reviews
+- User Story 3.2: As an Admin user I can view the latest reviews left by users
+
+## Feature 4 Login/Register/Logout
+
+### Description feature 4
+
+- The User can register for an account by entering their Username, Password, First Name, Last Name, Favourite Film, Profile Image.
+- All fields are required, and they will be notified with a flash message if the username already exists in the database. 
+    <details><summary>Flash Message</summary>
+    <img src="binge_reviews/static/images/features/flash-messages/username-exists.jpg">
+    </details>
+    <br>
+
+
+
+## Feature 5 Reviews/Add Reviews/Edit Reviews/Delete Reviews
+
+### Description feature 5
+
+## Feature 6 Categories/Add Category/Edit Category/Delete Category
+
+### Description feature 6
+
+## Feature 7 Top and lowest rated reviews
+
+### Description feature 7
+
+## Feature 8 Profile page
+
+### Description feature 8
+
+## Feature 9 Dashboard
+
+### Description feature   9
+
+# Features to implement
+
+- I am happy with what I have implemented in the timeframe I had to produce this project, there is some future features I would like to add in the future
+
+Number | Feature  
+ ------------ | ------- |
+1 | Social sharing of a memory on facebook, twitter  |
+2 | Integrate the IMDB API, this is an api
+3 | Include Music, Televsion sections
+4 | Include the ability to like a review
+5 | Leave comments on a review
+6 | View the authors profile page
 
 
 
