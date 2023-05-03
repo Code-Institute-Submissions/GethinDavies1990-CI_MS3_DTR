@@ -145,13 +145,16 @@ a {
 
 
 .carousel-item {
-    height: 250px;
+    height: 300px;
 }
 
 .carousel-item>img {
     margin: 2px auto;
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #F01D7F;
 }
 
 /* Reviews/Homepage */

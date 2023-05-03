@@ -10,6 +10,7 @@ from binge_reviews.util import util
 reviews = Blueprint('reviews', __name__)
 
 
+@reviews.route("/")
 @reviews.route("/home")
 def go_home():
     """

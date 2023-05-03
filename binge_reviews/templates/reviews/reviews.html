@@ -29,7 +29,7 @@
 
         <div class="col-lg-6 col-md-6 col-sm-12">
             <h3 class="text-pink text-center">Top Performers</h3>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselTopPerformersControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg')}}"
@@ -44,12 +44,12 @@
                     </div>
                     {% endfor %}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTopPerformersControls"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTopPerformersControls"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -58,25 +58,28 @@
         </div>
         <!-- Lowest Rated section -->
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3 class="text-pink text-center">Let Downs</h3>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <h3 class="text-pink text-center">Top Performers</h3>
+            <div id="carouselLowestPerformersControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="{{ url_for('static', filename='images/site-images/lowest-rated-image.jpg')}}"
+                            class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Poor Films</h5>
+                        </div>
                     </div>
+                    {% for review in reviews %}
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="{{ review.review_image }}" class="d-block alt=" ...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
+                    {% endfor %}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselLowestPerformersControlss"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselLowestPerformersControls"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -84,6 +87,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 {% endblock %}
