@@ -586,7 +586,20 @@ To deploy this application to Heroku, run the following steps.
 - Getting to grips with flask, i found this channel extremely helpful
     -https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz
 
+<br>
 
-# Content
+# Content and Media
 
+- Images, the images used on the website were mainly from google images.
+- Google fonts, was used for the typography, 'Rubik' and 'Poppins' were the fonts installed
+- Logo, The logo was created by myself in Adobe Ilustrator
+- The reviews generated for testing purposes were from Empire Reviews - https://www.empireonline.com/movies/reviews/
+
+<br>
+
+# Acknowledgements
+
+- I would like to thank my wife for always being patient with me and supporting me on the duration of this project. And my Son for always being my driving force of motivation.
+
+- I would also like to thank my mentor Mo Shami, for always pushing me to put out my best effort and work. 
 
