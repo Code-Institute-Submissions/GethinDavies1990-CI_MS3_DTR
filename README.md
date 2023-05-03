@@ -571,3 +571,22 @@ To deploy this application to Heroku, run the following steps.
 13. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
 14. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
+<br>
+
+# Credits
+
+- For the website I used IMDB for motivation, https://www.imdb.com/
+- I found this quick course very helpful in using the blueprint structure, and the flask application in general. https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/learn/lecture/11084628?start=600#content
+- For setting up aws s3 I found this video helpful
+    -https://www.youtube.com/watch?v=f3j5EdjsKww
+    -https://www.youtube.com/watch?v=4hnxrgTbmxw
+- For string the images in a bucket these videos helped
+    - https://www.youtube.com/watch?v=4hnxrgTbmxw
+    - https://www.youtube.com/watch?v=tSfdQJvTKmk&t=528s
+- Getting to grips with flask, i found this channel extremely helpful
+    -https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz
+
+
+# Content
+
+
