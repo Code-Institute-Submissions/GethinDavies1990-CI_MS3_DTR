@@ -25,70 +25,64 @@
 <!-- Top Rated and Lowest rated reviews section -->
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <div class="featured-review text-center">
-                {% for review in reviews %}
-                <div class="card mb-3 review-collection-card h-100">
-                    <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
-                    <div class="card-body">
-                        <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
-                                new_releases
-                            </span> Featured Review</h3>
-                        <h5 class="card-title text-center"><a
-                                href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="film-title">{{ review.film_name }} <span
-                                    class="text-white">{{ review.rating }}</span><span
-                                    class="material-symbols-outlined material-icons icon-header">
-                                    star
-                                </span></a></h5>
-                        <h5 class="film-snippet">"{{ review.review_title}}"</h5>
-                        <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
-                            {{ review.publish_date }}
-                        </p>
+        <!-- Top Rated section -->
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-pink text-center">Top Performers</h3>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg')}}"
+                            class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Top Rated Films</h5>
+                        </div>
                     </div>
-                    <div class="col-8 text-center featured-review-btn-container">
-                        <button class="pri-btn button mt-auto" type="button">
-                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
-                                Review</a>
-                        </button>
+                    {% for review in reviews %}
+                    <div class="carousel-item">
+                        <img src="{{ review.review_image }}" class="d-block alt=" ...">
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        <div class="col-6">
-            <div class="featured-review text-center">
-                {% for review in reviews|reverse %}
-                {% if loop.first %}
-                <div class="card mb-3 review-collection-card h-100">
-                    <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
-                    <div class="card-body">
-                        <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
-                                new_releases
-                            </span> Featured Review</h3>
-                        <h5 class="card-title text-center"><a
-                                href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="film-title">{{ review.film_name }} <span
-                                    class="text-white">{{ review.rating }}</span><span
-                                    class="material-symbols-outlined material-icons icon-header">
-                                    star
-                                </span></a></h5>
-                        <h5 class="film-snippet">"{{ review.review_title}}"</h5>
-                        <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
-                            {{ review.publish_date }}
-                        </p>
+        <!-- Lowest Rated section -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-pink text-center">Let Downs</h3>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="..." class="d-block w-100" alt="...">
                     </div>
-                    <div class="col-8 text-center featured-review-btn-container">
-                        <button class="pri-btn button mt-auto" type="button">
-                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
-                                Review</a>
-                        </button>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
 </div>
 </div>
