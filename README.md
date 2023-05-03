@@ -384,6 +384,15 @@ The footer is displayed on all pages of the website and has one section, I decid
 ### User Stories Feature 2
 - User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
 
+## Feature 3 Landing Page (Home)
+
+### Description feature 3
+
+The home page is displayed when the user accesses the website, on the homepage a 'Featured review' is present, this is the latest review published using the jinja for loop fucntion to loop through all the reviews, an 'If' statement is then nested to show the latest published review <br>
+<code>{% for review in reviews|reverse %}<br>
+        {% if loop.first %}<br>
+        {% endif %}<br>
+        {% endfor %}</code>
 
 
 
