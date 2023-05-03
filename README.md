@@ -509,6 +509,7 @@ The testing information are documented in TESTING.md
 <br>
 <code>s3_bucket_name = "binge-reviews"</code><br>
 <code>s3_bucket_url = "https://binge-reviews.s3.eu-north-1.amazonaws.com/"</code>
+<br>
 
 ## MongoDB
 
@@ -525,6 +526,48 @@ Mongodb is the database used in the application
 5. In the network access tab, allow network access from the ip-address of the application connecting to the database
 6. In the Databases section click Connect, and select connect your application
 7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
+<br>
 
+## Local Deployment
+To run this project locally, you will need to clone the repository
+1. Login to GitHub (https://wwww.github.com)
+2. Select the repository GethinDavies1990/CI_MS3_DTR
+3. Click the Code button and copy the HTTPS url, for example: https://github.com/GethinDavies1990/CI_MS3_DTR
+4. In your IDE, open a terminal and run the git clone command, for example 
 
+    ```git clone https://github.com/GethinDavies1990/CI_MS3_DTR.git```
+
+5. The repository will now be cloned in your workspace
+6. Create an env.py file in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
+<code>import os</code><br>
+<code>os.environ.setdefault("IP", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("PORT", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_URI", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_DBNAME", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("AWS_ACCESS_KEY_ID", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("AWS_SECRET_ACCESS_KEY", TO BE ADDED BY USER)</code><br>
+7. Install the relevant packages as per the requirements.txt file
+8. Start the application by running <code>python3 app.py</code>
+
+<br>
+
+## Heroku
+To deploy this application to Heroku, run the following steps.
+1. In the app.py file, ensure that debug is not enabled, i.e. set to True
+2. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
+3. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
+5. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
+6. Create an account on heroku.com
+7. Create a new application and give it a unique name
+8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
+![Heroku dashboard](binge_reviews/static/images/heroku/heroku-dash.jpg)
+9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+10. The next step is to set the config variables in the Settings section
+![Config vars](binge_reviews/static/images/heroku/heroku-config.jpg)
+11. Set key/value pairs for the following keys: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
+12. Go to the dashboard and trigger a deployment
+![Deploy](binge_reviews/static/images/heroku/heroku-deploy.jpg)
+13. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
+14. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
