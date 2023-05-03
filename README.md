@@ -441,11 +441,17 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ## Feature 9 Dashboard
 
-### Description feature   9
+### Description feature  9
+
+## Feature 10 Search
+
+### Description feature  10
+
+<br>
 
 # Features to implement
 
-- I am happy with what I have implemented in the timeframe I had to produce this project, there is some future features I would like to add in the future
+- I am happy with what I have implemented in the timeframe I had to produce this project, there is some future features I would like to add.
 
 Number | Feature  
  ------------ | ------- |
@@ -456,7 +462,69 @@ Number | Feature
 5 | Leave comments on a review
 6 | View the authors profile page
 
+<br>
 
+# Technologies Used 
+
+## Languages 
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- Jinja
+
+## Libraries
+
+- Bootstrap 5
+- Gitpod
+- Github
+- Google Fonts
+- Font Awesome
+- Lucidchart
+- CSS Validation
+- HMTL Validation
+- Chrome Dev tools
+- Am I Responsive
+- Figma 
+- Go FUll Page
+
+# Testing
+<br>
+The testing information are documented in TESTING.md
+<br>
+
+# Deployment
+
+## Amazon WebServices
+1. Create an account at aws.amazon.com
+2. Open the IAM application and create a new user
+3. Set the AmazonS3FullAccess for the user and note the users AWS ACCESS and SECRET keys
+![Iam](binge_reviews/static/images/s3-bucket/s3-iam-user.jpg)
+4. Open the S3 application and create a new bucket. For the purpose of this application the bucket name is binge-reviews
+5. With security best practices update the public access and policy bucket to enable the user created and the application access to read/write to the S3 bucket. Consult the AWS documentation if required: https://aws.amazon.com/s3/
+![policy](binge_reviews/static/images/s3-bucket/s3-bucket-policy.jpg)
+6. The s3 bucket is now updated to be accessed by your application
+7. In the util.py route update the variables s3_bucket_name and s3_bucket_url with the correct information that you have set up, for example:
+<br>
+<code>s3_bucket_name = "binge-reviews"</code><br>
+<code>s3_bucket_url = "https://binge-reviews.s3.eu-north-1.amazonaws.com/"</code>
+
+## MongoDB
+
+Mongodb is the database used in the application
+
+1. Create an account at mongodb
+2. Create a database cluster
+3. Select the cluster, and in the collections section create a database and create 3 collections: users, reviews, categories
+    <details><summary>MongoDB</summary>
+    <img src="binge_reviews/static/images/mongo/mongodb.jpg">
+    </details>
+    <br>
+4. In the database access, create a user and allow the user read/write access. Note the username
+5. In the network access tab, allow network access from the ip-address of the application connecting to the database
+6. In the Databases section click Connect, and select connect your application
+7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
 
 
 
