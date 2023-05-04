@@ -71,11 +71,11 @@ I have structured the website into 18 pages, each with consistent styling throug
 
 The first step in setting up my database was to map out a conceptual data model. 
 
-![Database Concept](binge_reviews/static/images/database-design/datebase-concept.jpg)
+![Database Concept](binge_reviews/static/images/readme/database-design/datebase-concept.jpg)
 
 Once the concept data model was designed, I then created the physical database models within MongoDB
 
-![Database Physical](binge_reviews/static/images/database-design/database-physical.jpeg)
+![Database Physical](binge_reviews/static/images/readme/database-design/database-physical.jpeg)
 
 ## MongoDB Database information
 - One production database was created (binge_reviews) and it contains 3 collections
@@ -99,7 +99,7 @@ The fields stored when they register are.
     - Profile Image(String) profile_img
 - Password - The users password is encrypted using a generate_password_hash from the werkzeug.security Python library.
 
-![user Collection](binge_reviews/static/images/database-design/user-collection.jpg)
+![user Collection](binge_reviews/static/images/readme/database-design/user-collection.jpg)
 
 ## Reviews
 
@@ -113,23 +113,23 @@ The fields stored when they register are.
     - Created by(string) created_by
     - Rating(Integer) rating
     - Publish Date(string) publish_date
-![Review Collection](binge_reviews/static/images/database-design/review-collection.jpg)
+![Review Collection](binge_reviews/static/images/readme/database-design/review-collection.jpg)
 
 ## Categories
 - The category information is added by the admin user only, i chose this decision to stop users added different variations of the same genre.
 - The fields stored are
     - Category Name(string) category_name
-![Categories](binge_reviews/static/images/database-design/category-collection.jpg)
+![Categories](binge_reviews/static/images/readme/database-design/category-collection.jpg)
 
 # Amazon Web Services S3 Bucket
 I decided to use the Amazon S3 bucket to store the images urls for the imagery uploaded by the user. I found this video very helpful to implement this https://www.youtube.com/watch?v=tSfdQJvTKmk&t=528s
 
 The steps I made to implement this 
 1. Created a AWS account and created an S3 bucket called binge-reviews
-![S3 Bucket](binge_reviews/static/images/s3-bucket/s3-bucket.jpg)
+![S3 Bucket](binge_reviews/static/images/readme/s3-bucket/s3-bucket.jpg)
 2. I created a user in AWS IAM, and gave the user the AmazonS3FullAccess permission
 3. I then gave the bucket policy the necessary permissions to allow my application to access the S3 bucket
-![Bucket Permissions](binge_reviews/static/images/s3-bucket/s3-bucket-policy.jpg)
+![Bucket Permissions](binge_reviews/static/images/readme/s3-bucket/s3-bucket-policy.jpg)
 4. I imported the Boto3 python library (https://boto3.amazonaws.com/) in the util.py file I made a design decision to have an util.py in an util flask route python file that would be used to store code that could be used by multiple routes
 5. I stored variables in the top of the util.py file <br>
 <code>
@@ -146,7 +146,7 @@ client = boto3.client('s3',
 8. This function stores a file in an AWS S3 bucket using boto3.
 9. The boto3 put_object method is used to store the image taking two parameters, the file name and actual file <code> s3.Bucket(s3_bucket_name).put_object(Key=image_to_upload, Body=image)</code>
 10. An image url is returned, and it is the image url that is stored in the mongodb for the relevant review, category or profile_img.
-![Image URL](binge_reviews/static/images/s3-bucket/image-example.jpg)
+![Image URL](binge_reviews/static/images/readme/s3-bucket/image-example.jpg)
 
 # Scope
 
@@ -198,7 +198,7 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 4.4: As an Admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As an Admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 - User Story 4.6: As an Admin user, when I am logged into the site, and I click the back button I am automatically redirected to the Login Page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
-- User Story 5.1: Add Review - As an Admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review decription content, and rate the film out of 5.
+- User Story 5.1: Add Review - As an Admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
 - User Story 5.2: Add Review - As an Admin user the review image I upload must be png or jpg format
 - User Story 5.3: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 - User Story 5.4: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
@@ -216,57 +216,57 @@ The user stories overlap with regular users and admin users. The admin user does
 ## Desktop
 <br>
 <details><summary>Home</summary>
-<img src="binge_reviews/static/images/wireframes/desktop/desktop - homepage.png">
+<img src="binge_reviews/static/images/readme/wireframes/desktop/desktop - homepage.png">
 </details>
 <br>
 <details><summary>Profile</summary>
-<img src="binge_reviews/static/images/wireframes/desktop/desktop - profile.png">
+<img src="binge_reviews/static/images/readme/wireframes/desktop/desktop - profile.png">
 </details>
 <br>
 <details><summary>Register</summary>
-<img src="binge_reviews/static/images/wireframes/desktop/desktop - Register.png">
+<img src="binge_reviews/static/images/readme/wireframes/desktop/desktop - Register.png">
 </details>
 <br>
 <details><summary>Review</summary>
-<img src="binge_reviews/static/images/wireframes/desktop/desktop - review.png">
+<img src="binge_reviews/static/images/readme/wireframes/desktop/desktop - review.png">
 </details>
 <br>
 
 ## Tablet 
 <br>
 <details><summary>Login</summary>
-<img src="binge_reviews/static/images/wireframes/tablet/tablet - Login.png">
+<img src="binge_reviews/static/images/readme/wireframes/tablet/tablet - Login.png">
 </details>
 <br>
 <details><summary>Profile</summary>
-<img src="binge_reviews/static/images/wireframes/tablet/tablet - profile.png">
+<img src="binge_reviews/static/images/readme/wireframes/tablet/tablet - profile.png">
 </details>
 <br>
 <details><summary>Register</summary>
-<img src="binge_reviews/static/images/wireframes/tablet/tablet - register.png">
+<img src="binge_reviews/static/images/readme/wireframes/tablet/tablet - register.png">
 </details>
 <br>
 <details><summary>Review</summary>
-<img src="binge_reviews/static/images/wireframes/tablet/tablet - review.png">
+<img src="binge_reviews/static/images/readme/wireframes/tablet/tablet - review.png">
 </details>
 <br>
 
 ## Phone
 <br>
 <details><summary>Home</summary>
-<img src="binge_reviews/static/images/wireframes/phone/phone - homepage.png">
+<img src="binge_reviews/static/images/readme/wireframes/phone/phone - homepage.png">
 </details>
 <br>
 <details><summary>Login</summary>
-<img src="binge_reviews/static/images/wireframes/phone/phone - login.png">
+<img src="binge_reviews/static/images/readme/wireframes/phone/phone - login.png">
 </details>
 <br>
 <details><summary>Profile</summary>
-<img src="binge_reviews/static/images/wireframes/phone/phone - profile.png">
+<img src="binge_reviews/static/images/readme/wireframes/phone/phone - profile.png">
 </details>
 <br>
 <details><summary>Register</summary>
-<img src="binge_reviews/static/images/wireframes/phone/phone - register.png">
+<img src="binge_reviews/static/images/readme/wireframes/phone/phone - register.png">
 </details>
 <br>
 
@@ -275,19 +275,19 @@ The colours chosen were to keep the design simple with a dark theme.
 
 - #F01D7F - Hot pink for the logo, primary buttons, and outlines for elements
 <details><summary>#F01D7F Image</summary>
-<img src="binge_reviews/static/images/colours/pink.jpg">
+<img src="binge_reviews/static/images/readme/colours/pink.jpg">
 </details>
 <br>
 - #000 - Background for the main pages and also background of review cards
 <br>
 <details><summary>#F000 Image</summary>
-<img src="binge_reviews/static/images/colours/black.jpg">
+<img src="binge_reviews/static/images/readme/colours/black.jpg">
 </details>
 <br>
 - #28282B - This was used as the background colour of the secondary buttons.
 <br>
 <details><summary>#28282B Image</summary>
-<img src="binge_reviews/static/images/colours/grey.jpg">
+<img src="binge_reviews/static/images/readme/colours/grey.jpg">
 </details>
 <br>
 # Typography

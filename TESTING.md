@@ -36,7 +36,7 @@ I made a very thorough check on responsiveness on all devices on the the google 
 <img src="binge_reviews/static/images/readme/testing/responsivness-testing/home/blackberry-playbook-home.png">
 </details>
 <br>
-binge_reviews/static/images/readme/testing/responsivness-testing/home/blackberry-playbook-home.png
+
 <details><summary>Blackberry Z30 - Home</summary>
 <img src="binge_reviews/static/images/readme/testing/responsivness-testing/home/blackberryz30-home.png">
 </details>
