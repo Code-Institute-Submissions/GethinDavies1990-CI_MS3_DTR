@@ -294,11 +294,11 @@ The colours chosen were to keep the design simple with a dark theme.
 
 Rubik was mainly used for the main headers of the website
 
-![Rubik](binge_reviews/static/images/typography/rubik.jpg)
+![Rubik](binge_reviews/static/images/readme/typography/rubik.jpg)
 
 Poppins was used for the smaller headings and also the p and a tags
 
-![Poppins](binge_reviews/static/images/typography/poppins.jpg)
+![Poppins](binge_reviews/static/images/readme/typography/poppins.jpg)
 <br>
 
 # Features
@@ -323,39 +323,39 @@ Description feature 1
 
 ### Nav Bar Logged out Desktop
 
-![Nav Bar Desktop Logged Out](binge_reviews/static/images/features/nav/desktop-logged-out-nav.jpg)
+![Nav Bar Desktop Logged Out](binge_reviews/static/images/readme/features/nav/desktop-logged-out-nav.jpg)
 
 ### Nav Bar Logged In Desktop
 
-![Nav Bar Logged In desktop](binge_reviews/static/images/features/nav/desktop-logged-in-nav.jpg)
+![Nav Bar Logged In desktop](binge_reviews/static/images/readme/features/nav/desktop-logged-in-nav.jpg)
 
 ### Nav Bar logged In Admin User
 
-![Nav Bar Admin Logged in](binge_reviews/static/images/features/nav/desktop-logged-in-nav-admin.jpg)
+![Nav Bar Admin Logged in](binge_reviews/static/images/readme/features/nav/desktop-logged-in-nav-admin.jpg)
 
 ### Nav Bar Logged out Tablet
 
-![Nav Bar Logged Out tablet](binge_reviews/static/images/features/nav/tablet-logged-out-nav.jpg)
+![Nav Bar Logged Out tablet](binge_reviews/static/images/readme/features/nav/tablet-logged-out-nav.jpg)
 
 ### Nav Bar Logged Out Tablet Expanded
 
-![Nav Bar Logged Out expanded](binge_reviews/static/images/features/nav/tablet-logged-out-nav-expanded.jpg)
+![Nav Bar Logged Out expanded](binge_reviews/static/images/readme/features/nav/tablet-logged-out-nav-expanded.jpg)
 
 ### Nav Bar logged In Expanded
 
-![Nav Bar Logged in Expanded](binge_reviews/static/images/features/nav/phone-logged-in-nav-expanded.jpg)
+![Nav Bar Logged in Expanded](binge_reviews/static/images/readme/features/nav/phone-logged-in-nav-expanded.jpg)
 
 ### Nav Bar Logged In Phone
 
-![Nav Bar Logged In Phone](binge_reviews/static/images/features/nav/phone-logged-in-nav.jpg)
+![Nav Bar Logged In Phone](binge_reviews/static/images/readme/features/nav/phone-logged-in-nav.jpg)
 
 ### Nav Bar Logged Out Phone Expanded
 
-![Nav Bar Logged Out expanded](binge_reviews/static/images/features/nav/tablet-logged-out-nav-expanded.jpg)
+![Nav Bar Logged Out expanded](binge_reviews/static/images/readme/features/nav/tablet-logged-out-nav-expanded.jpg)
 
 ### Nav Bar logged In Phone
 
-![Nav Bar Logged in Expanded](binge_reviews/static/images/features/nav/phone-logged-in-nav-expanded.jpg)
+![Nav Bar Logged in Expanded](binge_reviews/static/images/readme/features/nav/phone-logged-in-nav-expanded.jpg)
 
 ### User Stories Feature 1
 
@@ -373,13 +373,13 @@ The footer is displayed on all pages of the website and has one section, I decid
 1. Social Media Links
 
 ### Desktop Footer
-![Desktop Footer](binge_reviews/static/images/features/footer/desktop-footer.jpg)
+![Desktop Footer](binge_reviews/static/images/readme/features/footer/desktop-footer.jpg)
 
 ### Tablet Footer
-![Tablet Footer](binge_reviews/static/images/features/footer/Tablet-footer.jpg)
+![Tablet Footer](binge_reviews/static/images/readme/features/footer/Tablet-footer.jpg)
 
 ### Phone Footer
-![Phone Footer](binge_reviews/static/images/features/footer/phone-footer.jpg)
+![Phone Footer](binge_reviews/static/images/readme/features/footer/phone-footer.jpg)
 
 ### User Stories Feature 2
 - User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
@@ -394,13 +394,13 @@ The home page is displayed when the user accesses the website, on the homepage a
         {% endif %}<br>
         {% endfor %}</code>
 
-![Hero Image](binge_reviews/static/images/features/homepage/hero-img.jpg)
+![Hero Image](binge_reviews/static/images/readme/features/homepage/hero-img.jpg)
 
 Below the featured review section the last 4 published reviews are displayed, this is dynamic and will update accordingly when new reviews are published.
 
-![Last 4 reviews](binge_reviews/static/images/features/homepage/latest-reviews.jpg)
+![Last 4 reviews](binge_reviews/static/images/readme/features/homepage/latest-reviews.jpg)
 
-![Footer](binge_reviews/static/images/features/footer/desktop-footer.jpg)
+![Footer](binge_reviews/static/images/features/readme/footer/desktop-footer.jpg)
 
 ### User Stories Feature 3
 
@@ -417,7 +417,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 - The User can register for an account by entering their Username, Password, First Name, Last Name, Favourite Film, Profile Image.
 - All fields are required, and they will be notified with a flash message if the username already exists in the database. 
     <details><summary>Flash Message</summary>
-    <img src="binge_reviews/static/images/features/flash-messages/username-exists.jpg">
+    <img src="binge_reviews/static/images/readme/features/flash-messages/username-exists.jpg">
     </details>
     <br>
 
@@ -500,10 +500,10 @@ The testing information are documented in TESTING.md
 1. Create an account at aws.amazon.com
 2. Open the IAM application and create a new user
 3. Set the AmazonS3FullAccess for the user and note the users AWS ACCESS and SECRET keys
-![Iam](binge_reviews/static/images/s3-bucket/s3-iam-user.jpg)
+![Iam](binge_reviews/static/images/readme/s3-bucket/s3-iam-user.jpg)
 4. Open the S3 application and create a new bucket. For the purpose of this application the bucket name is binge-reviews
 5. With security best practices update the public access and policy bucket to enable the user created and the application access to read/write to the S3 bucket. Consult the AWS documentation if required: https://aws.amazon.com/s3/
-![policy](binge_reviews/static/images/s3-bucket/s3-bucket-policy.jpg)
+![policy](binge_reviews/static/images/readme/s3-bucket/s3-bucket-policy.jpg)
 6. The s3 bucket is now updated to be accessed by your application
 7. In the util.py route update the variables s3_bucket_name and s3_bucket_url with the correct information that you have set up, for example:
 <br>
@@ -519,7 +519,7 @@ Mongodb is the database used in the application
 2. Create a database cluster
 3. Select the cluster, and in the collections section create a database and create 3 collections: users, reviews, categories
     <details><summary>MongoDB</summary>
-    <img src="binge_reviews/static/images/mongo/mongodb.jpg">
+    <img src="binge_reviews/static/images/readme/mongo/mongodb.jpg">
     </details>
     <br>
 4. In the database access, create a user and allow the user read/write access. Note the username
@@ -561,13 +561,13 @@ To deploy this application to Heroku, run the following steps.
 6. Create an account on heroku.com
 7. Create a new application and give it a unique name
 8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
-![Heroku dashboard](binge_reviews/static/images/heroku/heroku-dash.jpg)
+![Heroku dashboard](binge_reviews/static/images/readme/heroku/heroku-dash.jpg)
 9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
 10. The next step is to set the config variables in the Settings section
 ![Config vars](binge_reviews/static/images/heroku/heroku-config.jpg)
 11. Set key/value pairs for the following keys: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
 12. Go to the dashboard and trigger a deployment
-![Deploy](binge_reviews/static/images/heroku/heroku-deploy.jpg)
+![Deploy](binge_reviews/static/images/readme/heroku/heroku-deploy.jpg)
 13. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
 14. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
