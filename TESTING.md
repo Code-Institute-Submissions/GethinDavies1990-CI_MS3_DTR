@@ -138,6 +138,53 @@ I made a very thorough check on responsiveness on all devices on the the google 
 </details>
 <br>
 
+###  Form Pages Login/Register/Add Review/Edit Review
+
+<details><summary>Surface Pro 7 - form</summary>
+<img src="binge_reviews/static/images/responsiveness/home/surface-pro7-home.png">
+</details>
+<br>
+
+<details><summary>Blackberry Playbook - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/blackberry-playbook-login.png">
+</details>
+<br>
+
+<details><summary>Blackberry Z30 - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/blackberry-z30-login.png">
+</details>
+<br>
+
+<details><summary>Desktop 1600px - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/desktop-1600ox-register.png">
+</details>
+<br>
+
+<details><summary>Desktop 1000px - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/desktop-1000px-login.png">
+</details>
+<br>
+
+<details><summary>Desktop 2500px - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/desktop-2500px-register.png">
+</details>
+<br>
+
+<details><summary>Galaxy 8 - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/galaxy-8-register.png">
+</details>
+<br>
+
+<details><summary>Galaxy Note 3 - form </summary>
+<img src="binge_reviews/static/images/responsiveness/forms/galaxy-note-3-add-review.png">
+</details>
+<br>
+
+<details><summary>Nest- Form</summary>
+<img src="binge_reviews/static/images/responsiveness/forms/nest-hub-register.png">
+</details>
+<br>
+
 
 
 
