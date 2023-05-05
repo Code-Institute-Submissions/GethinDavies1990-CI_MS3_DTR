@@ -203,17 +203,17 @@ Step Number | Desktop | Tablet | Mobile
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1-desktop.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.1-desktop.png">
 </details>
 <br>
 
 <details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1-mobile.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.1-mobile.png">
 </details>
 <br>
 
 <details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1-tablet.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.1-tablet.png">
 </details>
 <br>
 
@@ -236,16 +236,49 @@ Step Number | Desktop | Tablet | Mobile
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-desktop.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.2-desktop.png">
 </details>
 <br>
 
 <details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-mobile.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.2-mobile.png">
 </details>
 <br>
 
 <details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-tablet.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.2-tablet.png">
+</details>
+<br>
+
+### User Story 1-3
+
+- User Story 1.3: As a regular/admin user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
+
+### Test case steps 1-3
+
+1. navigate to home/index page and locate navbar
+
+### Expected Result 1-3
+
+1. The 3 links and logos are visible on all devices
+
+### Actual Result 1-3
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.3-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.3-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.3-tablet.png">
 </details>
 <br>
