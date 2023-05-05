@@ -184,19 +184,19 @@ I made a very thorough check on responsiveness on all devices on the the google 
 
 ## Feature 1 Navigation Bar
 
-### User Story 1-1
+### User Story 1.1
 
 - User Story 1.1: As a admin/regular user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices
 
-### Test case steps 1-1
+### Test case steps 1.1
 
 1. navigate to home/index page
 
-### Expected Result 1-1
+### Expected Result 1.1
 
 1. The home/index page will be displayed with logo and navigation bar, with a burger menu on mobile devices
 
-### Actual Result 1-1
+### Actual Result 1.1
 
 Step Number | Desktop | Tablet | Mobile 
 ------------ | ------------ | ------------- | ------------- | 
@@ -217,19 +217,19 @@ Step 1 | Pass  | Pass |Pass
 </details>
 <br>
 
-### User Story 1-2
+### User Story 1.2
 
 - User Story 1.2: As a regular/admin user the navigation item selected is highlighted
 
-### Test case steps 1-2
+### Test case steps 1.2
 
 1. navigate to home/index page and locate navbar
 
-### Expected Result 1-2
+### Expected Result 1.2
 
 1. The active page is highlighted to notify the user this is the page they are on.
 
-### Actual Result 1-2
+### Actual Result 1.2
 
 Step Number | Desktop | Tablet | Mobile 
 ------------ | ------------ | ------------- | ------------- | 
@@ -250,19 +250,19 @@ Step 1 | Pass  | Pass |Pass
 </details>
 <br>
 
-### User Story 1-3
+### User Story 1.3
 
 - User Story 1.3: As a regular/admin user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
 
-### Test case steps 1-3
+### Test case steps 1.3
 
 1. navigate to home/index page and locate navbar
 
-### Expected Result 1-3
+### Expected Result 1.3
 
 1. The 3 links and logos are visible on all devices
 
-### Actual Result 1-3
+### Actual Result 1.3
 
 Step Number | Desktop | Tablet | Mobile 
 ------------ | ------------ | ------------- | ------------- | 
@@ -280,5 +280,63 @@ Step 1 | Pass  | Pass |Pass
 
 <details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.3-tablet.png">
+</details>
+<br>
+
+### User Story 1.4
+
+- User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
+
+### Test case steps 1.4
+
+1. navigate to home/index page and locate navbar
+
+### Expected Result 1.4
+
+1. The 5 links and logos are visible on all devices
+
+### Actual Result 1.4
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.4-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.4-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1.4-tablet.png">
+</details>
+<br>
+
+## Feature 2 Footer
+
+### User Story 2.1
+
+- User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
+
+### Test case steps 2.1
+
+1. navigate to home/index page and locate navbar
+
+### Expected Result 2.1
+
+1. The 5 links and logos are visible on all devices
+
+### Actual Result 2.1
+
+Step Number | Desktop
+------------ | ------------ 
+Step 1 | Pass  
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2.1-desktop.png">
 </details>
 <br>
