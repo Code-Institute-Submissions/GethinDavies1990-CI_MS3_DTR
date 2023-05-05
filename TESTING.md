@@ -320,15 +320,16 @@ Step 1 | Pass  | Pass |Pass
 
 ### User Story 2.1
 
-- User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
+- User Story 2.1: As a regular/admin user if i navigate to the footer of the website, and click all social media links they open within new tabs. 
 
 ### Test case steps 2.1
 
-1. navigate to home/index page and locate navbar
+1. navigate to home/index page and locate footer at bottom of page
+2. click links to open social media pages.
 
 ### Expected Result 2.1
 
-1. The 5 links and logos are visible on all devices
+1. All links open in a new tab, and are complete (no broken links)
 
 ### Actual Result 2.1
 
@@ -338,5 +339,40 @@ Step 1 | Pass
 
 <details><summary>Desktop Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2.1-desktop.png">
+</details>
+<br>
+
+## Feature 3 Landing Page
+
+### User Story 3.1
+
+- User Story 3.1: As a regular user I can view a hero image
+
+### Test case steps 3.1
+
+1. navigate to home/index page
+
+### Expected Result 3.1
+
+1. The home/index page will display the hero image on all devices
+
+### Actual Result 3.1
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.1-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.1-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.1-tablet.png">
 </details>
 <br>

@@ -157,7 +157,6 @@ client = boto3.client('s3',
 - User Story 1.3: As a regular user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
 - User Story 1.4: As a regular user, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
 - User Story 2.1: As a regular user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
-- User Story 2.2: As a regular user I can view the websites terms and condition page by clicking on the link in the footer
 - User Story 3.1: As a regular user I can view a hero image with latest reviews
 - User Story 3.2: As a regular user I can view the latest reviews left by users
 - User Story 3.3: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page
