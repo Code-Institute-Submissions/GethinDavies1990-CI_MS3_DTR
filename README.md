@@ -400,7 +400,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ![Last 4 reviews](binge_reviews/static/images/readme/features/homepage/latest-reviews.jpg)
 
-![Footer](binge_reviews/static/images/features/readme/footer/desktop-footer.jpg)
+![Footer](binge_reviews/static/images/readme/features/footer/desktop-footer.jpg)
 
 ### User Stories Feature 3
 

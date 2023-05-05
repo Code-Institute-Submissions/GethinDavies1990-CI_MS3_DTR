@@ -216,3 +216,36 @@ Step 1 | Pass  | Pass |Pass
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-1-tablet.png">
 </details>
 <br>
+
+### User Story 1-2
+
+- User Story 1.2: As a regular/admin user the navigation item selected is highlighted
+
+### Test case steps 1-2
+
+1. navigate to home/index page and locate navbar
+
+### Expected Result 1-2
+
+1. The active page is highlighted to notify the user this is the page they are on.
+
+### Actual Result 1-2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2-tablet.png">
+</details>
+<br>
