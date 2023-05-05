@@ -187,7 +187,7 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 1.3: As an admin user, when logged out, the home/landing page is the default page and there are three options with a logo, Home, Reviews, Login, Register displayed
 - User Story 1.4: As an admin user, when logged in, when logged in, the reviews page is the default page and there are six options with a logo: Home, Reviews, New Review, Log out, Profile
 - User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
- User Story 3.1: As an Admin user I can view a hero image with latest reviews
+- User Story 3.1: As an Admin user I can view a hero image with latest reviews
 - User Story 3.2: As an Admin  user I can view the latest reviews left by users
 - User Story 3.3: As an Admin user if I encounter an error with the application starting up I am navigated to a 500 error page
 - User Story 3.4: As an Admin user if I encounter an error when using the application(adding a review, category or registering), a message is displayed

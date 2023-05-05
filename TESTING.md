@@ -346,7 +346,7 @@ Step 1 | Pass
 
 ### User Story 3.1
 
-- User Story 3.1: As a regular user I can view a hero image
+- User Story 3.1: As a regular/admin user I can view a hero image
 
 ### Test case steps 3.1
 
@@ -374,5 +374,38 @@ Step 1 | Pass  | Pass |Pass
 
 <details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.1-tablet.png">
+</details>
+<br>
+
+### User Story 3.2
+
+- User Story 3.2: As a regular/admin user I can view the latest reviews left by users
+
+### Test case steps 3.2
+
+1. navigate to home/index page and locate the latest reviews section
+
+### Expected Result 3.2
+
+1. The latest reviews are on display under the hero image on the homepage.
+
+### Actual Result 3.2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.2-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.2-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.2-tablet.png">
 </details>
 <br>
