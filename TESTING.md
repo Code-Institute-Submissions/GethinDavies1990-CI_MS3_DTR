@@ -443,3 +443,38 @@ Step 1 | Pass  | Pass |Pass
 </details>
 <br>
 
+### User Story 3.3
+
+- User Story 3.4: As a regular/admin user if I encounter an error with the application starting up I am navigated to a 500 error page
+
+### Test case steps 3.4
+
+1. In your local environment in the env.py file modify the MONGO_URI to set an incorrect Password
+2. Start the application, for example python3 app.py
+
+### Expected Result 3.4
+
+1. The MONGO_URI entry is updated
+2. The application starts and the user is navigated to a 500 error page
+
+### Actual Result 3.4
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.4-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.4-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.4-tablet.png">
+</details>
+<br>
+
