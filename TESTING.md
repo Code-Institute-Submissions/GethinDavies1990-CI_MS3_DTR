@@ -997,20 +997,36 @@ Step 1 | Pass  | Pass | Pass
 Step 2 | Pass  | Pass | Pass
 
 
-<details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-desktop.png">
+<details><summary>Step-1 Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-1-desktop.png">
 </details>
 <br>
 
-<details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-mobile.png">
+<details><summary>Step-1 Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-1-mobile.png">
 </details>
 <br>
 
-<details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-tablet.png">
+<details><summary>Step-1 Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-1-tablet.png">
 </details>
 <br>
+
+<details><summary>Step-2 Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step-2 Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step-2 Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-2-tablet.png">
+</details>
+<br>
+
 
 
 
