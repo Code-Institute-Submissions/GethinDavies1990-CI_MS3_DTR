@@ -159,8 +159,9 @@ client = boto3.client('s3',
 - User Story 2.1: As a regular user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
 - User Story 3.1: As a regular user I can view a hero image with latest reviews
 - User Story 3.2: As a regular user I can view the latest reviews left by users
-- User Story 3.3: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page
-- User Story 3.4: As a regular user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
+- User Story 3.3: As a regular user if I encounter an error with the application starting up I am navigated to a 404 error page
+- User Story 3.4: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page
+- User Story 3.5: As a regular user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
 - User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
 - User Story 4.2: As a regular user my username must be a minimum of 5 characters, and a max of 25 characters.
 - User Story 4.3: As a regular user my password must be a minimum of 8 characters.
@@ -189,8 +190,9 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 2.1: As an admin user I can view the footers social icons(Twitter, facebook, instagram, pinterest, snapchat) and the relevant website opens in a new tab when clicked
 - User Story 3.1: As an Admin user I can view a hero image with latest reviews
 - User Story 3.2: As an Admin  user I can view the latest reviews left by users
-- User Story 3.3: As an Admin user if I encounter an error with the application starting up I am navigated to a 500 error page
-- User Story 3.4: As an Admin user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
+- User Story 3.3: As an Admin user if I encounter an error with the application starting up I am navigated to a 404 error page
+- User Story 3.4: As an Admin user if I encounter an error with the application starting up I am navigated to a 500 error page
+- User Story 3.5: As an Admin user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
 - User Story 4.1: As an Admin user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
 - User Story 4.2: As an Admin user my username must be a minimum of 5 characters, and a max of 25 characters.
 - User Story 4.3: As an Admin user my password must be a minimum of 8 characters.
