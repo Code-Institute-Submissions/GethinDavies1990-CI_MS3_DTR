@@ -409,3 +409,37 @@ Step 1 | Pass  | Pass |Pass
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.2-tablet.png">
 </details>
 <br>
+
+### User Story 3.3
+
+- User Story 3.3: As a regular/admin user if I encounter an error with the application starting up I am navigated to a 404 error page
+
+### Test case steps 3.3
+
+1. Enter a URL that doesn't exist, for example - https://binge-reviews.herokuapp.com/hello
+
+### Expected Result 3.3
+
+1. The error 404 page is displayed and a link to the homepage is displayed on the page. 
+
+### Actual Result 3.3
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.3-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.3-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.3-tablet.png">
+</details>
+<br>
+
