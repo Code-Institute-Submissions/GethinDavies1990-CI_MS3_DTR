@@ -168,11 +168,10 @@ client = boto3.client('s3',
 - User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 - User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review decription content, and rate the film out of 5.
-- User Story 5.2: Add Review - As a regular user the review image I upload must be png or jpg format
-- User Story 5.3: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
-- User Story 5.4: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
-- User Story 5.6: View Review - As a regular user I can view a review by clicking on the 'Full review' button
-- User Story 5.7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
+- User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.3: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
+- User Story 5.4: View Review - As a regular user I can view a review by clicking on the 'Full review' button
+- User Story 5.5: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 - User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
 - User Story 6.2: As a regular user I can update my profile password
 - User Story 6.3: As a regular user I can update my profile details: Username, First Name, Last Name, Favourite Film 
@@ -198,11 +197,10 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 4.4: As an Admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As an Admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 - User Story 5.1: Add Review - As an Admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
-- User Story 5.2: Add Review - As an Admin user the review image I upload must be png or jpg format
-- User Story 5.3: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
-- User Story 5.4: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
-- User Story 5.6: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
-- User Story 5.7: Search - As an Admin user I can search on text for the review name, film name. And the result will display those information
+- User Story 5.2: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.3: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
+- User Story 5.4: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
+- User Story 5.5: Search - As an Admin user I can search on text for the review name, film name. And the result will display those information
 - User Story 6.1: As an Admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
 - User Story 6.2: As an Admin user I can update my profile password
 - User Story 6.3: As an Admin user I can update my profile details: Username, First Name, Last Name, Favourite Film 
