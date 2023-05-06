@@ -1186,3 +1186,8 @@ Step 2 | Pass  | Pass | Pass
 </details>
 <br> -->
 
+# Code Validation
+
+## HTML Validation
+
+
