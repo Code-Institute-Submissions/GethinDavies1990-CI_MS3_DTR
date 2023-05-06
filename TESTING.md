@@ -900,8 +900,6 @@ Step 4 | Pass  | Pass | Pass
 </details>
 <br>
 
-# Feature 4
-
 ### User Story 5.4
 
 - User Story 5.4: View Review - As a regular/admin user I can view a review by clicking on the 'Full review' button
@@ -937,43 +935,6 @@ Step 1 | Pass  | Pass | Pass
 </details>
 <br>
 
-# Feature 5 - Search
-
-<!-- ### User Story 6
-
--User Story 6.1: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
-
-### Test case steps 6.1
-
-
-
-
-### Expected Result 5.5
-
-
-
-### Actual Result 5.5
-
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
-Step 1 | Pass  | Pass | Pass
-
-
-<details><summary>Desktop Result</summary>
-<img src="">
-</details>
-<br>
-
-<details><summary>Mobile Result</summary>
-<img src="">
-</details>
-<br>
-
-<details><summary>Tablet Result</summary>
-<img src="">
-</details>
-<br> -->
-
 # Feature 6 Profile Page
 
 ### User Story 6.1
@@ -988,7 +949,7 @@ User Story 6.1: As a regular user I can view my profile page: Username, First Na
 
 ### Expected Result 6.1
 
-2. Profile page is displayed
+1. Profile page is displayed
 
 
 ### Actual Result 6.1
@@ -1010,6 +971,44 @@ Step 1 | Pass  | Pass | Pass
 
 <details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.1-tablet.png">
+</details>
+<br>
+
+### User Story 6.2
+
+User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+
+### Test case steps 6.2
+
+1. on profile page click 'Update profile' button
+2. updating information will be confirmed with a flash message.
+
+### Expected Result 6.2
+
+1. On profile page selecting 'Update profile' button will redirect to url
+2. updating information and clicking 'Update' will be confirmed and I am notified with a flash message.
+
+
+### Actual Result 6.2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass | Pass
+Step 2 | Pass  | Pass | Pass
+
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-tablet.png">
 </details>
 <br>
 

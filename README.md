@@ -171,11 +171,10 @@ client = boto3.client('s3',
 - User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 - User Story 5.3: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As a regular user I can view a review by clicking on the 'Full review' button
-- User Story 6: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
-- User Story 7.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 7.2: As a regular user I can update my profile password
-- User Story 7.3: As a regular user I can update my profile details: Username, First Name, Last Name, Favourite Film 
-- User Story 7.4: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile. 
+- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
+- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
+- User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile. 
+User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 
 ## User stories for site owner
 
@@ -200,10 +199,10 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 5.2: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 - User Story 5.3: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
-- User Story 6: Search - As an Admin user I can search on text for the review name, film name. And the result will display those information
-- User Story 7.1: As an Admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 7.2: As an Admin user I can update my profile password
-- User Story 7.3: As an Admin user I can update my profile details: Username, First Name, Last Name, Favourite Film 
+- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
+- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
+- User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
+User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
 - User Story 8.4: As an Admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
 - User Story 8.1: As an Admin user I can delete reviews left by other users,
 - User Story 8.2: As an Admin user I can delete categories I have created
@@ -424,7 +423,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ### Description feature 5
 
-## Feature 6 Search
+## Feature 6 Profile Page
 
 ### Description feature 6
 
@@ -434,11 +433,11 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ## Feature 8 Top and lowest rated reviews
 
-### Description feature 8
+### Description feature 8 
 
-## Feature 9 Profile page
+## Feature 9 Search
 
-### Description feature 9
+### Description feature  9
 
 ## Feature 10 Dashboard
 
