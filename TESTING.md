@@ -693,17 +693,17 @@ Step Number | Desktop | Tablet | Mobile
 Step 1 | Pass  | Pass | Pass
 
 
-<details><summary>Step 2 - Desktop Result</summary>
+<details><summary>Desktop Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-desktop.png">
 </details>
 <br>
 
-<details><summary>Step 2 - Mobile Result</summary>
+<details><summary>Mobile Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-mobile.png">
 </details>
 <br>
 
-<details><summary>Step 2 - Tablet Result</summary>
+<details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-tablet.png">
 </details>
 <br>
@@ -767,5 +767,76 @@ Step 3 | Pass  | Pass | Pass
 
 <details><summary>Step 3 - Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-3-tablet.png">
+</details>
+<br>
+
+### User Story 5.2
+
+- User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the Film name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+
+### Test case steps 5.2
+
+1. Once Logged in, navigate to profile page
+2. locate the review to edit/update
+3. Update the required information
+
+
+### Expected Result 5.2
+
+1. Navigated to profile and all reviews I have published are visible, select review to edit.
+2. Update information and click 'Edit Review'
+3. If successful, the user is prompted with a flash message to say their update was successful.
+
+### Actual Result 5.2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass | Pass
+Step 2 | Pass  | Pass | Pass
+Step 3 | Pass  | Pass | Pass
+
+
+<details><summary>Step 1 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-1-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 1 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-1-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 1 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-1-tablet.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-2-tablet.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-3-tablet.png">
 </details>
 <br>
