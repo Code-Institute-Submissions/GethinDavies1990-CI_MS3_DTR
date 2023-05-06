@@ -29,10 +29,9 @@
                 </p>
             </div>
             <div class="col-8 text-center featured-review-btn-container">
-                <button class="pri-btn button mt-auto" type="button">
-                    <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full
-                        Review</a>
-                </button>
+                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="pri-btn button mt-auto" type="button">Full
+                    Review
+                </a>
             </div>
         </div>
     </div>
@@ -58,11 +57,7 @@
                 <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
                     class="pri-btn button text-center mb-1">Edit/Delete</a>
                 {% endif %}
-                <div class="card-footer text-center">
-                    <button class="pri-btn button text-white mt-auto">
-                        <a href="{{ url_for('reviews.get_review', review_id=review._id)}}">Full Review</a>
-                    </button>
-                </div>
+                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="pri-btn button text-center mb-3">Full Review</a>
             </div>
         </div>
         {% endfor %}
