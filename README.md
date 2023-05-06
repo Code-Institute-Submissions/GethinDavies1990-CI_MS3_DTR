@@ -167,7 +167,6 @@ client = boto3.client('s3',
 - User Story 4.3: As a regular user my password must be a minimum of 8 characters.
 - User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
-- User Story 4.6: As a regular user, when I am logged into the site, and I click the back button I am automatically redirected to the Login Page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 - User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review decription content, and rate the film out of 5.
 - User Story 5.2: Add Review - As a regular user the review image I upload must be png or jpg format
 - User Story 5.3: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
@@ -198,7 +197,6 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 4.3: As an Admin user my password must be a minimum of 8 characters.
 - User Story 4.4: As an Admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As an Admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
-- User Story 4.6: As an Admin user, when I am logged into the site, and I click the back button I am automatically redirected to the Login Page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 - User Story 5.1: Add Review - As an Admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
 - User Story 5.2: Add Review - As an Admin user the review image I upload must be png or jpg format
 - User Story 5.3: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.

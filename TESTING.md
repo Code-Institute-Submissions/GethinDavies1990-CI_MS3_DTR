@@ -517,7 +517,7 @@ Step 3 | Pass  | Pass |Pass
 </details>
 <br>
 
-## Feature 4 Login/Register
+## Feature 4 Login/Register/logout
 
 <!-- ### User Story 4.1
 
@@ -705,5 +705,67 @@ Step 1 | Pass  | Pass | Pass
 
 <details><summary>Step 2 - Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-tablet.png">
+</details>
+<br>
+
+## Feature 5 Add/Edit/Delete Review
+
+### User Story 5.1
+
+- User Story 5.1: Add Review - As a regular/admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
+
+### Test case steps 5.1
+
+1. Once Logged in, navigate to the Navigation bar and click 'New Review'
+2. fill in the required information -  Film Name, Review Image, Review Title, category, review description, and rate the film out of 5 and select 'Publish Review'
+3. If successful, a flash Message will display, and the user is navigated to the 'Reviews' page where the users review is published. 
+
+
+### Expected Result 5.1
+
+1. After clicking the 'New Review' link I am linked to the 'New Review' url
+2. After filling in all fields I can click 'Publish Review'
+3. Review is published, and the user is displayed with a feedback flash message of their successful review publish
+
+### Actual Result 5.1
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass | Pass
+Step 2 | Pass  | Pass | Pass
+Step 3 | Pass  | Pass | Pass
+
+<details><summary>Step 1 - Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-1.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-2-tablet.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.1-step-3-tablet.png">
 </details>
 <br>
