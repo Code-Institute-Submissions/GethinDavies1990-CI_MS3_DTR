@@ -772,7 +772,7 @@ Step 3 | Pass  | Pass | Pass
 
 ### User Story 5.2
 
-- User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the Film name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.2: Edit Review - As a regular/admin user I can edit a review by uploading a review image, updating the Film name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 
 ### Test case steps 5.2
 
@@ -840,3 +840,63 @@ Step 3 | Pass  | Pass | Pass
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.2-step-3-tablet.png">
 </details>
 <br>
+
+### User Story 5.3
+
+- User Story 5.3: Delete Review - As a regular/admin user I can delete a review I created by confirming I want to delete
+
+### Test case steps 5.3
+
+1. Once logged in, navigate to profile and select a review you wish to delete
+2. locate the review and click 'Delete Review'
+3. The user is prompted with a modal, to confirm deletion
+4. Once deleted a flash message displays to confirm the review has been deleted.
+
+
+### Expected Result 5.3
+
+1. Navigated to profile and all reviews I have published are visible, select review to delete.
+2. Click Delete Review
+3. I am presented with a modal to confirm deletion, clicked confirm deletion
+4. review is deleted and i am prompted with a flash message to notify me of this. 
+
+### Actual Result 5.3
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | n/a  | n/a | n/a
+Step 3 | Pass  | Pass | Pass
+Step 4 | Pass  | Pass | Pass
+
+
+<details><summary>Step 3 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-3-tablet.png">
+</details>
+<br>
+
+<details><summary>Step 4 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-4-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 4 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-4-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 4 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-5.3-step-4-tablet.png">
+</details>
+<br>
+
