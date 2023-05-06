@@ -517,3 +517,159 @@ Step 3 | Pass  | Pass |Pass
 </details>
 <br>
 
+## Feature 4 Login/Register
+
+<!-- ### User Story 4.1
+
+-User Story 4.1: As a regular/admin user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+
+### Test case steps 4.1
+
+
+
+### Expected Result 4.1
+
+
+
+### Actual Result 4.1
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-tablet.png">
+</details>
+<br>
+
+### User Story 4.2
+
+-User Story 4.2: As a regular/admin user my username must be a minimum of 5 characters, and a max of 25 characters.
+
+### Test case steps 4.2
+
+
+
+### Expected Result 4.2
+
+
+
+### Actual Result 4.2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-tablet.png">
+</details>
+<br>
+
+### User Story 4.3
+
+-User Story 4.3: As a regular/admin user my password must be a minimum of 8 characters.
+
+### Test case steps 4.3
+
+
+
+### Expected Result 4.3
+
+
+
+### Actual Result 4.3
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.3-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.3-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.3-tablet.png">
+</details>
+<br> -->
+
+### User Story 4.4
+
+-User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
+
+### Test case steps 4.4
+
+1. As a regular user/admin user navigate to the login page and click the Login button
+2. Enter a username and/or password that does not exist
+3. Enter a valid username and password
+
+
+### Expected Result 4.4
+
+1. An error message is displayed that both the username and password fields must be entered
+2. A message is displayed: Incorrect Username and/or Password
+3. The user is successfully logged in and is brought to the memories page
+
+### Actual Result 4.4
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | Pass  | Pass |Pass
+Step 3 | Pass  | Pass |Pass
+
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-2-tablet.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 3 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.4-step-3-tablet.png">
+</details>
+<br>
+
