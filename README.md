@@ -174,7 +174,7 @@ client = boto3.client('s3',
 - User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
 - User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
 - User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile. 
-User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
+- User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 
 ## User stories for site owner
 

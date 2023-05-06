@@ -976,7 +976,7 @@ Step 1 | Pass  | Pass | Pass
 
 ### User Story 6.2
 
-User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+User Story 6.2: As a regular/admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
 
 ### Test case steps 6.2
 
@@ -1026,6 +1026,45 @@ Step 2 | Pass  | Pass | Pass
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.2-step-2-tablet.png">
 </details>
 <br>
+
+### User Story 6.3
+
+User Story 6.3: As a regular/admin user I can delete my account. The user will be asked to confirm deletion of their profile.
+
+### Test case steps 6.3
+
+1. On profile page click 'Update/Delete profile' button will direct the user to the update/delete page. On clicking delete the user will be displayed with a modal to confirm deletion.
+2. click delete to remove the profile
+
+### Expected Result 6.3
+
+1. clicking delete profile displays a modal to confirm deletion
+2. clicking delete will delete the profile
+
+
+### Actual Result 6.3
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | Pass  | Pass | Pass
+
+
+<details><summary>Step-1 Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step-1 Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step-1 Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-tablet.png">
+</details>
+<br>
+
 
 
 

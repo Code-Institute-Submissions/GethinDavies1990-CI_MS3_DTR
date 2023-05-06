@@ -13,7 +13,8 @@
                 class="text-white">{{user.last_name}}</span></p>
         <p class="text-pink"> Favourite Film: <span class="text-white">{{ user.fav_film }}</span>
             <p class="text-pink"> A little bit about me: <span class="text-white">{{ user.author_bio }}</span></p>
-            <a href="{{ url_for('authentication.update_profile', username=username)}}" class="pri-btn button">Update
+            <a href="{{ url_for('authentication.update_profile', username=username)}}"
+                class="pri-btn button">Update/Delete Profile
                 Profile</a>
     </div>
 </div>
