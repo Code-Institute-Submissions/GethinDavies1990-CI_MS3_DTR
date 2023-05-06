@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Edit Categories{% endblock %}
 {% block content %}
-<h3 class="text-white text-center">Edit Category</h3>
+<h3 class="text-pink text-center">Edit Category</h3>
 
 
 <div
@@ -18,14 +18,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="">
+            <div>
                 <input class="form-control validate" type="file" id="category_image" name="category_image" value="file"
                     required>
             </div>
         </div>
         <!-- Cancel Edit Category Button -->
-        <div class="row edit-category-buttons">
-            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <a href="{{ url_for('categories.get_categories') }}" type="submit"
                     class="sec-btn button text-center mb-2 mt-2">Cancel</a>
             </div>
