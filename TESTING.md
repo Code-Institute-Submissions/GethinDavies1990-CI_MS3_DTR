@@ -633,7 +633,7 @@ Step 1 | Pass  | Pass |Pass
 
 1. An error message is displayed that both the username and password fields must be entered
 2. A message is displayed: Incorrect Username and/or Password
-3. The user is successfully logged in and is brought to the memories page
+3. The user is successfully logged in and is brought to their profile page
 
 ### Actual Result 4.4
 
@@ -673,3 +673,37 @@ Step 3 | Pass  | Pass |Pass
 </details>
 <br>
 
+### User Story 4.5
+
+- User Story 4.5: As a regular/admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
+
+### Test case steps 4.5
+
+1. As a regular user/admin user navigate to the logout button and click
+
+
+### Expected Result 4.5
+
+1. The user is logged out and redirected back to the 
+
+### Actual Result 4.5
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | Pass  | Pass | Pass
+
+
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.5-tablet.png">
+</details>
+<br>
