@@ -443,7 +443,7 @@ Step 1 | Pass  | Pass |Pass
 </details>
 <br>
 
-### User Story 3.3
+### User Story 3.4
 
 - User Story 3.4: As a regular/admin user if I encounter an error with the application starting up I am navigated to a 500 error page
 
@@ -475,6 +475,45 @@ Step 1 | Pass  | Pass |Pass
 
 <details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.4-tablet.png">
+</details>
+<br>
+
+### User Story 3.5
+
+-User Story 3.5: As a regular/admin user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
+
+### Test case steps 3.5
+
+1. In your local environment in the env.py file modify the AWS_SECRET_ACCESS_KEY to set an incorrect key
+2. Start the application, for example python3 app.py
+3. As a regular user add a review
+
+### Expected Result 3.5
+
+1. The change is made
+2. The application starts
+3. The review does not add an exception is displayed: "An exception occurred when adding a new review: Exception('Exception when uploading the image to AWS S3 bucket')"
+
+### Actual Result 3.5
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a  | n/a 
+Step 2 | n/a   | n/a  | n/a 
+Step 3 | Pass  | Pass |Pass
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.5-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.5-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-3.5-tablet.png">
 </details>
 <br>
 
