@@ -202,7 +202,7 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
 - User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
 - User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
-User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
+- User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
 - User Story 8.4: As an Admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
 - User Story 8.1: As an Admin user I can delete reviews left by other users,
 - User Story 8.2: As an Admin user I can delete categories I have created
