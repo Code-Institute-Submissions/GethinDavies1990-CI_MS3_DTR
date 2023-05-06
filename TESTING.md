@@ -1065,7 +1065,124 @@ Step 2 | Pass  | Pass | Pass
 </details>
 <br>
 
+<!-- # Feature 7 - Search
+
+### User Story 6.3
+
+User Story 6.3: As a regular/admin user I can delete my account. The user will be asked to confirm deletion of their profile.
+
+### Test case steps 6.3
+
+1. On profile page click 'Update/Delete profile' button will direct the user to the update/delete page. On clicking delete the user will be displayed with a modal to confirm deletion.
+2. click delete to remove the profile
+
+### Expected Result 6.3
+
+1. clicking delete profile displays a modal to confirm deletion
+2. clicking delete will delete the profile
 
 
+### Actual Result 6.3
 
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | Pass  | Pass | Pass
+
+
+<details><summary>Step-1 Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-desktop.png">
+</details>
+<br>
+
+<details><summary>Step-1 Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-mobile.png">
+</details>
+<br>
+
+<details><summary>Step-1 Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-tablet.png">
+</details>
+<br>
+
+
+ -->
+
+# Feature 8 - Admin control
+
+### User Story 8.1
+
+User Story 8.1: As an Admin user I can delete reviews left by other users,
+
+### Test case steps 8.1
+
+1. Once logged in as an admin, locate a review and click the 'delete review' button, the user will be directed to the edit/delete review page.
+2. The user will be prompted with a modal to confirm deletion, click delete to delete review
+
+### Expected Result 8.1
+
+1. located review and clicked 'Delete review', directed to edit/delete page.
+2. clicking delete will delete the review from the database
+
+
+### Actual Result 8.1
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | Pass  | Pass | Pass
+
+
+<details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.1-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.1-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.1-tablet.png">
+</details>
+<br>
+
+### User Story 8.2
+
+ User Story 8.2: As an Admin user I can delete and edit categories
+
+### Test case steps 8.2
+
+1. Once logged in as an admin, navigate to the categories page, and select edit or delete.
+2. a modal will be displayed to confirm deletion.
+
+### Expected Result 8.2
+
+1. located the category page and selected delete/edit
+2. A modal appears to confirm deletion
+
+
+### Actual Result 8.2
+
+Step Number | Desktop | Tablet | Mobile 
+------------ | ------------ | ------------- | ------------- | 
+Step 1 | n/a  | n/a | n/a
+Step 2 | Pass  | Pass | Pass
+
+
+<!-- <details><summary>Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-desktop.png">
+</details>
+<br>
+
+<details><summary>Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-mobile.png">
+</details>
+<br>
+
+<details><summary>Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-tablet.png">
+</details>
+<br> -->
 
