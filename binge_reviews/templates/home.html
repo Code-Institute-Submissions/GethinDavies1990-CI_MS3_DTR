@@ -37,6 +37,13 @@
     </div>
     {% endif %}
     {% endfor %}
+    <p class="text-white">Welcome to Binge Reviews, the ultimate destination for movie enthusiasts! Our website is dedicated to providing a
+        platform for movie lovers to share their thoughts, opinions, and reviews on their favorite films. At Binge
+        Review, users can register and create their profiles, browse through our extensive library of movies, and leave
+        reviews on the ones they have watched. Our user-friendly interface makes it easy for everyone to navigate
+        through the website, find movies of their interest, and engage in meaningful discussions with fellow movie
+        buffs. Whether you are a fan of classic cinema or the latest blockbuster releases, Binge Review has something
+        for everyone.</pc>
     <h3 class="text-center text-pink mb-4 mt-4">Latest Reviews</h3>
     <div class=" row g-4 review-collection">
         {% for review in latest_reviews %}
@@ -57,7 +64,8 @@
                 <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
                     class="pri-btn button text-center mb-1">Edit/Delete</a>
                 {% endif %}
-                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="pri-btn button text-center mb-3">Full Review</a>
+                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                    class="pri-btn button text-center mb-3">Full Review</a>
             </div>
         </div>
         {% endfor %}
