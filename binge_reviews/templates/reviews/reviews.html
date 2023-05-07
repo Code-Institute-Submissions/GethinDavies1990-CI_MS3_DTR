@@ -26,7 +26,6 @@
 <div class="container">
     <div class="row">
         <!-- Top Rated section -->
-
         <div class="col-lg-6 col-md-12 col-sm-12">
             <h3 class="text-pink text-center">Top Performers</h3>
             <div id="carouselTopPerformersControls" class="carousel slide" data-bs-ride="carousel">
@@ -38,7 +37,7 @@
                             <h5>Top Rated Films</h5>
                         </div>
                     </div>
-                    {% for review in reviews %}
+                    {% for review in reviews if review.rating >= 4 %}
                     <div class="carousel-item">
                         <img src="{{ review.review_image }}" class="d-block alt=" ...">
                     </div>
@@ -68,7 +67,7 @@
                             <h5>Poor Films</h5>
                         </div>
                     </div>
-                    {% for review in reviews %}
+                    {% for review in reviews if review.rating <= 2 %}
                     <div class="carousel-item">
                         <img src="{{ review.review_image }}" class="d-block alt=" ...">
                     </div>
