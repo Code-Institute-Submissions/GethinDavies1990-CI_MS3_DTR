@@ -3,7 +3,7 @@
 {% block nav_reviews %}active{% endblock %}
 {% block content %}
 
-<h3 class="text-center text-pink">Reviews</h3>
+<h3 class="page-header">Reviews</h3>
 <!-- Top Rated and Lowest rated reviews section -->
 <div class="container">
     <div class="row">
@@ -21,15 +21,16 @@
                     </div>
                     {% for review in reviews if review.rating >= 4 %}
                     <div class="carousel-item">
-                        <img src="{{ review.review_image }}" class="d-block alt=" ...">
+                        <img src="{{review.review_image}}"
+                            class="d-block" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="card-title-small text-center"><a
+                            <a
                                 href="{{ url_for('reviews.get_review', review_id=review._id)}}"
                                 class="film-title">{{ review.film_name }} <span
                                     class="text-white">{{ review.rating }}</span><span
                                     class="material-symbols-outlined material-icons icon">
                                     star
-                                </span></a></h5>
+                                </span></a>
                         </div>
                     </div>
                     {% endfor %}

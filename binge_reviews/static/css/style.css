@@ -36,6 +36,20 @@ a {
     color: #F01D7F;
 }
 
+.page-header {
+    font-size: 2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    margin: 5px auto;
+    text-align: center;
+    color: #F01D7F;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 5px;
+    position: relative;
+}
+
 /* form validation */
 
 
@@ -161,26 +175,10 @@ a {
     background-color: #000 !important;
 }
 
-.overlay-text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.card-img {
-    opacity: 0.2;
-    margin: 0px auto;
-}
-
-.card-img-overlay {
-    position: relative;
-}
-
 .review-set {
     margin-top: 30px;
     height: 70vh;
 }
-
 
 #featured-review-header {
     font-weight: 400;
@@ -222,7 +220,9 @@ a {
 
 
 .film-title {
-    font-size: 32px;
+    font-size: 2.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
     margin-left: 5px;
     margin-right: 50px;
     color: #F01D7F;
@@ -292,7 +292,7 @@ a {
 }
 
 .card-title-small>a {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -301,7 +301,7 @@ a {
 }
 
 .card-title-small>.icon-header {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
