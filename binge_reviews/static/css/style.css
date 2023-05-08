@@ -180,7 +180,10 @@ a {
 
 .card-title {
     text-align: left;
-    font-size: 16px;
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #F01D7F;
 }
 
 .rating-container {
@@ -270,7 +273,7 @@ a {
 }
 
 .card-title-small>a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -292,6 +295,10 @@ a {
 
 .modal-header {
     background-color: #F01D7F;
+}
+
+.modal-footer {
+    text-align: center;
 }
 
 /* review page - each single review */
@@ -352,78 +359,57 @@ a {
     margin: 5px;
 }
 
-
 /* Buttons */
 
-.review-btn-container {
-    height: 60px;
+.btn {
+    width: 180px;
+    border-radius: 30px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #F01D7F;
+    border: 1px solid #fff;
+    color: #Fff;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    border: 1px solid #F01D7F;
+    color: #F01D7F;
+}
+
+.btn-secondary {
+    background-color: #000;
+    border: 1px solid #F01D7F;
+    color: #F01D7F;
+}
+
+.btn-secondary:hover {
+    background-color: #28282B !important;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #fff !important;
+    border: 1px solid #F01D7F;
+    color: #F01D7F;
+}
+
+.btn-danger:hover {
+    background-color: #F01D7F !important;
+    border: 1px solid #fff;
+    color: #Fff;
 }
 
 .featured-review-btn-container {
-    margin: 3px auto;
-    height: 50px;
-    vertical-align: middle;
+    margin: 2px auto;
 }
 
-.button,
-.card-btn {
-    width: 150px;
-    margin: 20px auto;
-    border-radius: 15px;
-    height: 30px;
-    font-size: 14px;
-    padding: 5px 2px;
-}
-
-.card-btn {
-    width: 80%;
-    margin: 10px auto;
-}
-
-.delete-btn {
-    width: 100px;
-    margin: 20px auto;
-    border-radius: 15px;
-    height: 30px;
-    font-size: 14px;
-    background-color: #28282B;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
-}
-
-.pri-btn {
-    background-color: #F01D7F;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-
-.pri-btn:hover {
-    background-color: #fff;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
-}
-
-.add-edit-sec-btn,
-.sec-btn {
-    background-color: #28282B;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
-}
-
-.edit-category-buttons {
-    margin: 5px auto;
-}
-
-.sec-btn:hover {
-    background-color: #28282B;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-.btn:hover {
-    background-color: #fff;
-    color: #F01D7F;
+.button-container {
+    text-align: center;
 }
 
 /* Register - Login Page - Profile Page */
@@ -506,6 +492,19 @@ select:-webkit-autofill:focus {
 .register-login-card input:hover {
     border-bottom: 3px solid #Fff;
 }
+
+.list-group-item {
+    background-color: #000;
+    border: #000;
+}
+
+.list-group-item > a {
+    color: #Fff;
+    background-color: #F01D7F;
+    padding: 1px 3px;
+    width: 150px;
+}
+
 
 form {
     width: 100%;

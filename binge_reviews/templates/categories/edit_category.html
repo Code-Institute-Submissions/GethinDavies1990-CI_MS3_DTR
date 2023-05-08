@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Edit Categories{% endblock %}
 {% block content %}
-<h3 class="text-pink text-center">Edit Category</h3>
+<h3 class="page-header">Edit Category</h3>
 
 
 <div
-    class="register-card register-login-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+    class="register-card register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form class="review-form" method="POST" enctype="multipart/form-data"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
@@ -13,7 +13,7 @@
             <div class="mb-2 mt-3">
                 <i class="fa-solid fa-clapperboard text-pink"></i>
                 <label for="category_name" class="form-label mb-2 mt-2">Category Name</label>
-                <input type="text" class="form-control" value="{{ category.category_name }}" id="category_name"
+                <input type="text" class="text-white" value="{{ category.category_name }}" id="category_name"
                     name="category_name" min-length="3" maxlength="25" required>
             </div>
         </div>
@@ -27,11 +27,11 @@
         <div class="row text-center">
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <a href="{{ url_for('categories.get_categories') }}" type="submit"
-                    class="sec-btn button text-center mb-2 mt-2">Cancel</a>
+                    class="btn btn-danger text-center mb-2 mt-2">Cancel</a>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <!-- Edit Category Button -->
-                <button type="submit" class="pri-btn button mb-2 mt-2">Edit Category</button>
+                <button type="submit" class="btn btn-secondary mb-2 mt-2">Edit Category</button>
             </div>
         </div>
     </form>

@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Add Categories{% endblock %}
 {% block content %}
-<h3 class="text-white text-center">Add Category</h3>
+<h3 class="page-header">Add Category</h3>
 
-
-<div class="register-card card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+<div class="register-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
         action="{{ url_for('categories.add_category')}}">
         <!-- Category Name -->
@@ -23,7 +22,8 @@
             </div>
             <!-- Submit Category Button -->
             <button type="submit" class="btn btn-primary mb-2 mt-2">Add Category<i
-                    class="fa-solid fa-plus icon-btn"></i></button>
+                    class="fa-solid fa-plus icon-btn"></i>
+            </button>
     </form>
 </div>
 
