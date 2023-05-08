@@ -13,7 +13,7 @@ categories = Blueprint('categories', __name__)
 @categories.route("/get_categories")
 def get_categories():
     """
-    This function will display all the catgories
+    This function will display all the categories
     in a grid section on the page
     """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
@@ -39,7 +39,7 @@ def add_category() -> object:
         flash("New Category Added")
         return redirect(url_for('categories/categories.get_categories'))
 
-    return render_template("add_category.html")
+    return render_template("categories/add_category.html")
 
 
 @categories.route("/edit_category/<category_id>", methods=["POST", "GET"])
