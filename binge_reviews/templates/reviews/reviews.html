@@ -4,60 +4,58 @@
 {% block content %}
 <h3 class="page-header">Reviews</h3>
 <!-- Top Rated and Lowest rated reviews section -->
-<div id="topRatedControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner  top-low-rated-carousel">
-        <div class="carousel-item active">
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}" alt="..."
-                            class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body ">
-                            <h5 class="card-title-small film-title">Top Rated Movies</h5>
-                            <p class="card-text">Don't miss out on the best movies of all time! Explore the top rated
-                                films and discover timeless classics and modern masterpieces.</p>
+<div class="top-low-rated-container">
+    <div id="topRatedControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card mb-3 top-low-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}"
+                                alt="..." class="img-fluid top rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body ">
+                                <h5 class="card-title-small film-title">Top Rated Movies</h5>
+                                <p class="card-text">Don't miss out on the best movies of all time! Explore the top
+                                    rated
+                                    films and discover timeless classics and modern masterpieces.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        {% for review in reviews if review.rating >= 4 %}
-        <div class="carousel-item">
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body ">
-                            <h5 class="card-title-small"><a
-                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                    class="film-title">{{ review.film_name }} <span
-                                        class="text-white">{{ review.rating }}</span><span
-                                        class="material-symbols-outlined material-icons icon">
-                                        star
-                                    </span></a></h5>
-                            <p class="card-text">"{{ review.review_title }}"</p>
-                            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="pri-btn button card-btn text-center mb-3">Full Review</a>
+            {% for review in reviews if review.rating >= 4 %}
+            <div class="carousel-item">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body ">
+                                <a class="card-title-small film-title"
+                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
+                                </a>
+                                <p class="card-text">"{{ review.review_title }}"</p>
+                                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                                    class="pri-btn text-center">Full Review</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#topRatedControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#topRatedControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#topRatedControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#topRatedControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
 <!-- Lowest Rated films -->
 <div id="lowRatedControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner  top-low-rated-carousel">
@@ -70,7 +68,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Movies to avoid</h5>
+                            <h5 class="card-title-small film-title">Movies to Avoid</h5>
                             <p class="card-text">Looking for a movie to avoid? Check out the lowest rated films! These
                                 movies have earned a reputation for being the worst of the worst. Save yourself the time
                                 and skip these duds. Stick to the top rated films for a guaranteed good time.</p>
@@ -84,17 +82,13 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ review.review_image }}" alt="{{review.film_name}}" class="img-fluid rounded-start">
+                        <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body ">
-                            <h5 class="card-title-small text-center"><a
-                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                    class="film-title">{{ review.film_name }} <span
-                                        class="text-white">{{ review.rating }}</span><span
-                                        class="material-symbols-outlined material-icons icon">
-                                        star
-                                    </span></a></h5>
+                            <a class="card-title-small film-title"
+                                href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
+                            </a>
                             <p class="card-text">"{{ review.review_title }}"</p>
                             <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
                                 class="pri-btn button card-btn text-center mb-3">Full Review</a>
@@ -113,6 +107,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
+</div>
 </div>
 <!-- Search Reviews -->
 <div class="search-container">

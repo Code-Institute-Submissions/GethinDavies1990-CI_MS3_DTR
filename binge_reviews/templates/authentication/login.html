@@ -9,8 +9,8 @@
             login
         </span>Login</h3>
     <div
-        class="register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form method="POST" action="{{ url_for('authentication.login')}}">
+        class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+        <form method="POST" action="{{ url_for('authentication.login')}}" autocomplete="off">
             <!--Username input -->
             <div class="row mb-4">
                 <div class="col">
@@ -20,7 +20,7 @@
                         </span>Username</label>
                     <div class="form-outline">
                         <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                            pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required>
+                            pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" required>
                     </div>
                 </div>
             </div>
@@ -30,11 +30,11 @@
                 </span>Password</label>
             <div class="form-outline">
                 <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" class="form-control" required>
+                    pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" required>
             </div>
             <!-- Submit button -->
             <div class="text-center">
-                <button type="submit" class="pri-btn button mb-4">Login</button>
+                <button type="submit" class="pri-btn button mb-4 mt-4">Login</button>
             </div>
         </form>
     </div>
