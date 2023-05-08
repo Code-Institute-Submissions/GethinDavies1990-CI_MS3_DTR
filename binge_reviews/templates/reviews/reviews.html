@@ -2,134 +2,96 @@
 {% block title %}Reviews{% endblock %}
 {% block nav_reviews %}active{% endblock %}
 {% block content %}
-
 <h3 class="page-header">Reviews</h3>
 <!-- Top Rated and Lowest rated reviews section -->
-<div class="container">
-    <div class="row">
-        <!-- Top Rated section -->
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-5">
-            <h3 class="text-pink text-center">Top Performers</h3>
-            <div id="carouselTopPerformersControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg')}}"
-                            class="d-block" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Top Rated Films</h5>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}" alt="..."
+                            class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Top Rated Films</h5>
+                            <p class="card-text">Don't miss out on the best movies of all time! Explore the top rated films and discover timeless classics and modern masterpieces. Start watching now!</p>
                         </div>
                     </div>
-                    {% for review in reviews if review.rating >= 4 %}
-                    <div class="carousel-item">
-                        <img src="{{review.review_image}}"
-                            class="d-block" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <a
-                                href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="film-title">{{ review.film_name }} <span
-                                    class="text-white">{{ review.rating }}</span><span
-                                    class="material-symbols-outlined material-icons icon">
-                                    star
-                                </span></a>
-                        </div>
-                    </div>
-                    {% endfor %}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTopPerformersControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselTopPerformersControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-        <!-- Lowest Rated section -->
-        <div class="col-lg-6 col-md-12 col-sm-12 mb-5">
-            <h3 class="text-pink text-center">Poor Films</h3>
-            <div id="carouselLowestPerformersControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ url_for('static', filename='images/site-images/lowest-rated-image.jpg')}}"
-                            class="d-block" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Poor Films</h5>
+        <div class="carousel-item active">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}" alt="..."
+                            class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                    {% for review in reviews if review.rating <= 2 %}
-                    <div class="carousel-item">
-                        <img src="{{ review.review_image }}" class="d-block alt=" ...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="card-title-small text-center"><a
-                                href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                class="film-title">{{ review.film_name }} <span
-                                    class="text-white">{{ review.rating }}</span><span
-                                    class="material-symbols-outlined material-icons icon">
-                                    star
-                                </span></a></h5>
-                        </div>
-                    </div>
-                    {% endfor %}
-                    </div>
-                    <button class="carousel-control-prev" type="button"
-                        data-bs-target="#carouselLowestPerformersControlss" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                        data-bs-target="#carouselLowestPerformersControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Search Reviews -->
-    <div class="search-container">
-        <div class="row">
-            <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
-                <form action=" {{ url_for('reviews.search') }}" method="POST">
-                    <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
-                        required>
-                </form>
-            </div>
-            <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
-                <button class="pri-btn button mt-1" type="submit">
-                    Search
-                </button>
-                <button class="sec-btn button">
-                    <a href="{{ url_for('reviews.get_reviews') }}">Reset</a>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class=" row g-4 review-collection">
-        {% for review in reviews %}
-        <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
-            <div class="card text-bg-dark h-100 review-collection-card">
-                <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
-                <div class="card-body ">
-                    <h5 class="card-title-small text-center"><a
-                            href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                            class="film-title">{{ review.film_name }} <span
-                                class="text-white">{{ review.rating }}</span><span
-                                class="material-symbols-outlined material-icons icon">
-                                star
-                            </span></a></h5>
-                    <p class="card-text">"{{ review.review_title }}"</p>
-                </div>
-                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
-                <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
-                    class="pri-btn button text-center mb-1">Edit/Delete</a>
-                {% endif %}
-                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="pri-btn button text-center mb-3">Full Review</a>
-            </div>
-        </div>
-        {% endfor %}
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+<!-- Search Reviews -->
+<div class="search-container">
+    <div class="row">
+        <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
+            <form action=" {{ url_for('reviews.search') }}" method="POST">
+                <input type="text" name="query" minlength="3" class="validate search-bar" placeholder="Search Reviews"
+                    required>
+            </form>
+        </div>
+        <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
+            <button class="pri-btn button mt-1" type="submit">
+                Search
+            </button>
+            <button class="sec-btn button">
+                <a href="{{ url_for('reviews.get_reviews') }}">Reset</a>
+            </button>
+        </div>
+    </div>
+</div>
+<div class=" row g-4 review-collection">
+    {% for review in reviews %}
+    <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <div class="card text-bg-dark h-100 review-collection-card">
+            <img src="{{ review.review_image }}" class="card-img-top review-img" alt="{{ review.review_image }}">
+            <div class="card-body ">
+                <h5 class="card-title-small text-center"><a
+                        href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                        class="film-title">{{ review.film_name }} <span
+                            class="text-white">{{ review.rating }}</span><span
+                            class="material-symbols-outlined material-icons icon">
+                            star
+                        </span></a></h5>
+                <p class="card-text">"{{ review.review_title }}"</p>
+            </div>
+            {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
+            <a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                class="pri-btn button text-center mb-1">Edit/Delete</a>
+            {% endif %}
+            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                class="pri-btn button text-center mb-3">Full Review</a>
+        </div>
+    </div>
+    {% endfor %}
 
-{% endblock %}
+    {% endblock %}

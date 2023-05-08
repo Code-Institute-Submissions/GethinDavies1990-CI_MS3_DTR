@@ -36,6 +36,7 @@ a {
     color: #F01D7F;
 }
 
+
 .page-header {
     font-size: 2rem;
     font-family: 'Rubik', sans-serif;
@@ -49,6 +50,7 @@ a {
     padding: 15px 5px;
     position: relative;
 }
+
 
 /* form validation */
 
@@ -152,6 +154,17 @@ a {
     object-fit: cover;
     border-radius: 3px;
     border: 1px solid #F01D7F;
+}
+
+.card-img-top {
+    object-fit: cover;
+    justify-content: center;
+}
+
+.card {
+    background-color: #000;
+    border: 2px solid #F01D7F;
+    color: #fff;
 }
 
 /* Reviews/Homepage */
