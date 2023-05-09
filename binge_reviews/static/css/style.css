@@ -383,6 +383,7 @@ a {
     background-color: #F01D7F;
     border: 1px solid #fff;
     color: #Fff;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
