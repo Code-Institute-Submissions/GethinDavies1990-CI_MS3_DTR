@@ -1,7 +1,7 @@
-# Testing 
+# Testing
 
-The testing performed in this unit is described in this testing readme: 
-1. Manual testing using emulators and real devices. 
+The testing performed in this unit is described in this testing readme:
+1. Manual testing using emulators and real devices.
 
 <br>
 
@@ -15,15 +15,15 @@ To follow
 
 Device Number | Physical/Emulator | Device Name | Device Type | Browser |
 ------------ | ------------ | ------------- | ------------- | ------------- |
-1 | Physical | Galaxy Note 3 | Phone |  Chrome | 
-2 | Physical | iPhone 8 | Mobile |Safari | 
-3 | Physical | Iphone 14 Pro | Mobile | Safari | 
-4 | Physical | Lenovo | Desktop | IE Edge | 
+1 | Physical | Galaxy Note 3 | Phone |  Chrome |
+2 | Physical | iPhone 8 | Mobile |Safari |
+3 | Physical | Iphone 14 Pro | Mobile | Safari |
+4 | Physical | Lenovo | Desktop | IE Edge |
 5 | Physical | Macbook Pro 14 | Desktop | Mozilla Firefox |
-6 | Physical | Imac | Desktop | Chrome | 
-7 | Emulator | Ipad Air | Tablet | Chrome | 
-8 | Emulator | Surface Pro 2 | Tablet | Chrome | 
-9 | Emulator | Pixel 2 | Tablet | Chrome | 
+6 | Physical | Imac | Desktop | Chrome |
+7 | Emulator | Ipad Air | Tablet | Chrome |
+8 | Emulator | Surface Pro 2 | Tablet | Chrome |
+9 | Emulator | Pixel 2 | Tablet | Chrome |
 
 
 ## Responsiveness Testing
@@ -198,8 +198,8 @@ I made a very thorough check on responsiveness on all devices on the the google 
 
 ### Actual Result 1.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -231,8 +231,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 1.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -264,8 +264,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 1.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -297,8 +297,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 1.4
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -320,7 +320,7 @@ Step 1 | Pass  | Pass |Pass
 
 ### User Story 2.1
 
-- User Story 2.1: As a regular/admin user if i navigate to the footer of the website, and click all social media links they open within new tabs. 
+- User Story 2.1: As a regular/admin user if i navigate to the footer of the website, and click all social media links they open within new tabs.
 
 ### Test case steps 2.1
 
@@ -334,8 +334,8 @@ Step 1 | Pass  | Pass |Pass
 ### Actual Result 2.1
 
 Step Number | Desktop
------------- | ------------ 
-Step 1 | Pass  
+------------ | ------------
+Step 1 | Pass
 
 <details><summary>Desktop Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-2.1-desktop.png">
@@ -358,8 +358,8 @@ Step 1 | Pass
 
 ### Actual Result 3.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -391,8 +391,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 3.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -420,12 +420,12 @@ Step 1 | Pass  | Pass |Pass
 
 ### Expected Result 3.3
 
-1. The error 404 page is displayed and a link to the homepage is displayed on the page. 
+1. The error 404 page is displayed and a link to the homepage is displayed on the page.
 
 ### Actual Result 3.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -459,8 +459,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 3.4
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -496,10 +496,10 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 3.5
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
-Step 1 | n/a  | n/a  | n/a 
-Step 2 | n/a   | n/a  | n/a 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
+Step 1 | n/a  | n/a  | n/a
+Step 2 | n/a   | n/a  | n/a
 Step 3 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -533,8 +533,8 @@ Step 3 | Pass  | Pass |Pass
 
 ### Actual Result 4.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -566,8 +566,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 4.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -599,8 +599,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 4.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
@@ -637,8 +637,8 @@ Step 1 | Pass  | Pass |Pass
 
 ### Actual Result 4.4
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | Pass  | Pass |Pass
 Step 3 | Pass  | Pass |Pass
@@ -684,12 +684,12 @@ Step 3 | Pass  | Pass |Pass
 
 ### Expected Result 4.5
 
-1. The user is logged out and redirected back to the 
+1. The user is logged out and redirected back to the
 
 ### Actual Result 4.5
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 
 
@@ -718,7 +718,7 @@ Step 1 | Pass  | Pass | Pass
 
 1. Once Logged in, navigate to the Navigation bar and click 'New Review'
 2. fill in the required information -  Film Name, Review Image, Review Title, category, review description, and rate the film out of 5 and select 'Publish Review'
-3. If successful, a flash Message will display, and the user is navigated to the 'Reviews' page where the users review is published. 
+3. If successful, a flash Message will display, and the user is navigated to the 'Reviews' page where the users review is published.
 
 
 ### Expected Result 5.1
@@ -729,8 +729,8 @@ Step 1 | Pass  | Pass | Pass
 
 ### Actual Result 5.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 Step 2 | Pass  | Pass | Pass
 Step 3 | Pass  | Pass | Pass
@@ -789,8 +789,8 @@ Step 3 | Pass  | Pass | Pass
 
 ### Actual Result 5.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 Step 2 | Pass  | Pass | Pass
 Step 3 | Pass  | Pass | Pass
@@ -858,12 +858,12 @@ Step 3 | Pass  | Pass | Pass
 1. Navigated to profile and all reviews I have published are visible, select review to delete.
 2. Click Delete Review
 3. I am presented with a modal to confirm deletion, clicked confirm deletion
-4. review is deleted and i am prompted with a flash message to notify me of this. 
+4. review is deleted and i am prompted with a flash message to notify me of this.
 
 ### Actual Result 5.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | n/a  | n/a | n/a
 Step 3 | Pass  | Pass | Pass
@@ -911,12 +911,12 @@ Step 4 | Pass  | Pass | Pass
 
 ### Expected Result 5.4
 
-1. After clicking 'Full Review' I am presented with the page of the review 
+1. After clicking 'Full Review' I am presented with the page of the review
 
 ### Actual Result 5.4
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 
 
@@ -954,8 +954,8 @@ User Story 6.1: As a regular user I can view my profile page: Username, First Na
 
 ### Actual Result 6.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 
 
@@ -991,8 +991,8 @@ User Story 6.2: As a regular/admin user I can update my profile details: Usernam
 
 ### Actual Result 6.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass | Pass
 Step 2 | Pass  | Pass | Pass
 
@@ -1044,8 +1044,8 @@ User Story 6.3: As a regular/admin user I can delete my account. The user will b
 
 ### Actual Result 6.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | Pass  | Pass | Pass
 
@@ -1084,8 +1084,8 @@ User Story 6.3: As a regular/admin user I can delete my account. The user will b
 
 ### Actual Result 6.3
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | Pass  | Pass | Pass
 
@@ -1127,8 +1127,8 @@ User Story 8.1: As an Admin user I can delete reviews left by other users,
 
 ### Actual Result 8.1
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | Pass  | Pass | Pass
 
@@ -1165,8 +1165,8 @@ Step 2 | Pass  | Pass | Pass
 
 ### Actual Result 8.2
 
-Step Number | Desktop | Tablet | Mobile 
------------- | ------------ | ------------- | ------------- | 
+Step Number | Desktop | Tablet | Mobile
+------------ | ------------ | ------------- | ------------- |
 Step 1 | n/a  | n/a | n/a
 Step 2 | Pass  | Pass | Pass
 
@@ -1190,4 +1190,7 @@ Step 2 | Pass  | Pass | Pass
 
 ## HTML Validation
 
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+home.html | Passed, No errors found | [Results](football_memories/static/images/html_validation/dashboard_html_validation.PNG)
 

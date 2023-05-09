@@ -128,7 +128,15 @@ a {
 
 /* Carousel */
 
-
+.button-link > a{
+        width: 180px;
+        border-radius: 30px;
+        height: 35px;
+        font-size: 14px;
+        background-color: #F01D7F;
+        border: 1px solid #fff;
+        color: #Fff;
+}
 
 .card {
     background-color: #000;

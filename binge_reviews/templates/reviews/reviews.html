@@ -6,7 +6,7 @@
 <!-- Top Rated and Lowest rated reviews section -->
 <div class="top-low-rated-container">
     <div id="topRatedControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner top-low-rated-carousel">
             <div class="carousel-item active">
                 <div class="card mb-3 top-low-card">
                     <div class="row g-0">
@@ -33,13 +33,19 @@
                             <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body ">
+                            <div class="card-body">
                                 <a class="card-title-small film-title"
                                     href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
                                 </a>
                                 <p class="card-text">"{{ review.review_title }}"</p>
-                                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                    class="pri-btn text-center">Full Review</a>
+                                <p class="card-text">{{ review.rating }}<span
+                                    class="material-symbols-outlined material-icons icon">
+                                    star
+                                </span></p>
+                                <div class="button-link">
+                                    <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                                        class="btn btn-primary">Full Review</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,20 +93,19 @@
                             <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ review.film_name }}</h5>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item text-white">{{ review.rating }}<span
-                                        class="material-symbols-outlined material-icons icon">
-                                        star
-                                    </span></li>
-                                <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
-                            </ul>
-                            <div class="button-container">
-                                <h4><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                                        class="btn btn-primary mt-3">Full
-                                        Review</a></h4>
+                            <div class="card-body ">
+                                <a class="card-title-small film-title"
+                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
+                                </a>
+                                <p class="card-text">"{{ review.review_title }}"</p>
+                                <p class="card-text">{{ review.rating }}<span
+                                    class="material-symbols-outlined material-icons icon">
+                                    star
+                                </span></p>
+                                <div class="button-link">
+                                    <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
+                                        class="btn btn-primary">Full Review</a>
+                                </div>
                             </div>
                         </div>
                     </div>
