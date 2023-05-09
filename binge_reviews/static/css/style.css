@@ -113,15 +113,15 @@ a {
 }
 
 .navbar a:hover {
-    color: #C11562;
+    color: #fff;
 }
 
 .active {
-    color: #C11562 !important;
+    color: #fff !important;
 }
 
 .navbar-toggler {
-    color: #C11562;
+    color: #fff;
 }
 
 .heading {
@@ -136,7 +136,7 @@ a {
         border-radius: 30px;
         height: 35px;
         font-size: 14px;
-        background-color: #C11562;
+        background-color: #fff;
         border: 1px solid #fff;
         color: #Fff;
 }
@@ -194,7 +194,7 @@ a {
     font-size: 1.2rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    color: #C11562;
+    color: #fff;
 }
 
 .rating-container {
@@ -222,7 +222,7 @@ a {
     font-weight: 600;
     margin-left: 5px;
     margin-right: 50px;
-    color: #C11562;
+    color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -240,7 +240,7 @@ a {
     background: none repeat scroll 0 0 transparent;
     height: 1px;
     width: 0;
-    background: #C11562;
+    background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
@@ -250,7 +250,7 @@ a {
 }
 
 .film-title:hover {
-    color: #Fff;
+    color: #C11562;
 }
 
 .film-snippet,
@@ -265,7 +265,7 @@ a {
 .author-text {
     text-align: right;
     font-size: 20px;
-    color: #C11562;
+    color: #fff;
 }
 
 .rounded-circle-featured-img {
@@ -301,11 +301,11 @@ a {
 
 .modal-content {
     background-color: #28282B;
-    border: 1px solid #C11562;
+    border: 1px solid #fff;
 }
 
 .modal-header {
-    background-color: #C11562;
+    background-color: #fff;
 }
 
 .modal-footer {
@@ -327,7 +327,7 @@ a {
 }
 
 .review-title {
-    color: #C11562;
+    color: #fff;
     font-size: 24px;
     font-weight: 600;
 }
@@ -359,7 +359,7 @@ a {
     width: 100%;
     background-color: #000 !important;
     margin: 10px auto;
-    border: 1px solid #C11562;
+    border: 1px solid #fff;
     border-radius: 2px;
     padding: 2px;
 }
@@ -389,14 +389,14 @@ a {
 
 .btn-primary:hover {
     background-color: #fff;
-    border: 1px solid #C11562;
-    color: #C11562;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .btn-secondary {
     background-color: #000;
-    border: 1px solid #C11562;
-    color: #C11562;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .btn-secondary:hover {
@@ -407,8 +407,8 @@ a {
 
 .btn-danger {
     background-color: #fff !important;
-    border: 1px solid #C11562;
-    color: #C11562;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .btn-danger:hover {
