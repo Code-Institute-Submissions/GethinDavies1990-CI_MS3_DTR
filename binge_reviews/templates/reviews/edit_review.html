@@ -56,7 +56,7 @@
                         class="material-symbols-outlined material-icons icon">
                         description
                     </span>Review Content</label>
-                <textarea type="text" class="form-control" id="review_description" name="review_description"
+                <textarea class="form-control" id="review_description" name="review_description"
                     maxlength="1000" rows="15" required>{{- review.review_description -}}
                 </textarea>
             </div>
@@ -68,16 +68,15 @@
             </div>
             <!-- Cancel Changes Button -->
             <div class="row button-container">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <button class="btn btn-secondary mb-3 mt-2 text-center"><a
-                            href="{{ url_for('reviews.get_reviews') }}" type="submit">Cancel Changes</a></button>
+                <div class="col-lg-4 col-md-12 col-sm-12"><a href="{{ url_for('reviews.get_reviews') }}" type="submit"
+                        class="btn btn-secondary mb-3 mb-2">Cancel Changes</a>
                 </div>
                 <!-- Submit Review Button -->
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <button type="submit" class="btn btn-primary mb-3 mt-2">Edit Review</button>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <button type="button" class="btn btn-danger mb-3 mt-2 text-center" data-bs-toggle="modal"
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <button type="button" class="btn btn-danger mb-3 mt-2" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Delete
                     </button>
@@ -92,7 +91,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-white">
-                <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Delete Review</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-white">
@@ -105,7 +104,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 {% endblock %}
