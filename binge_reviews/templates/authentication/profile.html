@@ -11,7 +11,7 @@
     <div class="col-lg-9 col-md-8 col-sm-12 mt-5 profile-info">
         <p class="text-pink">First Name: <span class="text-white">{{user.first_name}} </span>Last Name: <span
                 class="text-white">{{user.last_name}}</span></p>
-        <p class="text-pink"> Favourite Film: <span class="text-white">{{ user.fav_film }}</span>
+        <p class="text-pink"> Favorite Film: <span class="text-white">{{ user.fav_film }}</span></p>
             <p class="text-pink"> A little bit about me: <span class="text-white">{{ user.author_bio }}</span></p>
             <a href="{{ url_for('authentication.update_profile', username=username)}}" class="btn btn-primary">Update
                 Profile</a>

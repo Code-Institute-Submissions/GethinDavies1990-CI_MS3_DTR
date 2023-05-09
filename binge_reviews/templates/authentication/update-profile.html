@@ -2,8 +2,7 @@
 {% block title %}Update Profile{% endblock %}
 {% block content %}
 
-<h1 class="page-header"><span class="text-white">Update or Delete</span><br> {{ username }}'s Profile
-</h1>
+<h1 class="page-header"><span class="text-white">Update or Delete</span><br> {{ username }}'s Profile</h1>
 <div class="row">
     <div
         class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
@@ -18,7 +17,7 @@
                         </span>Username</label>
                     <div class="form-outline">
                         <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                            pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ username }}" required />
+                            pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ username }}" required>
                     </div>
                 </div>
             </div>
@@ -29,7 +28,7 @@
                 </span>Password</label>
             <div class="form-outline mb-4">
                 <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ user.password }}" required />
+                    pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ user.password }}" required>
             </div>
             <!-- First Name input -->
             <div class="col">
@@ -39,7 +38,7 @@
                     </span>First Name</label>
                 <div class="form-outline">
                     <input type="text" id="first_name" name="first_name" class="text-white" value="
-                        {{- user.first_name -}}" required />
+                        {{- user.first_name -}}" required>
                 </div>
             </div>
             <!-- Last Name input -->
@@ -50,7 +49,7 @@
                     </span>Last Name</label>
                 <div class="form-outline">
                     <input type="text" id="last_name" name="last_name" class="text-white" value="{{ user.last_name }}"
-                        required />
+                        required>
                 </div>
             </div>
             <div class="mb-2 mt-3 input-control">
@@ -58,25 +57,27 @@
                         upload
                     </span>Profile Image</label>
                 <input type="file" id="user_img" name="user_img" class="text-white">
-            <!-- Favourtie film input -->
-            <div class="col mb-4">
-                <label class="form-label mb-3 mt-3" for="fav_film"><span
-                        class="material-symbols-outlined material-icons icon">
-                        stars
-                    </span>Favourite Film</label>
-                <div class="form-outline">
-                    <input type="text" id="fav_film" name="fav_film" value="{{ user.fav_film }}" class="text-white"
-                        required />
+                <!-- Favorite film input -->
+                <div class="col mb-4">
+                    <label class="form-label mb-3 mt-3" for="fav_film"><span
+                            class="material-symbols-outlined material-icons icon">
+                            stars
+                        </span>Favorite Film</label>
+                    <div class="form-outline">
+                        <input type="text" id="fav_film" name="fav_film" value="{{ user.fav_film }}" class="text-white"
+                            required>
+                    </div>
                 </div>
-            </div>
-            <!-- Submit button -->
-            <div class="col text-center">
-                <div class="button-container">
-                <button type="submit" class="btn btn-primary mb-4">Save Changes</button>
-                <button type="button" class="btn btn-danger mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Delete
-                </button>
-            </div>
+                <!-- Submit button -->
+                <div class="col text-center">
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary mb-4">Save Changes</button>
+                        <button type="button" class="btn btn-danger mb-4" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Delete
+                        </button>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
@@ -101,5 +102,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

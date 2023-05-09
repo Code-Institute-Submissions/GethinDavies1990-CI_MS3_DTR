@@ -7,76 +7,74 @@
 <p class="text-center text-white mb-4">Binge reviews is a review website, for film and television fans to submit their
     own reviews!</p>
 <!-- Featured review section -->
-<section class="review-section">
-    <div class="featured-review text-center">
-        {% for review in reviews|reverse %}
-        {% if loop.first %}
-        <div class="card mb-3 review-collection-card">
-            <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
+<div class="featured-review text-center">
+    {% for review in reviews|reverse %}
+    {% if loop.first %}
+    <div class="card mb-3 review-collection-card">
+        <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
+        <div class="card-body">
+            <h2 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
+                    new_releases
+                </span> Featured Review</h2>
+            <h3 class="card-title film-title">{{ review.film_name }} <span
+                    class="text-white">{{ review.rating }}</span><span
+                    class="material-symbols-outlined material-icons icon-header text-pink">
+                    star
+                </span></a></h3>
+            <p class="film-snippet">"{{ review.review_title}}"</p>
+            <p class="film-snippet"><span class="text-white">{{ review.created_by }}</span> | Published:
+                {{ review.publish_date }}
+            </p>
+        </div>
+        <div class="col-8 featured-review-btn-container">
+            <a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-auto mb-4">Full
+                Review
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+<p class="text-white">Welcome to Binge Reviews, the ultimate destination for movie enthusiasts! Our website
+    is dedicated to providing a
+    platform for movie lovers to share their thoughts, opinions, and reviews on their favorite films. At
+    Binge
+    Review, users can register and create their profiles, browse through our extensive library of movies,
+    and leave
+    reviews on the ones they have watched. Our user-friendly interface makes it easy for everyone to
+    navigate
+    through the website, find movies of their interest, and engage in meaningful discussions with fellow
+    movie
+    buffs. Whether you are a fan of classic cinema or the latest blockbuster releases, Binge Review has
+    something
+    for everyone.</p>
+<h3 class="text-center text-white mb-4 mt-4">Latest Reviews</h3>
+<div class=" row g-4 review-collection">
+    {% for review in latest_reviews %}
+    <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <div class="card h-100">
+            <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
             <div class="card-body">
-                <h2 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
-                        new_releases
-                    </span> Featured Review</h2>
-                <h3 class="card-title film-title">{{ review.film_name }} <span class="text-white">{{ review.rating }}</span><span
-                        class="material-symbols-outlined material-icons icon-header text-pink">
-                        star
-                    </span></a></h3>
-                <p class="film-snippet">"{{ review.review_title}}"</p>
-                <p class="film-snippet"><span class="text-white">{{ review.created_by }}</span> | Published:
-                    {{ review.publish_date }}
-                </p>
+                <h4 class="card-title">{{ review.film_name }}</h4>
             </div>
-            <div class="col-8 featured-review-btn-container">
-                <a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                    class="btn btn-primary mt-auto mb-4">Full
-                    Review
-                </a>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-white">{{ review.rating }}<span
+                        class="material-symbols-outlined material-icons icon">
+                        star
+                    </span></li>
+                <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
+            </ul>
+            <div class="button-container">
+                <h5><a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-3">Full
+                        Review</a></h5>
+                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
+                <h5><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                        class="btn btn-secondary">Edit</a></h5>
+                {% endif %}
             </div>
         </div>
     </div>
-    {% endif %}
     {% endfor %}
-    <p class="text-white">Welcome to Binge Reviews, the ultimate destination for movie enthusiasts! Our website
-        is dedicated to providing a
-        platform for movie lovers to share their thoughts, opinions, and reviews on their favorite films. At
-        Binge
-        Review, users can register and create their profiles, browse through our extensive library of movies,
-        and leave
-        reviews on the ones they have watched. Our user-friendly interface makes it easy for everyone to
-        navigate
-        through the website, find movies of their interest, and engage in meaningful discussions with fellow
-        movie
-        buffs. Whether you are a fan of classic cinema or the latest blockbuster releases, Binge Review has
-        something
-        for everyone.</p>
-        <h3 class="text-center text-white mb-4 mt-4">Latest Reviews</h3>
-        <div class=" row g-4 review-collection">
-            {% for review in latest_reviews %}
-            <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                <div class="card h-100">
-                    <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ review.film_name }}</h4>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-white">{{ review.rating }}<span
-                                class="material-symbols-outlined material-icons icon">
-                                star
-                            </span></li>
-                        <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
-                    </ul>
-                    <div class="button-container">
-                        <h5><a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-3">Full
-                                Review</a></h5>
-                                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
-                        <h5><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
-                                class="btn btn-secondary">Edit</a></h5>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-</section>
+</div>
 
 {% endblock %}
