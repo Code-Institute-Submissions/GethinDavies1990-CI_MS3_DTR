@@ -15,7 +15,7 @@
                         class="material-symbols-outlined material-icons icon">
                         movie
                     </span>Film Name</label>
-                <input type="text" class="text-white" id="film_name" name="film_name" min-length="5" maxlength="50"
+                <input type="text" class="text-white" id="film_name" name="film_name" minlength="5" maxlength="50"
                     required>
             </div>
         </div>
@@ -25,8 +25,7 @@
                         class="material-symbols-outlined material-icons icon">
                         upload
                     </span>Review Image</label>
-                <input class="validate text-white" type="file" id="review_image" name="review_image" value="file"
-                    required>
+                <input class="validate text-white" type="file" id="review_image" name="review_image" required>
             </div>
             <!-- Review Title -->
             <div class="row">
@@ -35,7 +34,7 @@
                             class="material-symbols-outlined material-icons icon">
                             title
                         </span>Review Title</label>
-                    <input type="text" class="text-white" id="review_title" name="review_title" min-length="5"
+                    <input type="text" class="text-white" id="review_title" name="review_title" minlength="5"
                         maxlength="350" required>
                 </div>
             </div>
@@ -48,7 +47,6 @@
                         </span>Select Category</label>
                     <select id="category_name" name="category_name" class="form-select form-select-sm"
                         aria-label=".form-select-sm example" required>
-                        <option selected>Choose Genre</option>
                         {% for category in categories %}
                         <option value="{{ category.catgeory_name }}">{{ category.category_name }}</option>
                         {% endfor %}
@@ -62,8 +60,8 @@
                             class="material-symbols-outlined material-icons icon">
                             description
                         </span>Review Content</label>
-                    <textarea type="text" class="form-control" id="review_description" name="review_description"
-                        min-length="5" maxlength="5000" rows="15" required>
+                    <textarea class="form-control" id="review_description" name="review_description" minlength="5"
+                        maxlength="5000" rows="15" required>
                 </textarea>
                 </div>
                 <div class="rating-field">
@@ -77,6 +75,7 @@
                             class="fa-solid fa-plus icon-btn"></i></button>
                 </div>
             </div>
+        </div>
     </form>
 </div>
 
