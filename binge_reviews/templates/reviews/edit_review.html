@@ -15,7 +15,7 @@
                         movie
                     </span>Film Name</label>
                 <input type="text" class="form-control" id="film_name" name="film_name" value="{{ review.film_name}}"
-                    min-length="5" maxlength="50" required>
+                    maxlength="50" required>
             </div>
         </div>
         <!-- Review Title -->
@@ -26,7 +26,7 @@
                         title
                     </span>Review Title</label>
                 <input type="text" class="form-control" id="review_title" name="review_title"
-                    value="{{ review.review_title }}" min-length="5" maxlength="350" required>
+                    value="{{ review.review_title }}" maxlength="350" required>
             </div>
         </div>
         <!-- Category selection -->
@@ -57,7 +57,7 @@
                         description
                     </span>Review Content</label>
                 <textarea type="text" class="form-control" id="review_description" name="review_description"
-                    min-length="5" maxlength="1000" rows="15" required>{{- review.review_description -}}
+                    maxlength="1000" rows="15" required>{{- review.review_description -}}
                 </textarea>
             </div>
             <!-- Review Rating -->
@@ -69,8 +69,8 @@
             <!-- Cancel Changes Button -->
             <div class="row button-container">
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <button class="btn btn-secondary mb-3 mt-2 text-center"><a href="{{ url_for('reviews.get_reviews') }}"
-                            type="submit">Cancel Changes</a></button>
+                    <button class="btn btn-secondary mb-3 mt-2 text-center"><a
+                            href="{{ url_for('reviews.get_reviews') }}" type="submit">Cancel Changes</a></button>
                 </div>
                 <!-- Submit Review Button -->
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -83,27 +83,29 @@
                     </button>
                 </div>
             </div>
+        </div>
     </form>
-    <!-- Delete Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-white">
-                    <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-white">
-                    Are you sure you want to delete this review?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                    <a href="{{ url_for('reviews.delete_review', review_id=review._id)}}"
-                        class="btn btn-danger text-center mt-2">Delete</a>
-                </div>
+</div>
+<!-- Delete Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                Are you sure you want to delete this review?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ url_for('reviews.delete_review', review_id=review._id)}}"
+                    class="btn btn-danger text-center mt-2">Delete</a>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}
