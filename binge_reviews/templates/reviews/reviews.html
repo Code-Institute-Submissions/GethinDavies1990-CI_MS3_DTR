@@ -12,7 +12,7 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}"
-                                alt="top rated image" class="img-fluid top rounded-start">
+                                alt="the godfather used as top rated image" class="img-fluid top rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body ">
@@ -35,8 +35,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h2 class="card-title-small film-title"></h2>
-                                {{ review.film_name }}
+                                <h2 class="card-title-small film-title">{{ review.film_name }}</h2>
                                 </h2>
                                 <p class="card-text">"{{ review.review_title }}"</p>
                                 <p class="card-text">{{ review.rating }}<span
@@ -71,7 +70,7 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/lowest-rated-image.jpg') }}"
-                                alt="lowest rated image" class="img-fluid rounded-start">
+                                alt="sonic the hedgehog used as the lowest rated image" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -131,7 +130,7 @@
         <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
             <form action=" {{ url_for('reviews.search') }}" method="POST">
                 <input type="text" name="query" minlength="3" class="validate search-bar text-white"
-                    placeholder="Search Reviews" required>
+                    placeholder="Search Reviews" aria-label="Search Reviews" required>
             </form>
         </div>
         <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
@@ -148,7 +147,7 @@
         <div class="card h-100">
             <img src="{{ review.review_image }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ review.film_name }}</h5>
+                <h4 class="card-title">{{ review.film_name }}</h4>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-white">{{ review.rating }}<span
