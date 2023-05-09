@@ -2,7 +2,7 @@
 {% block title %}Reviews{% endblock %}
 {% block nav_reviews %}active{% endblock %}
 {% block content %}
-<h3 class="page-header">Reviews</h3>
+<h1 class="page-header">Reviews</h1>
 <!-- Top Rated and Lowest rated reviews section -->
 <div class="top-low-rated-container">
     <div id="topRatedControls" class="carousel slide" data-bs-ride="carousel">
@@ -12,11 +12,11 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}"
-                                alt="the godfather used as top rated image" class="img-fluid top rounded-start">
+                                alt="The godfather" class="img-fluid top rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body ">
-                                <h5 class="card-title-small film-title">Top Rated Movies</h5>
+                                <h2 class="card-title-small film-title">Top Rated Movies</h2>
                                 <p class="card-text">Don't miss out on the best movies of all time! Explore the top
                                     rated
                                     films and discover timeless classics and modern masterpieces.</p>
@@ -69,11 +69,11 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/lowest-rated-image.jpg') }}"
-                                alt="sonic the hedgehog used as the lowest rated image" class="img-fluid rounded-start">
+                                alt="sonic the hedgehog" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title-small film-title">Movies to Avoid</h5>
+                                <h2 class="card-title-small film-title">Movies to Avoid</h2>
                                 <p class="card-text">Looking for a movie to avoid? Check out the lowest rated films!
                                     These
                                     movies have earned a reputation for being the worst of the worst. Save yourself the
@@ -142,9 +142,9 @@
     {% for review in reviews %}
     <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
         <div class="card h-100">
-            <img src="{{ review.review_image }}" class="card-img-top" alt="...">
+            <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
             <div class="card-body">
-                <h4 class="card-title">{{ review.film_name }}</h4>
+                <h3 class="card-title">{{ review.film_name }}</h3>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-white">{{ review.rating }}<span
