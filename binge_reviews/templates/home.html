@@ -22,7 +22,7 @@
                         star
                     </span></a></h3>
                 <p class="film-snippet">"{{ review.review_title}}"</p>
-                <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
+                <p class="film-snippet"><span class="text-white">{{ review.created_by }}</span> | Published:
                     {{ review.publish_date }}
                 </p>
             </div>
@@ -49,12 +49,12 @@
         buffs. Whether you are a fan of classic cinema or the latest blockbuster releases, Binge Review has
         something
         for everyone.</p>
-        <h3 class="text-center text-pink mb-4 mt-4">Latest Reviews</h3>
+        <h3 class="text-center text-white mb-4 mt-4">Latest Reviews</h3>
         <div class=" row g-4 review-collection">
             {% for review in latest_reviews %}
             <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
                 <div class="card h-100">
-                    <img src="{{ review.review_image }}" class="card-img-top" alt="...">
+                    <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
                     <div class="card-body">
                         <h5 class="card-title">{{ review.film_name }}</h5>
                     </div>
