@@ -1192,5 +1192,23 @@ Step 2 | Pass  | Pass | Pass
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-home.html | Passed, No errors found | [Results](football_memories/static/images/html_validation/dashboard_html_validation.PNG)
+home.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/home_html.png)
+add_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/add_category_html.png)
+add_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/add_review_html.png)
+categories.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/categories_html.png)
+edit_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/edit_category_html.png)
+edit_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/edit_review_html.png)
+login.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/login_html.png)
+profile.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/profile_html.png)
+register.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/register_html.png)
+review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/review_html.png)
+reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/reviews_html.png)
+
+## CSS Validation
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+style.css | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/css_validation/css_validation.png)
+
+## Lighthouse Scores
 
