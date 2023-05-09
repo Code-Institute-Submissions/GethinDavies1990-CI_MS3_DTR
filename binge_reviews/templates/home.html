@@ -73,10 +73,6 @@
                                 {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
                         <h4><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
                                 class="btn btn-secondary">Edit</a></h4>
-                        <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Delete
-                        </button>
                         {% endif %}
                     </div>
                 </div>
