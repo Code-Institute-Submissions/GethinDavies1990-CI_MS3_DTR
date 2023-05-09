@@ -12,7 +12,7 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/top-rated-image.jpg') }}"
-                                alt="..." class="img-fluid top rounded-start">
+                                alt="top rated image" class="img-fluid top rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body ">
@@ -30,13 +30,14 @@
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
+                            <img src="{{ review.review_image }}" alt="{{review.film_name}}"
+                                class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <a class="card-title-small film-title"
-                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
-                                </a>
+                                <h2 class="card-title-small film-title"></h2>
+                                {{ review.film_name }}
+                                </h2>
                                 <p class="card-text">"{{ review.review_title }}"</p>
                                 <p class="card-text">{{ review.rating }}<span
                                         class="material-symbols-outlined material-icons icon">
@@ -70,7 +71,7 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ url_for('static', filename='images/site-images/lowest-rated-image.jpg') }}"
-                                alt="..." class="img-fluid rounded-start">
+                                alt="lowest rated image" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -85,18 +86,19 @@
                     </div>
                 </div>
             </div>
-            {% for review in reviews if review.rating <= 2 %}
+            {% for review in reviews if review.rating <2= 2 %}
             <div class="carousel-item">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{ review.review_image }}" alt="..." class="img-fluid rounded-start">
+                            <img src="{{ review.review_image }}" alt="{{review.film_name}}"
+                                class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body ">
-                                <a class="card-title-small film-title"
-                                    href="{{ url_for('reviews.get_review', review_id=review._id)}}">{{ review.film_name }}
-                                </a>
+                                <h2 class="card-title-small film-title"></h2>
+                                {{ review.film_name }}
+                                </h2>
                                 <p class="card-text">"{{ review.review_title }}"</p>
                                 <p class="card-text">{{ review.rating }}<span
                                         class="material-symbols-outlined material-icons icon">
@@ -166,6 +168,5 @@
         </div>
     </div>
     {% endfor %}
-</div>
 </div>
 {% endblock %}
