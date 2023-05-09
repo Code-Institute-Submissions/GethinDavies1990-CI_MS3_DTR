@@ -590,6 +590,7 @@ form {
 
 .error-text {
     color: #C11562;
+    font-size: 26px;
 }
 
 .error-text:hover {
