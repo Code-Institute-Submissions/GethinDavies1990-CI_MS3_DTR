@@ -3,12 +3,9 @@
 {% block content %}
 <!-- 404 error page -->
 <div
-    class="register-login-card add-edit-review-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
+    class="register-login-card card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center text-center">
     <h1 class="text-pink text-center">error 404</h1>
     <h2>Error has occurred</h2>
-    <p class="text-white">Click <a href="{{ url_for('reviews.get_reviews') }}" class=" text-pink card-title">here</a> to go back to
-        home
-        page
-    </p>
+    <a href="{{ url_for('reviews.get_reviews') }}" class="card-title text-center error-text">Back to Reviews</a>
 </div>
 {% endblock %}

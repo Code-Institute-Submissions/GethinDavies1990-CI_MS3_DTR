@@ -586,6 +586,16 @@ form {
     border: 1px solid #fff;
 }
 
+/* Error pages */
+
+.error-text {
+    color: #C11562;
+}
+
+.error-text:hover {
+    color: #fff;
+}
+
 /* Google material icons */
 
 .icon {
