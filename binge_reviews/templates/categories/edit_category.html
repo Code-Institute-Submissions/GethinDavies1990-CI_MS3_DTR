@@ -4,8 +4,7 @@
 <h3 class="page-header">Edit Category</h3>
 
 
-<div
-    class="register-card register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+<div class="register-card register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
     <form class="review-form" method="POST" enctype="multipart/form-data"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
@@ -14,13 +13,12 @@
                 <i class="fa-solid fa-clapperboard text-pink"></i>
                 <label for="category_name" class="form-label mb-2 mt-2">Category Name</label>
                 <input type="text" class="text-white" value="{{ category.category_name }}" id="category_name"
-                    name="category_name" min-length="3" maxlength="25" required>
+                    name="category_name" minlength="3" maxlength="25" required>
             </div>
         </div>
         <div class="row">
             <div>
-                <input class="form-control validate" type="file" id="category_image" name="category_image" value="file"
-                    required>
+                <input class="form-control validate" type="file" id="category_image" name="category_image" required>
             </div>
         </div>
         <!-- Cancel Edit Category Button -->
