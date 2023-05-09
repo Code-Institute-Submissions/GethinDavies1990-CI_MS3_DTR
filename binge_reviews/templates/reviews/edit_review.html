@@ -38,7 +38,6 @@
                     </span>Select Category</label>
                 <select id="category_name" name="category_name" class="form-select form-select-sm"
                     aria-label="form-select-sm example" required>
-                    <option></option>
                     {% for category in categories %}
                     {% if category.category_name == review.category_name %}
                     <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
