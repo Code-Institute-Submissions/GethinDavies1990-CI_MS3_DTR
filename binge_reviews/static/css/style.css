@@ -33,11 +33,11 @@ a {
 }
 
 .active a {
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .nav-link {
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .page-header {
@@ -46,7 +46,7 @@ a {
     font-weight: 600;
     margin: 5px auto;
     text-align: center;
-    color: #F01D7F;
+    color: #C11562;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -63,7 +63,7 @@ a {
 /* Text */
 
 .text-pink {
-    color: #F01D7F;
+    color: #C11562;
 }
 
 /* navbar */
@@ -72,7 +72,7 @@ a {
 }
 
 .navbar-toggler {
-    border-color: #F01D7F;
+    border-color: #C11562;
 }
 
 .nav-link {
@@ -103,7 +103,7 @@ a {
     background: none repeat scroll 0 0 transparent;
     height: 1px;
     width: 0;
-    background: #F01D7F;
+    background: #C11562;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
@@ -113,15 +113,15 @@ a {
 }
 
 .navbar a:hover {
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .active {
-    color: #F01D7F !important;
+    color: #C11562 !important;
 }
 
 .navbar-toggler {
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .heading {
@@ -136,7 +136,7 @@ a {
         border-radius: 30px;
         height: 35px;
         font-size: 14px;
-        background-color: #F01D7F;
+        background-color: #C11562;
         border: 1px solid #fff;
         color: #Fff;
 }
@@ -194,7 +194,7 @@ a {
     font-size: 1.2rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .rating-container {
@@ -222,7 +222,7 @@ a {
     font-weight: 600;
     margin-left: 5px;
     margin-right: 50px;
-    color: #F01D7F;
+    color: #C11562;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -240,7 +240,7 @@ a {
     background: none repeat scroll 0 0 transparent;
     height: 1px;
     width: 0;
-    background: #F01D7F;
+    background: #C11562;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
@@ -265,7 +265,7 @@ a {
 .author-text {
     text-align: right;
     font-size: 20px;
-    color: #F01D7F;
+    color: #C11562;
 }
 
 .rounded-circle-featured-img {
@@ -301,11 +301,11 @@ a {
 
 .modal-content {
     background-color: #28282B;
-    border: 1px solid #F01D7F;
+    border: 1px solid #C11562;
 }
 
 .modal-header {
-    background-color: #F01D7F;
+    background-color: #C11562;
 }
 
 .modal-footer {
@@ -327,7 +327,7 @@ a {
 }
 
 .review-title {
-    color: #F01D7F;
+    color: #C11562;
     font-size: 24px;
     font-weight: 600;
 }
@@ -359,7 +359,7 @@ a {
     width: 100%;
     background-color: #000 !important;
     margin: 10px auto;
-    border: 1px solid #F01D7F;
+    border: 1px solid #C11562;
     border-radius: 2px;
     padding: 2px;
 }
@@ -380,22 +380,23 @@ a {
 }
 
 .btn-primary {
-    background-color: #F01D7F;
+    background-color: #C11562;
     border: 1px solid #fff;
     color: #Fff;
     font-weight: 600;
+    font-size: 16px;
 }
 
 .btn-primary:hover {
     background-color: #fff;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
+    border: 1px solid #C11562;
+    color: #C11562;
 }
 
 .btn-secondary {
     background-color: #000;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
+    border: 1px solid #C11562;
+    color: #C11562;
 }
 
 .btn-secondary:hover {
@@ -406,8 +407,8 @@ a {
 
 .btn-danger {
     background-color: #fff !important;
-    border: 1px solid #F01D7F;
-    color: #F01D7F;
+    border: 1px solid #C11562;
+    color: #C11562;
 }
 
 .btn-danger:hover {
