@@ -407,14 +407,16 @@ a {
 }
 
 .btn-danger {
-    background-color: #fff !important;
+    background-color: #28282B !important;
     border: 1px solid #fff;
     color: #fff;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .btn-danger:hover {
-    background-color: #F01D7F !important;
-    border: 1px solid #fff;
+    background-color: #C11562 !important;
+    border: 2px solid #fff;
     color: #Fff;
 }
 
