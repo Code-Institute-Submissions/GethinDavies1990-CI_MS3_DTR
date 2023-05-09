@@ -64,9 +64,7 @@ def add_review() -> object:
 
     if request.method == "POST":
         try:
-            # Store Review image in S3 Bucket
             image_url = util.upload_image('review_image')
-            # Generate timestamp
             timestamp = util.get_timestamp()
             review = {
                 "review_image": image_url,

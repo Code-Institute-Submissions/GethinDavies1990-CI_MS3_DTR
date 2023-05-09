@@ -26,11 +26,8 @@ def add_category() -> object:
     This function lets the user add new catagories and images to the
     application.
     """
-
     if request.method == "POST":
-        # Store category image in AWS s3 bucket
         image_url = util.upload_image('category_image')
-
         category = {
             "category_image": image_url,
             "category_name": request.form.get("category_name")
