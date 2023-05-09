@@ -110,62 +110,62 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#lowRatedControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#lowRatedControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            {% endfor %}
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#lowRatedControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#lowRatedControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <!-- Search Reviews -->
-    <div class="search-container">
-        <div class="row">
-            <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
-                <form action=" {{ url_for('reviews.search') }}" method="POST">
-                    <input type="text" name="query" minlength="3" class="validate search-bar text-white"
-                        placeholder="Search Reviews" required>
-                </form>
-            </div>
-            <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
-                <button class="btn btn-primary" type="submit">
-                    Search
-                </button>
-                <a href="{{ url_for('reviews.get_reviews') }}" class="btn btn-secondary">Reset</a>
-            </div>
-        </div>
-    </div>
-    <div class="row g-4 review-collection">
-        {% for review in reviews %}
-        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-            <div class="card h-100">
-                <img src="{{ review.review_image }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ review.film_name }}</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-white">{{ review.rating }}<span
-                            class="material-symbols-outlined material-icons icon">
-                            star
-                        </span></li>
-                    <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
-                </ul>
-                <div class="button-container">
-                    <h4><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                            class="btn btn-primary mt-3">Full
-                            Review</a></h4>
-                    {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
-                    <h4><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
-                            class="btn btn-secondary">Edit</a></h4>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    {% endblock %}
 </div>
+<!-- Search Reviews -->
+<div class="search-container">
+    <div class="row">
+        <div class="search-bar-container col-md-12 col-lg-6 col-sm-12">
+            <form action=" {{ url_for('reviews.search') }}" method="POST">
+                <input type="text" name="query" minlength="3" class="validate search-bar text-white"
+                    placeholder="Search Reviews" required>
+            </form>
+        </div>
+        <div class="col-md-12 col-lg-6 col-sm-12 search-button-container">
+            <button class="btn btn-primary" type="submit">
+                Search
+            </button>
+            <a href="{{ url_for('reviews.get_reviews') }}" class="btn btn-secondary">Reset</a>
+        </div>
+    </div>
+</div>
+<div class="row g-4 review-collection">
+    {% for review in reviews %}
+    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <div class="card h-100">
+            <img src="{{ review.review_image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.film_name }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-white">{{ review.rating }}<span
+                        class="material-symbols-outlined material-icons icon">
+                        star
+                    </span></li>
+                <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
+            </ul>
+            <div class="button-container">
+                <h4><a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-3">Full
+                        Review</a></h4>
+                {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
+                <h4><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                        class="btn btn-secondary">Edit</a></h4>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
