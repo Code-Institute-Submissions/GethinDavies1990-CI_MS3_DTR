@@ -1210,5 +1210,9 @@ Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 style.css | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/css_validation/css_validation.png)
 
-## Lighthouse Scores
+## Wave Accessibility
+
+### Homepage
+
+
 

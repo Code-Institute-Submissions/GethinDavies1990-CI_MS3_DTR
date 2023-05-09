@@ -14,16 +14,14 @@
         <div class="card mb-3 review-collection-card">
             <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
             <div class="card-body">
-                <h3 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
+                <h2 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
                         new_releases
-                    </span> Featured Review</h3>
-                <h5 class="card-title"><a href="{{ url_for('reviews.get_review', review_id=review._id)}}"
-                        class="film-title">{{ review.film_name }} <span
-                            class="text-white">{{ review.rating }}</span><span
-                            class="material-symbols-outlined material-icons icon-header">
-                            star
-                        </span></a></h5>
-                <h5 class="film-snippet">"{{ review.review_title}}"</h5>
+                    </span> Featured Review</h2>
+                <h3 class="card-title">{{ review.film_name }}<span class="text-white">{{ review.rating }}</span><span
+                        class="material-symbols-outlined material-icons icon-header">
+                        star
+                    </span></a></h3>
+                <p class="film-snippet">"{{ review.review_title}}"</p>
                 <p class="film-snippet"><span class="text-pink">{{ review.created_by }}</span> | Published:
                     {{ review.publish_date }}
                 </p>
