@@ -18,7 +18,9 @@
 <div class="row g-4 mb-5 mt-5">
     {% for category in categories %}
     <div class="mx-auto card category-card text-white bg-dark col-sm-12 col-md-6 col-lg-4">
-        <div class="card-header"><h5 class="card-title">{{category.category_name}}</h5></div>
+        <div class="card-header">
+            <h2 class="card-title">{{category.category_name}}</h2>
+        </div>
         <div class="card-body">
             <img src="{{ category.category_image }}" class="card-img-top" alt="{{category.category_name}}">
         </div>
