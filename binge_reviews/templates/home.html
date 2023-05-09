@@ -56,7 +56,7 @@
                 <div class="card h-100">
                     <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ review.film_name }}</h5>
+                        <h4 class="card-title">{{ review.film_name }}</h4>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item text-white">{{ review.rating }}<span
@@ -66,11 +66,11 @@
                         <li class="list-group-item text-white">published by: {{ review.created_by}}</li>
                     </ul>
                     <div class="button-container">
-                        <h4><a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-3">Full
-                                Review</a></h4>
+                        <h5><a href="{{ url_for('reviews.get_review', review_id=review._id)}}" class="btn btn-primary mt-3">Full
+                                Review</a></h5>
                                 {% if session.user|lower == review.created_by|lower or session.user == "admin"|lower %}
-                        <h4><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
-                                class="btn btn-secondary">Edit</a></h4>
+                        <h5><a href="{{ url_for('reviews.edit_review', review_id=review._id)}}"
+                                class="btn btn-secondary">Edit</a></h5>
                         {% endif %}
                     </div>
                 </div>
