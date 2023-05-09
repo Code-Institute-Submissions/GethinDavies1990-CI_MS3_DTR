@@ -514,6 +514,15 @@ select:-webkit-autofill:focus {
 }
 
 
+/* Category Page */
+
+.category-card {
+    background-color: #000 !important;
+    outline: 1px solid #28282B;
+}
+
+/* form */
+
 form {
     width: 100%;
 }

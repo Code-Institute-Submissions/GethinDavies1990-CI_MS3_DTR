@@ -37,7 +37,7 @@ def add_category() -> object:
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
-        return redirect(url_for('categories/categories.get_categories'))
+        return redirect(url_for('categories.get_categories'))
 
     return render_template("categories/add_category.html")
 
