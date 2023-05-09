@@ -117,7 +117,7 @@ a {
 }
 
 .active {
-    color: #fff !important;
+    color: #C11562 !important;
 }
 
 .navbar-toggler {
@@ -135,8 +135,9 @@ a {
         width: 180px;
         border-radius: 30px;
         height: 35px;
-        font-size: 14px;
-        background-color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #C11562;
         border: 1px solid #fff;
         color: #Fff;
 }
@@ -389,8 +390,8 @@ a {
 
 .btn-primary:hover {
     background-color: #fff;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 2px solid #C11562;
+    color: #C11562;
 }
 
 .btn-secondary {
@@ -400,9 +401,9 @@ a {
 }
 
 .btn-secondary:hover {
-    background-color: #28282B !important;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: #000 !important;
+    border: 2px solid #C11562;
+    color: #C11562;
 }
 
 .btn-danger {
