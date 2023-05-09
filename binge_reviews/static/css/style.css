@@ -398,6 +398,8 @@ a {
     background-color: #000;
     border: 1px solid #fff;
     color: #fff;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .btn-secondary:hover {
