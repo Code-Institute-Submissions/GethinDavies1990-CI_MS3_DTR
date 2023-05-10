@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    flex: 1;
+}
+
 h1,
 h2,
 h3 {
@@ -616,6 +620,13 @@ form {
 
 /* Footer */
 
+footer {
+    margin-top: 100px;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 .social-icon:hover {
     color: #F01D7F;
