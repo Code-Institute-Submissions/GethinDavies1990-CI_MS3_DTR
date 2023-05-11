@@ -77,7 +77,7 @@ def login() -> object:
     return render_template("authentication/login.html")
 
 
-@ authentication.route("/logout")
+@authentication.route("/logout")
 def logout():
     """
     This function logs the user out of their
