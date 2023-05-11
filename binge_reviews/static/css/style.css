@@ -90,12 +90,35 @@ a {
     border-color: #ff3860;
 }
 
+.input-control textarea {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+}
+
+.input-control textarea:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.input-control.error textarea {
+    border-color: #ff3860;
+}
+
+.input-control.success textarea {
+    border-color: #09c372;
+}
+
 .input-control .error {
     color: #ff3860;
     font-size: 12px;
     height: 13px;
 }
 
+.helper {
+    font-size: 12px;
+}
 
 /* Text */
 
