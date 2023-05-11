@@ -6,76 +6,72 @@
 
 <div
     class="register-login-card add-edit-review-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form class="add-edit-review-form" method="POST" enctype="multipart/form-data"
-        action="{{ url_for('reviews.add_review')}}">
+    <form id="form" class="add-edit-review-form" method="POST" enctype="multipart/form-data"
+        action="{{ url_for('reviews.add_review')}}"  onsubmit="return validateInputs()">
         <!-- Film Name -->
-        <div class="row">
-            <div class="mb-2 mt-3">
-                <label for="film_name" class="form-label mb-2 mt-2"><span
-                        class="material-symbols-outlined material-icons icon">
-                        movie
-                    </span>Film Name</label>
-                <input type="text" class="text-white" id="film_name" name="film_name" minlength="5" maxlength="50"
-                    required>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="input-control">
+                    <label for="film_name" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            movie
+                        </span>Film Name</label>
+                    <input type="text" class="text-white" id="film_name" name="film_name">
+                    <div class="error"></div>
+                </div>
             </div>
-        </div>
-        <!-- Review Image -->
-        <div class="row">
-            <div class="mb-2 mt-3">
+            <!-- Review Title -->
+            <div class="input-control">
+                <label for="review_title" class="form-label mb-2 mt-2"><span
+                        class="material-symbols-outlined material-icons icon">
+                        title
+                    </span>Review Title</label>
+                <input type="text" class="text-white" id="review_title" name="review_title">
+                <div class="error"></div>
+            </div>
+            <!-- Review Image -->
+            <div class="input-control">
                 <label for="review_image" class="form-label mb-2 mt-2"><span
                         class="material-symbols-outlined material-icons icon">
                         upload
                     </span>Review Image</label>
-                <input class="validate text-white" type="file" id="review_image" name="review_image" required>
+                <input class="validate text-white" type="file" id="review_image" name="review_image">
+                <div class="error"></div>
             </div>
-            <!-- Review Title -->
-            <div class="row">
-                <div class="mb-2">
-                    <label for="review_title" class="form-label mb-2 mt-2"><span
-                            class="material-symbols-outlined material-icons icon">
-                            title
-                        </span>Review Title</label>
-                    <input type="text" class="text-white" id="review_title" name="review_title" minlength="5"
-                        maxlength="350" required>
-                </div>
-            </div>
-            <!-- Category selection -->
-            <div class="row">
-                <div class="mb-3">
-                    <label for="category_name" class=" mb-2 mt-2"><span
-                            class="material-symbols-outlined material-icons icon">
-                            category
-                        </span>Select Category</label>
-                    <select id="category_name" name="category_name" class="form-select form-select-sm"
-                        aria-label=".form-select-sm example" required>
-                        {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
+            <div class="input-control">
+                <label for="category_name" class=" mb-2 mt-2"><span
+                        class="material-symbols-outlined material-icons icon">
+                        category
+                        <!-- Category selection -->
+                    </span>Select Category</label>
+                <select id="category_name" name="category_name" class="form-select form-select-sm"
+                    aria-label=".form-select-sm example">
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <!-- Review Description -->
-            <div class="row">
-                <div class="mb-3">
-                    <label for="review_description" class="form-label mb-2 mt-2"><span
-                            class="material-symbols-outlined material-icons icon">
-                            description
-                        </span>Review Content</label>
-                    <textarea class="form-control" id="review_description" name="review_description" minlength="5"
-                        maxlength="5000" rows="15" required>
-                </textarea>
-                </div>
-                <div class="rating-field">
-                    <label for="rating">Rating out of 5:</label>
-                    <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
-                        class="rating-field" required>
-                </div>
-                <!-- Submit Review Button -->
-                <div class="button-container">
-                    <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
-                            class="fa-solid fa-plus icon-btn"></i></button>
-                </div>
+            <div class="input-control">
+                <label for="review_description" class="form-label mb-2 mt-2"><span
+                        class="material-symbols-outlined material-icons icon">
+                        description
+                    </span>Review Content</label>
+                    <div class="error mb-2 mt-2"></div>
+                <textarea class="form-control" id="review_description" name="review_description" minlength="5"
+                    maxlength="5000" rows="15" required>
+        </textarea>
             </div>
+            <div class="input-control">
+                <label for="rating">Rating out of 5:</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
+                    class="rating-field text-white">
+            </div>
+        </div>
+        <!-- Submit Review Button -->
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
+                    class="fa-solid fa-plus icon-btn"></i></button>
         </div>
     </form>
 </div>

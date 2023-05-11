@@ -6,8 +6,11 @@ const password = document.getElementById('password');
 const firstName = document.getElementById('first_name')
 const lastName = document.getElementById('last_name')
 const favFilm = document.getElementById('fav_film')
-const fileInput = document.getElementsByClassName('');
-const allowedExtensions = /(\.png|\.jpeg|\.jpg)$/i;
+const filmName = document.getElementById('film_name')
+const reviewTitle = document.getElementById('review_title')
+// const categorySelection = document.getElementById('category_name')
+const reviewDescription = document.getElementById('review_description')
+// const rating = document.getElementById('rating')
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -100,16 +103,40 @@ const validateInputs = () => {
         setSuccess(favFilm);
       }
     }
-    if (favFilm) {
-        const favFilmValue = favFilm.value.trim();
-        if (favFilmValue === '') {
-          setError(favFilm, 'Favorite film is required');
+      if (filmName) {
+        const filmNameValue = filmName.value.trim();
+        if (filmNameValue === '') {
+          setError(filmName, 'Film name is required');
           isValid = false;
-        } else if (favFilmValue.length < 1) {
-          setError(favFilm, 'Favorite film must be at least 1 character.');
+        } else if (filmNameValue.length < 5) {
+          setError(filmName, 'Film name must be at least 5 character.');
           isValid = false;
         } else {
-          setSuccess(favFilm);
+          setSuccess(filmName);
+        }
+      }
+      if (reviewTitle) {
+        const reviewTitleValue = reviewTitle.value.trim();
+        if (reviewTitleValue === '') {
+          setError(reviewTitle, 'Review title is required');
+          isValid = false;
+        } else if (reviewTitleValue.length < 15) {
+          setError(reviewTitle, 'Review title must be at least 15 character.');
+          isValid = false;
+        } else {
+          setSuccess(reviewTitle);
+        }
+      }
+      if (reviewDescription) {
+        const reviewDescriptionValue = reviewDescription.value.trim();
+        if (reviewDescriptionValue === '') {
+          setError(reviewDescription, 'Review description is required');
+          isValid = false;
+        } else if (reviewDescriptionValue.length < 50) {
+          setError(reviewDescription, 'Review description must be at least 50 character.');
+          isValid = false;
+        } else {
+          setSuccess(reviewDescription);
         }
       }
 
