@@ -120,9 +120,11 @@ def update_profile(username):
     a template for updating profile
     """
     if request.method == "POST":
+        image_url = util.upload_image('user_img')
         user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         update_profile = {"$set": {
+            "user_img": image_url,
             "username": session['user'],
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),

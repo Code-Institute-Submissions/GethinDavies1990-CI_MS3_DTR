@@ -6,81 +6,72 @@
 <div class="row">
     <div
         class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form method="POST" enctype="multipart/form-data" class="add-edit-review-form"
+        <form id="form" method="POST" enctype="multipart/form-data" class="add-edit-review-form"
             action="{{ url_for('authentication.update_profile', username=username) }}">
             <!--Username input -->
-            <div class="mb-4">
+            <div class="row mb-4">
                 <div class="col">
-                    <label class="form-label mb-3 mt-3" for="username"><span
-                            class="material-symbols-outlined material-icons icon">
-                            person
-                        </span>Username</label>
-                    <div class="form-outline">
-                        <input type="text" id="username" name="username" minlength="5" maxlength="25"
-                            pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ username }}" required>
+                    <div class="input-control">
+                        <label for="username"><span class="material-symbols-outlined material-icons icon">
+                                person
+                            </span>Username</label>
+                        <input id="username" name="username" type="text" class="text-white" value="{{user.username}}">
+                        <div class="error"></div>
                     </div>
                 </div>
             </div>
             <!-- Password input -->
-            <label class="form-label mb-3 mt-3" for="password"><span
-                    class="material-symbols-outlined material-icons icon">
-                    lock
-                </span>Password</label>
-            <div class="form-outline mb-4">
-                <input type="password" id="password" name="password" minlength="5" maxlength="25"
-                    pattern="^[a-zA-Z0-9]{5,25}$" class="text-white" value="{{ user.password }}" required>
+            <div class="input-control">
+                <label for="password"><span class="material-symbols-outlined material-icons icon">
+                        lock
+                    </span>Password</label>
+                <input id="password" name="password" type="password" class="text-white" value="{{user.password}}">
+                <div class="error"></div>
             </div>
             <!-- First Name input -->
-            <div class="col">
-                <label class="form-label mb-3 mt-3" for="first_name"><span
-                        class="material-symbols-outlined material-icons icon">
+            <div class="col input-control">
+                <label class="mb-3 mt-3" for="first_name"><span class="material-symbols-outlined material-icons icon">
                         badge
                     </span>First Name</label>
-                <div class="form-outline">
-                    <input type="text" id="first_name" name="first_name" class="text-white" value="
-                        {{- user.first_name -}}" required>
-                </div>
+                <input type="text" id="first_name" name="first_name" class="text-white" value="{{user.first_name}}">
+                <div class="error"></div>
             </div>
             <!-- Last Name input -->
-            <div class=" col">
-                <label class="form-label mb-3 mt-3" for="last_name"><span
-                        class="material-symbols-outlined material-icons icon">
+            <div class="col input-control">
+                <label class="mb-3 mt-3" for="last_name"><span class="material-symbols-outlined material-icons icon">
                         badge
                     </span>Last Name</label>
-                <div class="form-outline">
-                    <input type="text" id="last_name" name="last_name" class="text-white" value="{{ user.last_name }}"
-                        required>
-                </div>
+                <input type="text" id="last_name" name="last_name" class="text-white" value="{{user.last_name}}">
+                <div class="error"></div>
+            </div>
+            <!-- Favorite film input -->
+            <div class="col mb-4 input-control">
+                <label class="mb-3 mt-3" for="fav_film"><span class="material-symbols-outlined material-icons icon">
+                        stars
+                    </span>Favorite Film</label>
+                <input type="text" id="fav_film" name="fav_film" class="text-white" value="{{user.fav_film}}">
+                <div class="error"></div>
             </div>
             <div class="mb-2 mt-3 input-control">
                 <label for="user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
                         upload
                     </span>Profile Image</label>
-                <input type="file" id="user_img" name="user_img" class="text-white">
-                <!-- Favorite film input -->
-                <div class="col mb-4">
-                    <label class="form-label mb-3 mt-3" for="fav_film"><span
-                            class="material-symbols-outlined material-icons icon">
-                            stars
-                        </span>Favorite Film</label>
-                    <div class="form-outline">
-                        <input type="text" id="fav_film" name="fav_film" value="{{ user.fav_film }}" class="text-white"
-                            required>
-                    </div>
-                </div>
-                <!-- Submit button -->
-                <div class="col text-center">
-                    <div class="button-container">
-                        <button type="submit" class="btn btn-primary mb-4">Save Changes</button>
-                        <button type="button" class="btn btn-danger mb-4" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Delete
-                        </button>
-                    </div>
+                <input type="file" id="user_img" name="user_img" class="text-white img_upload">
+                <div class="error"></div>
+            </div>
+            <!-- Submit button -->
+            <div class="col text-center">
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary mb-4">Save Changes</button>
+                    <button type="button" class="btn btn-danger mb-4" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Delete
+                    </button>
                 </div>
             </div>
-        </form>
     </div>
+    </form>
+</div>
 </div>
 <!-- Delete Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

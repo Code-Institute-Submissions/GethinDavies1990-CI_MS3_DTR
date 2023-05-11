@@ -1,9 +1,13 @@
+// The form validation checks for user input and server side validation before submitting.
+// Credit: https://www.youtube.com/watch?v=CYlNJpltjMM&t=6s
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const firstName = document.getElementById('first_name')
 const lastName = document.getElementById('last_name')
 const favFilm = document.getElementById('fav_film')
+const fileInput = document.getElementsByClassName('');
+const allowedExtensions = /(\.png|\.jpeg|\.jpg)$/i;
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -96,6 +100,18 @@ const validateInputs = () => {
         setSuccess(favFilm);
       }
     }
+    if (favFilm) {
+        const favFilmValue = favFilm.value.trim();
+        if (favFilmValue === '') {
+          setError(favFilm, 'Favorite film is required');
+          isValid = false;
+        } else if (favFilmValue.length < 1) {
+          setError(favFilm, 'Favorite film must be at least 1 character.');
+          isValid = false;
+        } else {
+          setSuccess(favFilm);
+        }
+      }
 
     return isValid;
   };
