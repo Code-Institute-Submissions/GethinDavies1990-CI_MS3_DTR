@@ -56,7 +56,7 @@
                 <label for="user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
                         upload
                     </span>Profile Image</label>
-                <input type="file" id="user_img" name="user_img" class="text-white img_upload">
+                <input type="file" id="user_img" name="user_img" class="text-white img_upload" required>
                 <div class="helper">Only image files(jpg, JPG, png PNG) will be accepted</div>
             </div>
             <!-- Submit button -->
@@ -69,28 +69,29 @@
                     </button>
                 </div>
             </div>
+        </form>
     </div>
-    </form>
 </div>
-</div>
-<!-- Delete Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header text-white">
-                <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-white">
-                Are you sure you want to delete your profile?
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('authentication.delete_profile', username=username)}}"
-                    class="btn btn-secondary">Delete</a>
+
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white">
+                    Are you sure you want to delete your profile?
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    <a href="{{ url_for('authentication.delete_profile', username=username)}}"
+                        class="btn btn-secondary">Delete</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

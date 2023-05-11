@@ -8,9 +8,8 @@ const lastName = document.getElementById('last_name')
 const favFilm = document.getElementById('fav_film')
 const filmName = document.getElementById('film_name')
 const reviewTitle = document.getElementById('review_title')
-// const categorySelection = document.getElementById('category_name')
 const reviewDescription = document.getElementById('review_description')
-// const rating = document.getElementById('rating')
+const categoryName = document.getElementById('category_name')
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -137,6 +136,18 @@ const validateInputs = () => {
           isValid = false;
         } else {
           setSuccess(reviewDescription);
+        }
+      }
+      if (categoryName) {
+        const categoryNameValue = categoryName.value.trim();
+        if (categoryNameValue === '') {
+          setError(categoryName, 'Category Name is required');
+          isValid = false;
+        } else if (categoryNameValue.length < 1) {
+          setError(categoryName, 'Category Name must be at least 1 character.');
+          isValid = false;
+        } else {
+          setSuccess(categoryName);
         }
       }
 

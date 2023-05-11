@@ -4,26 +4,33 @@
 <h1 class="page-header">Edit Category</h1>
 
 
-<div class="register-card register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form class="review-form" method="POST" enctype="multipart/form-data"
+<div class="register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
+    <form id="form" class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
         <div class="row">
             <div class="mb-2 mt-3">
-                <i class="fa-solid fa-clapperboard text-pink"></i>
-                <label for="category_name" class="form-label mb-2 mt-2">Category Name</label>
-                <input type="text" class="text-white" value="{{ category.category_name }}" id="category_name"
-                    name="category_name" minlength="3" maxlength="25" required>
+                <div class="input-control">
+                    <label for="category_name" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            movie
+                        </span>Category Name</label>
+                    <input type="text" class="text-white" id="category_name" name="category_name" value="{{category.category_name}}">
+                    <div class="error"></div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="mb-2 mt-2">
-                <label for="category_image" class="form-label mb-2 mt-2"><span
-                        class="material-symbols-outlined material-icons icon">
-                        upload
-                    </span>Category Image</label>
-                <input class="validate" type="file" id="category_image" name="category_image"
-                    aria-label="category-image" required>
+                <div class="input-control">
+                    <label for="category_image" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            upload
+                        </span>Category Image</label>
+                    <input class="validate" type="file" id="category_image" name="category_image"
+                        aria-label="category-image" required>
+                    <div class="error"></div>
+                </div>
             </div>
         </div>
         <!-- Cancel Edit Category Button -->

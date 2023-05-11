@@ -9,8 +9,7 @@
     </span>Register</h1>
     <div
         class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form id="form" method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data"
-            onsubmit="return validateInputs()">
+        <form id="form" method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data">
              <!--Username input -->
              <div class="row mb-4">
                 <div class="col">
@@ -61,7 +60,7 @@
                 <label for="user_img" class="mb-2 mt-2"><span class="material-symbols-outlined material-icons icon">
                         upload
                     </span>Profile Image</label>
-                <input type="file" id="user_img" name="user_img" class="text-white img_upload">
+                <input type="file" id="user_img" name="user_img" class="text-white img_upload" required>
                 <div class="helper">Only image files(jpg, JPG, png PNG) will be accepted</div>
             </div>
             <!-- Submit button -->

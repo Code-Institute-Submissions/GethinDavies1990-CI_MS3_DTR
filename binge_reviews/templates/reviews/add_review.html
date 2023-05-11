@@ -7,7 +7,16 @@
 <div
     class="register-login-card add-edit-review-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
     <form id="form" class="add-edit-review-form" method="POST" enctype="multipart/form-data"
-        action="{{ url_for('reviews.add_review')}}"  onsubmit="return validateInputs()">
+        action="{{ url_for('reviews.add_review')}}">
+         <!-- Review Image -->
+         <div class="input-control">
+            <label for="review_image" class="form-label mb-2 mt-2"><span
+                    class="material-symbols-outlined material-icons icon">
+                    upload
+                </span>Review Image</label>
+            <input class="text-white" type="file" id="review_image" name="review_image" required>
+            <div class="helper">Only image files(jpg, JPG, png PNG) will be accepted</div>
+        </div>
         <!-- Film Name -->
         <div class="row mb-4">
             <div class="col">
@@ -28,15 +37,6 @@
                     </span>Review Title</label>
                 <input type="text" class="text-white" id="review_title" name="review_title">
                 <div class="error"></div>
-            </div>
-            <!-- Review Image -->
-            <div class="input-control">
-                <label for="review_image" class="form-label mb-2 mt-2"><span
-                        class="material-symbols-outlined material-icons icon">
-                        upload
-                    </span>Review Image</label>
-                <input class="validate text-white" type="file" id="review_image" name="review_image">
-                <div class="helper">Only image files(jpg, JPG, png PNG) will be accepted</div>
             </div>
             <div class="input-control">
                 <label for="category_name" class=" mb-2 mt-2"><span

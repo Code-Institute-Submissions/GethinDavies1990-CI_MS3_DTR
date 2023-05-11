@@ -1,42 +1,50 @@
 {% extends "base.html" %}
 {% block title %}Edit Review{% endblock %}
+{% block nav_new_review %}active{% endblock %}
 {% block content %}
 <h1 class="page-header">Edit Review</h1>
 
 <div
     class="register-login-card add-edit-review-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form class="add-edit-review-form" method="POST" enctype="multipart/form-data"
-        action="{{ url_for('reviews.edit_review', review_id=review._id)}}">
-        <!-- Film Name -->
-        <div class="row">
-            <div class="mb-2 mt-3">
-                <label for="film_name" class="form-label mb-2 mt-2"><span
-                        class="material-symbols-outlined material-icons icon">
-                        movie
-                    </span>Film Name</label>
-                <input type="text" class="form-control" id="film_name" name="film_name" value="{{ review.film_name}}"
-                   minlength="5" maxlength="50" required>
-            </div>
+    <form id="form" class="add-edit-review-form" method="POST" enctype="multipart/form-data"
+    action="{{ url_for('reviews.edit_review', review_id=review._id)}}">
+         <!-- Review Image -->
+         <div class="input-control">
+            <label for="review_image" class="form-label mb-2 mt-2"><span
+                    class="material-symbols-outlined material-icons icon">
+                    upload
+                </span>Review Image</label>
+            <input class="text-white" type="file" id="review_image" name="review_image" required>
+            <div class="helper">Only image files(jpg, JPG, png PNG) will be accepted</div>
         </div>
-        <!-- Review Title -->
-        <div class="row">
-            <div class="mb-2">
+        <!-- Film Name -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="input-control">
+                    <label for="film_name" class="form-label mb-2 mt-2"><span
+                            class="material-symbols-outlined material-icons icon">
+                            movie
+                        </span>Film Name</label>
+                    <input type="text" class="text-white" id="film_name" name="film_name" value="{{ review.film_name}}">
+                    <div class="error"></div>
+                </div>
+            </div>
+            <!-- Review Title -->
+            <div class="input-control">
                 <label for="review_title" class="form-label mb-2 mt-2"><span
                         class="material-symbols-outlined material-icons icon">
                         title
                     </span>Review Title</label>
-                <input type="text" class="form-control" id="review_title" name="review_title"
-                    value="{{ review.review_title }}" minlength="5" maxlength="350" required>
+                <input type="text" class="text-white" id="review_title" name="review_title" value="{{ review.review_title}}">
+                <div class="error"></div>
             </div>
-        </div>
-        <!-- Category selection -->
-        <div class="row">
-            <div class="mb-3">
+            <div class="input-control">
                 <label for="category_name" class=" mb-2 mt-2"><span
                         class="material-symbols-outlined material-icons icon">
                         category
+                        <!-- Category selection -->
                     </span>Select Category</label>
-                <select id="category_name" name="category_name" class="form-select form-select-sm"
+                    <select id="category_name" name="category_name" class="form-select form-select-sm"
                     aria-label="form-select-sm example">
                     {% for category in categories %}
                     {% if category.category_name == review.category_name %}
@@ -47,62 +55,30 @@
                     {% endfor %}
                 </select>
             </div>
-        </div>
-        <!-- Review Description -->
-        <div class="row">
-            <div class="mb-3">
+            <!-- Review Description -->
+            <div class="input-control">
                 <label for="review_description" class="form-label mb-2 mt-2"><span
                         class="material-symbols-outlined material-icons icon">
                         description
                     </span>Review Content</label>
-                <textarea class="form-control" id="review_description" name="review_description"
-                minlength="5" maxlength="1000" rows="15" required>{{- review.review_description -}}
-                </textarea>
+                    <div class="error mb-2 mt-2"></div>
+                <textarea class="form-control" id="review_description" name="review_description" minlength="5"
+                    maxlength="5000" rows="15" required>{{- review.review_description -}}
+        </textarea>
             </div>
-            <!-- Review Rating -->
-            <div class="rating-field">
+            <div class="input-control">
                 <label for="rating">Rating out of 5:</label>
-                <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3" class="rating-field"
-                    required>
+                <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
+                    class="rating-field text-white">
+                    <div class="helper">Please select a rating between 1 and 5</div>
             </div>
-            <!-- Cancel Changes Button -->
-            <div class="row button-container">
-                <div class="col-lg-4 col-md-12 col-sm-12"><a href="{{ url_for('reviews.get_reviews') }}"
-                        class="btn btn-secondary mb-3 mb-2">Cancel Changes</a>
-                </div>
-                <!-- Submit Review Button -->
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <button type="submit" class="btn btn-primary mb-3 mt-2">Edit Review</button>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <button type="button" class="btn btn-danger mb-3 mt-2" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Delete
-                    </button>
-                </div>
-            </div>
+        </div>
+        <!-- Submit Review Button -->
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Publish Review <i
+                    class="fa-solid fa-plus icon-btn"></i></button>
         </div>
     </form>
-</div>
-<!-- Delete Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header text-white">
-                <h2 class="modal-title" id="staticBackdropLabel">Delete Review</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-white">
-                Are you sure you want to delete this review?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('reviews.delete_review', review_id=review._id)}}"
-                    class="btn btn-danger text-center mt-2">Delete</a>
-            </div>
-        </div>
-    </div>
 </div>
 
 {% endblock %}
