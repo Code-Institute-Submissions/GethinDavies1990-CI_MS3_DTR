@@ -1,5 +1,3 @@
-// The form validation checks for user input and server side validation before submitting.
-// Credit: https://www.youtube.com/watch?v=CYlNJpltjMM&t=6s
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
