@@ -48,10 +48,10 @@ a {
 }
 
 .page-header {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    margin: 5px auto;
+    margin: 5px 3px;
     text-align: center;
     color: #C11562;
     text-transform: uppercase;
@@ -547,6 +547,20 @@ input:focus {
     background-color: #000;
 }
 
+.profile-header {
+    font-size: 0.85rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    margin: 5px 3px;
+    text-align: center;
+    color: #C11562;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 5px;
+    position: relative;
+}
+
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -584,6 +598,11 @@ select:-webkit-autofill:focus {
 }
 
 
+/* Form */
+form {
+    width: 100%;
+}
+
 /* Category Page */
 
 .category-card {
@@ -591,12 +610,7 @@ select:-webkit-autofill:focus {
     outline: 1px solid #28282B;
 }
 
-/* form */
-
-form {
-    width: 100%;
-}
-
+/* profile */
 .profile-page {
     width: 100%;
 }

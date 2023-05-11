@@ -27,31 +27,31 @@ The primary goal of the website from a users perspective is:
 I have structured the website into 18 pages, each with consistent styling throughout.
 
 1. Home/Reviews: This is the landing page for the website.
-2. Register: This page allows the user to register for the website and submit reviews. 
+2. Register: This page allows the user to register for the website and submit reviews.
 3. Login: This page allows users to login into the website
 4. Profile: This page displays the users profile page.
 5. Update profile: This page allows the user to edit their profile information.
-6. Categories: This displays the categories page, this is only visible to an admin user to allow them to create/read/update/delete categories form the website. 
+6. Categories: This displays the categories page, this is only visible to an admin user to allow them to create/read/update/delete categories form the website.
 7. Add categories: This page allows the admin user to add more categories to the website
 8. Edit Categories: This page allows the admin user to edit a category.
 9. Add Review: This page allows the user to submit a review for a film.
-10. Edit Review: This page allows the owner of a review to edit their review information. 
-11. Delete Review: This button allows the user to remove their owned review from the website 
-12. Reviews: This page displays all reviews submitted to the website. 
-13. Review: This page displays the full review which has been submitted by a user. 
+10. Edit Review: This page allows the owner of a review to edit their review information.
+11. Delete Review: This button allows the user to remove their owned review from the website
+12. Reviews: This page displays all reviews submitted to the website.
+13. Review: This page displays the full review which has been submitted by a user.
 14. Error 400: This page is displayed to a user if they encounter an error 400
 15. Error 404: This page is displayed if a user encounters a non existent url.
 16. Error 401: This page is displayed if a user encounters an error 401
 17. Error 405: This page is displayed if a user encounters an error 405
 18. Error 500: This page is displayed if a user encounters an error 500
 
-## Code Structure 
+## Code Structure
 - My project was built using the Blueprints structure
 - The blueprint structure is an object to structure a flask application into subsets. This helped keeping the site split into sections for organization and readability.
 - This link here really helped me to understand how to structure my website using blueprints. https://realpython.com/flask-blueprint/
 - The Project is structured as follows:
     - Authentication: Contains a flask route for authentication code, Register/Login/Profile etc.
-    - Categories: Contains the routes for Adding categories, Edit Categories, and deleting categories. 
+    - Categories: Contains the routes for Adding categories, Edit Categories, and deleting categories.
     - Errors: Contains the routes for error pages, 400, 401, 404, 405, 500
     - reviews: Contains the routes for the reviews code. add review, edit review, Delete review etc
     - Static
@@ -63,13 +63,13 @@ I have structured the website into 18 pages, each with consistent styling throug
     - app.py: That sets and runs the application
     - a local env.py file, tha is not committed to source control - This ensures sensitive information is hidden in environment variables and never committed to repositories.
 
-# Database 
+# Database
 - The website was built to be a data centric site, made with HTML, CSS, Javascript and the bootstrap framework was also used.
 - The backend of the website consists of the Python language, The flask framework, Jinja templates and MongoDb was used to store the data.
 
 ## Database Model
 
-The first step in setting up my database was to map out a conceptual data model. 
+The first step in setting up my database was to map out a conceptual data model.
 
 ![Database Concept](binge_reviews/static/images/readme/database-design/datebase-concept.jpg)
 
@@ -82,9 +82,9 @@ Once the concept data model was designed, I then created the physical database m
     1. users
     2. reviews
     3. categories
-- A model.py file is included in the binge_reviews/models file to display the structure of the database in the python code. 
+- A model.py file is included in the binge_reviews/models file to display the structure of the database in the python code.
 - The databases were created manually in MongoDB at first
-- I then installed MongoDB connection directly into my IDE editor. This allowed me to check any data being added nto the database very quickly as opposed to logging into the mongodb website database each time. 
+- I then installed MongoDB connection directly into my IDE editor. This allowed me to check any data being added nto the database very quickly as opposed to logging into the mongodb website database each time.
 
 ## Users
 
@@ -124,7 +124,7 @@ The fields stored when they register are.
 # Amazon Web Services S3 Bucket
 I decided to use the Amazon S3 bucket to store the images urls for the imagery uploaded by the user. I found this video very helpful to implement this https://www.youtube.com/watch?v=tSfdQJvTKmk&t=528s
 
-The steps I made to implement this 
+The steps I made to implement this
 1. Created a AWS account and created an S3 bucket called binge-reviews
 ![S3 Bucket](binge_reviews/static/images/readme/s3-bucket/s3-bucket.jpg)
 2. I created a user in AWS IAM, and gave the user the AmazonS3FullAccess permission
@@ -172,13 +172,13 @@ client = boto3.client('s3',
 - User Story 5.3: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As a regular user I can view a review by clicking on the 'Full review' button
 - User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
-- User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile. 
+- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile.
 - User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 
 ## User stories for site owner
 
-The user stories overlap with regular users and admin users. The admin user does have rights to delete all reviews, add categories, delete categories. 
+The user stories overlap with regular users and admin users. The admin user does have rights to delete all reviews, add categories, delete categories.
 
 - User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices
 - User Story 1.2: As an admin user the navigation item selected is highlighted
@@ -200,8 +200,8 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 5.3: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
 - User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film 
-- User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile. 
+- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile.
 - User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
 - User Story 8.1: As an Admin user I can delete reviews left by other users,
 - User Story 8.2: As an Admin user I can delete and edit categories
@@ -226,7 +226,7 @@ The user stories overlap with regular users and admin users. The admin user does
 </details>
 <br>
 
-## Tablet 
+## Tablet
 <br>
 <details><summary>Login</summary>
 <img src="binge_reviews/static/images/readme/wireframes/tablet/tablet - Login.png">
@@ -409,7 +409,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 ### Description feature 4
 
 - The User can register for an account by entering their Username, Password, First Name, Last Name, Favourite Film, Profile Image.
-- All fields are required, and they will be notified with a flash message if the username already exists in the database. 
+- All fields are required, and they will be notified with a flash message if the username already exists in the database.
     <details><summary>Flash Message</summary>
     <img src="binge_reviews/static/images/readme/features/flash-messages/username-exists.jpg">
     </details>
@@ -425,21 +425,14 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ### Description feature 6
 
-## Feature 7 Categories/Add Category/Edit Category/Delete Category
+## Feature 7 Search
 
 ### Description feature 7
 
-## Feature 8 Top and lowest rated reviews
+## Feature 8 Categories/Add Category/Edit Category/Delete Category
 
-### Description feature 8 
+### Description feature  8
 
-## Feature 9 Search
-
-### Description feature  9
-
-## Feature 10 Dashboard
-
-### Description feature  10
 
 
 <br>
@@ -448,7 +441,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 - I am happy with what I have implemented in the timeframe I had to produce this project, there is some future features I would like to add.
 
-Number | Feature  
+Number | Feature
  ------------ | ------- |
 1 | Social sharing of a memory on facebook, twitter  |
 2 | Integrate the IMDB API, this is an api
@@ -459,9 +452,9 @@ Number | Feature
 
 <br>
 
-# Technologies Used 
+# Technologies Used
 
-## Languages 
+## Languages
 
 - HTML
 - CSS
@@ -481,7 +474,7 @@ Number | Feature
 - HMTL Validation
 - Chrome Dev tools
 - Am I Responsive
-- Figma 
+- Figma
 - Go FUll Page
 
 # Testing
@@ -528,7 +521,7 @@ To run this project locally, you will need to clone the repository
 1. Login to GitHub (https://wwww.github.com)
 2. Select the repository GethinDavies1990/CI_MS3_DTR
 3. Click the Code button and copy the HTTPS url, for example: https://github.com/GethinDavies1990/CI_MS3_DTR
-4. In your IDE, open a terminal and run the git clone command, for example 
+4. In your IDE, open a terminal and run the git clone command, for example
 
     ```git clone https://github.com/GethinDavies1990/CI_MS3_DTR.git```
 
@@ -596,5 +589,5 @@ To deploy this application to Heroku, run the following steps.
 
 - I would like to thank my wife for always being patient with me and supporting me on the duration of this project. And my Son for always being my driving force of motivation.
 
-- I would also like to thank my mentor Mo Shami, for always pushing me to put out my best effort and work. 
+- I would also like to thank my mentor Mo Shami, for always pushing me to put out my best effort and work.
 

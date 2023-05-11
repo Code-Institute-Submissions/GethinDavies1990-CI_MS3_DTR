@@ -7,11 +7,45 @@ The testing performed in this unit is described in this testing readme:
 
 ## Unit Testing
 
-To follow
+The unit testing was performed in the tests/ directory, each file tests function related to their respective routes. this is detailed below. I would of liked to of tested my whole app but due to time constraints, I couldn't do so. see below detailed report of the tests performed.
 
-## Automated testing
+I tested using pytest, and Mongomock to create a mock database.
 
-To follow
+### test_authentication
+
+This file includes the test functions for the authentication section of the application.
+
+- test_register: Test's the functions ability to register a user to the database.
+
+### test_categories
+
+This file includes the test functions for the Category functions
+
+- test_add_category: Test's to see if a category collection is added to the database.
+- test_update_category: Test's an added collection already in the database and updates the collection.
+
+### test_reviews
+
+This file includes the test functions for the review functions
+
+- test_add_review: Test's to see if a review collection is added to the database.
+- test_update_review: Test's an added collection already in the database and updates the collection.
+
+### test_routes
+
+This file includes the test function for the route's
+I only managed to test 1 route, I would of liked to tested all, but I was having issues making more than one call with the client app.
+
+- test_routes: Tests the routes and a response is parsed.
+
+### test_util
+This file includes the test functions for the util.py
+
+- test_get_timestamp was ran to check the function on generate_timestamp
+
+![Test Results](binge_reviews/static/images/readme/testing/unit_testing/unit_testing.png)
+
+
 
 Device Number | Physical/Emulator | Device Name | Device Type | Browser |
 ------------ | ------------ | ------------- | ------------- | ------------- |
@@ -519,16 +553,18 @@ Step 3 | Pass  | Pass |Pass
 
 ## Feature 4 Login/Register/logout
 
-<!-- ### User Story 4.1
+### User Story 4.1
 
 -User Story 4.1: As a regular/admin user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
 
 ### Test case steps 4.1
-
+1. Navigate to the Register page, input your details, and select register
+2. If successful they will be redirect to their profile page
 
 
 ### Expected Result 4.1
-
+1. Navigated to the register page, and was given the option to input my details
+2. inputting my details and registering, redirects me to my profile page.
 
 
 ### Actual Result 4.1
@@ -536,33 +572,49 @@ Step 3 | Pass  | Pass |Pass
 Step Number | Desktop | Tablet | Mobile
 ------------ | ------------ | ------------- | ------------- |
 Step 1 | Pass  | Pass |Pass
+Step 2 | Pass  | Pass |Pass
 
-<details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-desktop.png">
+<details><summary>Step 1 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-1-desktop.png">
 </details>
 <br>
 
-<details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-mobile.png">
+<details><summary>Step 1 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-1-mobile.png">
 </details>
 <br>
 
-<details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-tablet.png">
+<details><summary>Step 1 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-1-tablet.png">
+</details>
+<br>
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.1-step-2-tablet.png">
 </details>
 <br>
 
 ### User Story 4.2
 
--User Story 4.2: As a regular/admin user my username must be a minimum of 5 characters, and a max of 25 characters.
+-User Story 4.2: As a regular/admin user my username must be a minimum of 5 characters, and certain input's must be completed.
 
 ### Test case steps 4.2
 
+1. Navigate to Register/Login page, register or login without completing input's
 
 
 ### Expected Result 4.2
 
-
+1. Navigated to the register page, and tried submitting form with less than 5 characters, validation was fed back to me.
 
 ### Actual Result 4.2
 
@@ -571,17 +623,17 @@ Step Number | Desktop | Tablet | Mobile
 Step 1 | Pass  | Pass |Pass
 
 <details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-desktop.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-step-1-desktop.png">
 </details>
 <br>
 
 <details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-mobile.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-step-1-mobile.png">
 </details>
 <br>
 
 <details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-tablet.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.2-step-1-tablet.png">
 </details>
 <br>
 
@@ -591,11 +643,11 @@ Step 1 | Pass  | Pass |Pass
 
 ### Test case steps 4.3
 
-
+1. Navigate to Register/Login page, register or login without completing input's
 
 ### Expected Result 4.3
 
-
+1. Navigated to the register page, and tried submitting form with less than 8 characters, validation was fed back to me.
 
 ### Actual Result 4.3
 
@@ -616,7 +668,7 @@ Step 1 | Pass  | Pass |Pass
 <details><summary>Tablet Result</summary>
 <img src="binge_reviews/static/images/readme/testing/user-stories/user-story-4.3-tablet.png">
 </details>
-<br> -->
+<br>
 
 ### User Story 4.4
 

@@ -3,7 +3,8 @@
 {% block nav_profile %}active{% endblock %}
 {% block content %}
 
-<h1 class="page-header">{{ username }}'s Profile</h1>
+
+<h1 class="profile-header">{{ username }}'s<br> Profile</h1>
 <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-12 profile-img">
         <img src="{{ user.user_img }}" alt="{{ user.user_img }}" class="rounded-circle">
