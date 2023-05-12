@@ -1117,48 +1117,46 @@ Step 2 | Pass  | Pass | Pass
 </details>
 <br>
 
-<!-- # Feature 7 - Search
+# Feature 7 - Search
 
-### User Story 6.3
+### User Story 7.1
 
-User Story 6.3: As a regular/admin user I can delete my account. The user will be asked to confirm deletion of their profile.
+User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 
-### Test case steps 6.3
+### Test case steps 7.1
 
-1. On profile page click 'Update/Delete profile' button will direct the user to the update/delete page. On clicking delete the user will be displayed with a modal to confirm deletion.
-2. click delete to remove the profile
+1. Navigate to the Reviews Page, and locate the search bar in the middle of the page, search a film.
 
-### Expected Result 6.3
+### Expected Result 7.1
 
-1. clicking delete profile displays a modal to confirm deletion
-2. clicking delete will delete the profile
+1. Searching for a film in the database, returns a match. the search only works for films in the database.
 
 
-### Actual Result 6.3
+### Actual Result 7.1
 
 Step Number | Desktop | Tablet | Mobile
 ------------ | ------------ | ------------- | ------------- |
-Step 1 | n/a  | n/a | n/a
-Step 2 | Pass  | Pass | Pass
+Step 1 | Pass  | Pass | Pass
+
 
 
 <details><summary>Step-1 Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-desktop.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-7.1-desktop.png">
 </details>
 <br>
 
 <details><summary>Step-1 Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-mobile.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-7.1-mobile.png">
 </details>
 <br>
 
 <details><summary>Step-1 Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-6.3-tablet.png">
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-7.1-tablet.png">
 </details>
 <br>
 
 
- -->
+
 
 # Feature 8 - Admin control
 
@@ -1219,24 +1217,40 @@ Step 2 | Pass  | Pass | Pass
 
 Step Number | Desktop | Tablet | Mobile
 ------------ | ------------ | ------------- | ------------- |
-Step 1 | n/a  | n/a | n/a
-Step 2 | Pass  | Pass | Pass
+Step 1 | Pass  | Pass | Pass
+Step 1 | Pass  | Pass | Pass
 
 
-<!-- <details><summary>Desktop Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-desktop.png">
+<details><summary>Step 1 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-1-desktop.png">
 </details>
 <br>
 
-<details><summary>Mobile Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-mobile.png">
+<details><summary>Step 1 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-1-mobile.png">
 </details>
 <br>
 
-<details><summary>Tablet Result</summary>
-<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-tablet.png">
+<details><summary>Step 1 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-1-tablet.png">
 </details>
-<br> -->
+<br>
+
+<details><summary>Step 2 - Desktop Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-2-desktop.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Mobile Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-2-mobile.png">
+</details>
+<br>
+
+<details><summary>Step 2 - Tablet Result</summary>
+<img src="binge_reviews/static/images/readme/testing/user-stories/user-story-8.2-step-2-tablet.png">
+</details>
+<br>
+
 
 # Code Validation
 
@@ -1261,6 +1275,12 @@ reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/r
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 style.css | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/css_validation/css_validation.png)
+
+## Python Code Validation
+
+
+## JavaScript Code Validation
+
 
 ## Wave Accessibility
 
