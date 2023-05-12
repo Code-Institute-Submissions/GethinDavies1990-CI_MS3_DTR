@@ -73,25 +73,28 @@
     </div>
 </div>
 
-
-    <!-- Delete Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-white">
-                    <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-white">
-                    Are you sure you want to delete your profile?
-                </div>
-                <div class="modal-footer text-center">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                    <a href="{{ url_for('authentication.delete_profile', username=username)}}"
-                        class="btn btn-danger">Delete</a>
-                </div>
+<!-- Delete Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Delete Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                Are you sure you want to delete your profile?
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ url_for('authentication.delete_profile', username=username)}}"
+                    class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% block scripts %}
+<script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock %}
+
+{% endblock %}

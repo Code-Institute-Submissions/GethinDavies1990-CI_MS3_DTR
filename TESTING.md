@@ -1297,6 +1297,8 @@ binge_reviews/util.py | No Errors/Warnings | [Results](binge_reviews/static/imag
 
 ## JavaScript Code Validation
 
+
+
 <br>
 
 ## Wave Accessibility
@@ -1319,4 +1321,17 @@ reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/r
 
 ### Chrome Lighthouse scores
 
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+add_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/add_category_wave.png)
+add_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/add_review_wave.png)
+categories.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/categories_wave.png)
+edit_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/edit_category_wave.png)
+edit_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/edit_review_wave.png)
+errors.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/error_wave.png)
+home.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/home_wave.png)
+login.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/login_wave.png)
+register.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/register_wave.png)
+review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/review_wave.png)
+reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/reviews_wave.png)
 
