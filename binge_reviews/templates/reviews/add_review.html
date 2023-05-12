@@ -25,7 +25,7 @@
                             class="material-symbols-outlined material-icons icon">
                             movie
                         </span>Film Name</label>
-                    <input type="text" class="text-white" id="film_name" name="film_name">
+                    <input type="text" class="text-white" id="film_name" name="film_name" required>
                     <div class="error"></div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         class="material-symbols-outlined material-icons icon">
                         title
                     </span>Review Title</label>
-                <input type="text" class="text-white" id="review_title" name="review_title">
+                <input type="text" class="text-white" id="review_title" name="review_title" required>
                 <div class="error"></div>
             </div>
             <div class="input-control">
@@ -58,14 +58,13 @@
                         description
                     </span>Review Content</label>
                 <div class="error mb-2 mt-2"></div>
-                <textarea class="form-control" id="review_description" name="review_description" minlength="5"
-                    maxlength="5000" rows="15" required>
+                <textarea class="form-control" id="review_description" name="review_description" rows="15" required>
         </textarea>
             </div>
             <div class="input-control">
                 <label for="rating">Rating out of 5:</label>
                 <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
-                    class="rating-field text-white">
+                    class="rating-field text-white" required>
                 <div class="helper">Please select a rating between 1 and 5</div>
             </div>
         </div>

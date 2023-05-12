@@ -25,7 +25,7 @@
                             class="material-symbols-outlined material-icons icon">
                             movie
                         </span>Film Name</label>
-                    <input type="text" class="text-white" id="film_name" name="film_name" value="{{ review.film_name}}">
+                    <input type="text" class="text-white" id="film_name" name="film_name" value="{{ review.film_name}}" required>
                     <div class="error"></div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                         title
                     </span>Review Title</label>
                 <input type="text" class="text-white" id="review_title" name="review_title"
-                    value="{{ review.review_title}}">
+                    value="{{ review.review_title}}" required>
                 <div class="error"></div>
             </div>
             <div class="input-control">
@@ -70,7 +70,7 @@
             <div class="input-control">
                 <label for="rating">Rating out of 5:</label>
                 <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
-                    class="rating-field text-white">
+                    class="rating-field text-white" required>
                 <div class="helper">Please select a rating between 1 and 5</div>
             </div>
         </div>
