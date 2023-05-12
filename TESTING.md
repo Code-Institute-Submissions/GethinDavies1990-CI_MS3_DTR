@@ -1270,17 +1270,34 @@ register.html | Passed, No errors found | [Results](binge_reviews/static/images/
 review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/review_html.png)
 reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/html_validation/reviews_html.png)
 
+<br>
+
 ## CSS Validation
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 style.css | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/css_validation/css_validation.png)
 
+<br>
+
 ## Python Code Validation
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+binge_reviews/categories/routes.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/categories.png)
+binge_reviews/__init | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/__init__.png)
+binge_reviews/app| No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/app.png)
+binge_reviews/authentication/routes.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/authentication.png)
+binge_reviews/errors/routes.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/errors.png)
+binge_reviews/models.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/models.png)
+binge_reviews/reviews/routes.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/reviews.png)
+binge_reviews/util.py | No Errors/Warnings | [Results](binge_reviews/static/images/readme/testing/python_validation/util.png)
+<br>
 
 
 ## JavaScript Code Validation
 
+<br>
 
 ## Wave Accessibility
 
@@ -1297,6 +1314,8 @@ login.html | Passed, No errors found | [Results](binge_reviews/static/images/rea
 register.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/register_wave.png)
 review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/review_wave.png)
 reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/reviews_wave.png)
+
+<br>
 
 ### Chrome Lighthouse scores
 

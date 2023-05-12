@@ -58,7 +58,7 @@ def search():
 def add_review() -> object:
     """
     This function allows the user to add reviews to the
-    application. On succesfull submission the user is
+    application. On successful submission the user is
     redirected to the reviews.html page.
     """
 
@@ -79,7 +79,7 @@ def add_review() -> object:
             mongo.db.reviews.insert_one(review)
             flash("Review Published")
         except Exception as e:
-            flash("An exception occured when adding user: " +
+            flash("An exception occurred when adding user: " +
                   getattr(e, 'message', repr(e)))
         return redirect(url_for('reviews.get_reviews'))
 
@@ -107,7 +107,7 @@ def edit_review(review_id):
             mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, submit)
             flash("Review Successfully Edited")
         except Exception as e:
-            flash("An exception occured when adding user: " +
+            flash("An exception occurred when adding user: " +
                   getattr(e, 'message', repr(e)))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
