@@ -1319,19 +1319,24 @@ reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/r
 
 <br>
 
-### Chrome Lighthouse scores
+## Google Chrome Lighthouse
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-add_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/add_category_wave.png)
-add_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/add_review_wave.png)
-categories.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/categories_wave.png)
-edit_category.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/edit_category_wave.png)
-edit_review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/edit_review_wave.png)
-errors.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/error_wave.png)
-home.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/home_wave.png)
-login.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/login_wave.png)
-register.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/register_wave.png)
-review.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/review_wave.png)
-reviews.html | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/wave/reviews_wave.png)
+add_category.html desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/add-categories-desktop.png)
+add_category.html mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/add-categories-mobile.png)
+categories desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/categories-desktop.png)
+categories mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/categories-mobile.png)
+full review mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/full-review-mobile.png)
+full review desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/full-review-desktop.png)
+home | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/home.png)
+login desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/login-desktop.png)
+login mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/login-mobile.png)
+register mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/register-mobile.png)
+register desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/register-desktop.png)
+reviews desktop | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/reviews-desktop.png)
+reviews mobile | Passed, No errors found | [Results](binge_reviews/static/images/readme/testing/lighthouse/reviews-mobile.png)
+
+
+
 

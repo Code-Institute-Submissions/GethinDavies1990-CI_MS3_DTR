@@ -7,11 +7,11 @@
 <p class="text-center text-white mb-4">Binge reviews is a review website, for film and television fans to submit their
     own reviews!</p>
 <!-- Featured review section -->
-<div class="featured-review text-center">
+<div class="featured-review text-center container-fluid">
     {% for review in reviews|reverse %}
     {% if loop.first %}
     <div class="card mb-3 review-collection-card">
-        <img src="{{ review.review_image }}" class="card-img-top" alt="{{ review.film_name }}">
+        <img src="{{ review.review_image }}" height="608px" width="1080px"  class="card-img-top img-fluid" alt="{{ review.film_name }}">
         <div class="card-body">
             <h2 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
                     new_releases
@@ -53,7 +53,7 @@
     {% for review in latest_reviews %}
     <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3">
         <div class="card h-100">
-            <img src="{{ review.review_image }}" class="card-img-top" alt="{{review.film_name}}">
+            <img src="{{ review.review_image }}" height="608px" width="1080px" class="card-img-top" alt="{{review.film_name}}">
             <div class="card-body">
                 <h4 class="card-title">{{ review.film_name }}</h4>
             </div>

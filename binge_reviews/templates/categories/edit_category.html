@@ -5,7 +5,7 @@
 
 
 <div class="register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form id="form" class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
+    <form id="edit-category-form" class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
         <div class="row">
@@ -71,9 +71,4 @@
         </div>
     </div>
 </div>
-
-{% block scripts %}
-<script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-{% endblock %}
-
 {% endblock %}

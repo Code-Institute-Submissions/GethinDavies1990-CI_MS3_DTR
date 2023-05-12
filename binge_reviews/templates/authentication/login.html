@@ -9,7 +9,7 @@
         </span>Login</h1>
     <div
         class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form id="form" method="POST" action="{{ url_for('authentication.login')}}" onsubmit="return validateInputs()">
+        <form id="login-form" method="POST" action="{{ url_for('authentication.login')}}" onsubmit="return validateInputs()">
             <!--Username input -->
             <div class="row mb-4">
                 <div class="col">
@@ -47,7 +47,4 @@
         </div>
     </div>
 </section>
-{% block scripts %}
-<script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-{% endblock %}
 {% endblock %}

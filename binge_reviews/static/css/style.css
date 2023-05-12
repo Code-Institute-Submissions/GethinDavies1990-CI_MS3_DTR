@@ -357,6 +357,10 @@ a {
     font-size: 14px;
 }
 
+.img-fluid {
+    height: 300px;
+    width: 100%;
+}
 
 /* Modal */
 
@@ -752,6 +756,12 @@ footer {
     .film-title {
         font-size: 16px;
     }
+
+    .img-fluid {
+        height: 100px;
+        width: 100%;
+    }
+
 
 }
 
