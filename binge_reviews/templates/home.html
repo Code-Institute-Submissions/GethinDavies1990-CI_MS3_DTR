@@ -11,7 +11,7 @@
     {% for review in reviews|reverse %}
     {% if loop.first %}
     <div class="card mb-3 review-collection-card">
-        <img src="{{ review.review_image }}" class="card-img-top img-fluid"
+        <img src="{{ review.review_image }}" class=" img-fluid"
             alt="{{ review.film_name }}">
         <div class="card-body">
             <h2 id="featured-review-header"><span class="material-symbols-outlined material-icons icon">
