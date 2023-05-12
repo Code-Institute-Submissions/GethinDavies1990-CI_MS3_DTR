@@ -135,7 +135,7 @@ def update_profile(username):
             mongo.db.users.update_one({"username": username}, update_profile)
             flash("Profile Successfully Updated")
         except Exception as e:
-            flash("An exception occured when adding user: " +
+            flash("An exception occurred when adding user: " +
                   getattr(e, 'message', repr(e)))
         user = mongo.db.users.find_one({"username": username})
         return redirect(url_for('authentication.profile', username=username))
@@ -157,6 +157,6 @@ def delete_profile(username: object) -> object:
         flash("Your account has been deleted and you have been logged out")
         session.pop("user")
     except Exception as e:
-        flash("An exception occured when delting user: " +
+        flash("An exception occurred when deleting user: " +
               getattr(e, 'message'), repr(e))
     return redirect(url_for("reviews.get_reviews"))
