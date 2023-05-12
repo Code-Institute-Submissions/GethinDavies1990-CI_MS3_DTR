@@ -1,70 +1,22 @@
-const loginForm = document.getElementById('login-form');
-const registerForm = document.getElementById('register-form');
-const updateProfileForm = document.getElementById('update-profile-form');
-const addCategoryForm = document.getElementById('add-category-form');
-const editCategoryForm = document.getElementById('edit-category-form');
-const addReviewForm = document.getElementById('add-review-form');
-const editReviewForm = document.getElementById('edit-review-form');
+let forms = document.querySelectorAll('.validate-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const firstName = document.getElementById('first_name')
-const lastName = document.getElementById('last_name')
-const favFilm = document.getElementById('fav_film')
-const filmName = document.getElementById('film_name')
-const reviewTitle = document.getElementById('review_title')
-const reviewDescription = document.getElementById('review_description')
-const categoryName = document.getElementById('category_name')
+const firstName = document.getElementById('first_name');
+const lastName = document.getElementById('last_name');
+const favFilm = document.getElementById('fav_film');
+const filmName = document.getElementById('film_name');
+const reviewTitle = document.getElementById('review_title');
+const reviewDescription = document.getElementById('review_description');
+const categoryName = document.getElementById('category_name');
 
-
-
-loginForm.addEventListener('submit', function (event) {
+forms.forEach(form => {
+  form.addEventListener('submit', function (event) {
   event.preventDefault();
   if (validateInputs()) {
-      loginForm.submit();
+  form.submit();
   }
-});
-
-registerForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      registerForm.submit();
-  }
-});
-
-updateProfileForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      updateProfileForm.submit();
-  }
-});
-
-addCategoryForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      addCategoryForm.submit();
-  }
-});
-
-editCategoryForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      editCategoryForm.submit();
-  }
-});
-
-addReviewForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      addReviewForm.submit();
-  }
-});
-
-editReviewForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (validateLoginInputs()) {
-      editReviewForm.submit();
-  }
-});
+  });
+  });
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -72,8 +24,8 @@ const setError = (element, message) => {
 
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
+    inputControl.classList.remove('success');
+};
 
 const setSuccess = element => {
     const inputControl = element.parentElement;

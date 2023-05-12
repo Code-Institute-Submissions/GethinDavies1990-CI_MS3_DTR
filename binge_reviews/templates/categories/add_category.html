@@ -4,7 +4,7 @@
 <h1 class="page-header">Add Category</h1>
 
 <div class="register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form id="add-category-form" class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
+    <form id="form" class="review-form validate-form" method="POST" enctype="multipart/form-data" name="add_category"
         action="{{ url_for('categories.add_category')}}">
         <!-- Category Name -->
         <div class="row">
@@ -40,6 +40,5 @@
         </div>
     </form>
 </div>
-
 
 {% endblock %}

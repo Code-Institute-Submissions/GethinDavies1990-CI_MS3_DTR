@@ -5,19 +5,19 @@
 
 <section>
     <h1 class="page-header"><span class="material-symbols-outlined material-icons icon-header">
-        person_add
-    </span>Register</h1>
+            person_add
+        </span>Register</h1>
     <div
         class="register-login-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-        <form id="form" method="POST" action="{{ url_for('authentication.register')}}" enctype="multipart/form-data">
-             <!--Username input -->
-             <div class="row mb-4">
+        <form id="form" class="validate-form" method="POST" action="{{ url_for('authentication.register')}}"
+            enctype="multipart/form-data">
+            <!--Username input -->
+            <div class="row mb-4">
                 <div class="col">
                     <div class="input-control">
-                        <label for="username"><span
-                            class="material-symbols-outlined material-icons icon">
-                            person
-                        </span>Username</label>
+                        <label for="username"><span class="material-symbols-outlined material-icons icon">
+                                person
+                            </span>Username</label>
                         <input id="username" name="username" type="text" class="text-white">
                         <div class="error"></div>
                     </div>
@@ -25,10 +25,9 @@
             </div>
             <!-- Password input -->
             <div class="input-control">
-                <label for="password"><span
-                    class="material-symbols-outlined material-icons icon">
-                    lock
-                </span>Password</label>
+                <label for="password"><span class="material-symbols-outlined material-icons icon">
+                        lock
+                    </span>Password</label>
                 <input id="password" name="password" type="password" class="text-white">
                 <div class="error"></div>
             </div>
@@ -78,6 +77,5 @@
         </div>
     </div>
 </section>
-
 
 {% endblock %}

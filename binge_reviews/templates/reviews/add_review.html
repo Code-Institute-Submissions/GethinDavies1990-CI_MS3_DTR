@@ -6,10 +6,10 @@
 
 <div
     class="register-login-card add-edit-review-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form id="add-review-form" class="add-edit-review-form" method="POST" enctype="multipart/form-data"
+    <form id="form" class="add-edit-review-form validate-form" method="POST" enctype="multipart/form-data"
         action="{{ url_for('reviews.add_review')}}">
-         <!-- Review Image -->
-         <div class="input-control">
+        <!-- Review Image -->
+        <div class="input-control">
             <label for="review_image" class="form-label mb-2 mt-2"><span
                     class="material-symbols-outlined material-icons icon">
                     upload
@@ -57,7 +57,7 @@
                         class="material-symbols-outlined material-icons icon">
                         description
                     </span>Review Content</label>
-                    <div class="error mb-2 mt-2"></div>
+                <div class="error mb-2 mt-2"></div>
                 <textarea class="form-control" id="review_description" name="review_description" minlength="5"
                     maxlength="5000" rows="15" required>
         </textarea>
@@ -66,7 +66,7 @@
                 <label for="rating">Rating out of 5:</label>
                 <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="3"
                     class="rating-field text-white">
-                    <div class="helper">Please select a rating between 1 and 5</div>
+                <div class="helper">Please select a rating between 1 and 5</div>
             </div>
         </div>
         <!-- Submit Review Button -->
@@ -76,6 +76,5 @@
         </div>
     </form>
 </div>
-
 
 {% endblock %}

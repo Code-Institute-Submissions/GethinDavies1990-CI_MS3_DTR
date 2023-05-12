@@ -6,7 +6,7 @@
 
 <div
     class="register-login-card add-edit-review-card text-bg-dark mb-3 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center">
-    <form id="edit-review-form" class="add-edit-review-form" method="POST" enctype="multipart/form-data"
+    <form id="form" class="add-edit-review-form validate-form" method="POST" enctype="multipart/form-data"
         action="{{ url_for('reviews.edit_review', review_id=review._id)}}">
         <!-- Review Image -->
         <div class="input-control">
@@ -112,6 +112,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}

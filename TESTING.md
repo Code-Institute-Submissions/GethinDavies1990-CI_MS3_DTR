@@ -1297,6 +1297,12 @@ binge_reviews/util.py | No Errors/Warnings | [Results](binge_reviews/static/imag
 
 ## JavaScript Code Validation
 
+- Js hint passes with no errors
+
+<details><summary>JS Hint</summary>
+<img src="binge_reviews/static/images/readme/testing/css_validation/js-hint/js-hint.png">
+</details>
+<br>
 
 
 <br>

@@ -3,9 +3,8 @@
 {% block content %}
 <h1 class="page-header">Edit Category</h1>
 
-
 <div class="register-login-card text-bg-dark mb-3 col-8 d-flex align-items-center justify-content-center">
-    <form id="edit-category-form" class="review-form" method="POST" enctype="multipart/form-data" name="add_category"
+    <form id="form" class="review-form validate-form" method="POST" enctype="multipart/form-data" name="add_category"
         action="{{ url_for('categories.edit_category', category_id=category._id)}}">
         <!-- Category Name -->
         <div class="row">
@@ -15,7 +14,8 @@
                             class="material-symbols-outlined material-icons icon">
                             movie
                         </span>Category Name</label>
-                    <input type="text" class="text-white" id="category_name" name="category_name" value="{{category.category_name}}">
+                    <input type="text" class="text-white" id="category_name" name="category_name"
+                        value="{{category.category_name}}">
                     <div class="error"></div>
                 </div>
             </div>

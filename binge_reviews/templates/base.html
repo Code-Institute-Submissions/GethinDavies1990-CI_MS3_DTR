@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>{% block title %}{% endblock %}</title>
   </head>
+
   <body>
     <header>
       <!-- Nav Bar -->
@@ -40,7 +42,8 @@
                 {% else %}
                 {% endif %}
                 {% if session.user %}
-                <li class="nav-item"><a class="nav-link {% block nav_new_review %}{% endblock %}" aria-current="page" href=" {{ url_for('reviews.add_review') }}">NEW REVIEW</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_new_review %}{% endblock %}" aria-current="page"
+                    href=" {{ url_for('reviews.add_review') }}">NEW REVIEW</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('authentication.logout') }}">LOG OUT</a></li>
                 <li class="nav-item"><a class="nav-link {% block nav_profile %}{% endblock %}" aria-current="page"
                     href="{{ url_for('authentication.profile', username=session['user']) }}"><i
@@ -48,8 +51,8 @@
                 {% else %}
                 <li class="nav=item"><a class="nav-link {% block nav_login %}{% endblock %}" aria-current="page" href="
                     {{ url_for('authentication.login') }}">LOGIN</a></li>
-                <li class="nav=item"><a class="nav-link {% block nav_register %}{% endblock %}"
-                    aria-current="page" href=" {{ url_for('authentication.register') }}">REGISTER</a>
+                <li class="nav=item"><a class="nav-link {% block nav_register %}{% endblock %}" aria-current="page"
+                    href=" {{ url_for('authentication.register') }}">REGISTER</a>
                 </li>
               </ul>
               {% endif %}
@@ -69,7 +72,7 @@
       {% endfor %}
       {% endif %}
       {% endwith %}
-  </div>
+    </div>
     <main class="container">
       {% block content %}
       {% endblock %}
@@ -105,4 +108,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
   </body>
+
 </html>

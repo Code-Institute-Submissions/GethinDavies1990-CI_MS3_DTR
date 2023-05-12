@@ -3,7 +3,6 @@
 {% block nav_profile %}active{% endblock %}
 {% block content %}
 
-
 <h1 class="profile-header">{{ username }}'s<br> Profile</h1>
 <div class="row text-center">
     <div class="col-lg-3 col-md-4 col-sm-12 profile-img">
@@ -19,7 +18,7 @@
     </div>
 </div>
 <h2 class="text-pink text-center mt-5 mb-5">{{ user.username }}'s Reviews</h2>
-
+<!-- Review Collection -->
 <div class="review-collection row">
     {% for review in reviews %}
     {% if session.user|lower == review.created_by|lower %}
