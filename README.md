@@ -408,6 +408,14 @@ Below the featured review section the last 4 published reviews are displayed, th
 
 ### Description feature 4
 
+#### Register Page
+![Register](binge_reviews/static/images/readme/features/authentication/register.png)
+<br>
+
+#### Login Page
+![Login](binge_reviews/static/images/readme/features/authentication/login_page.png)
+<br>
+
 - The User can register for an account by entering their Username, Password, First Name, Last Name, Favourite Film, Profile Image.
 - All fields are required, and they will be notified with a flash message if the username already exists in the database.
     <details><summary>Flash Message</summary>
@@ -415,27 +423,127 @@ Below the featured review section the last 4 published reviews are displayed, th
     </details>
     <br>
 
+### User Stories Feature 3
 
+
+- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+- User Story 4.2: As a regular user my username must be a minimum of 5 characters, and a max of 25 characters.
+- User Story 4.3: As a regular user my password must be a minimum of 8 characters.
+- User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
+- User Story 4.5: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
+- User Story 4.1: As an Admin user I can register for an account by providing my username, password, first name, last name, favorite film and profile image, and I am redirected to the profile page.
+- User Story 4.2: As an Admin user my username must be a minimum of 5 characters, and a max of 25 characters.
+- User Story 4.3: As an Admin user my password must be a minimum of 8 characters.
+- User Story 4.4: As an Admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
+- User Story 4.5: As an Admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
 
 ## Feature 5 Reviews/Add Reviews/Edit Reviews/Delete Reviews
 
-### Description feature 5
+
+Description feature 5
+
+- The Website uses  CRUD (Create/Read?/Update/Delete) function's throughout.
+
+- The Add Review page, is the route for the add_review function
+- The owner of the review, or the admin is given access to edit the review, the edit button is only displayed to these users.
+
+
+### Add Review
+
+![Add Review](binge_reviews/static/images/readme/features/reviews/add_review.png)
+
+### Edit Review
+
+![Edit Review](binge_reviews/static/images/readme/features/reviews/edit_review.png)
+
+### Delete Review
+
+![Delete Review](binge_reviews/static/images/readme/features/reviews/delete_review.png)
+
+### Full Review
+
+![Full Review](binge_reviews/static/images/readme/features/reviews/full_review.png)
+
+
+### User Stories Feature 5
+
+- User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
+- User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the Film name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.3: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
+- User Story 5.4: View Review - As a regular user I can view a review by clicking on the 'Full review' button
+- User Story 5.1: Add Review - As an Admin user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
+- User Story 5.2: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
+- User Story 5.3: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
+- User Story 5.4: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
+
+<br>
 
 ## Feature 6 Profile Page
 
+
 ### Description feature 6
 
-## Feature 7 Search
+- A user is given a profile page when they register for an account.
+- on the profile page, the users own reviews, will be visible for them to edit and delete.
 
-### Description feature 7
 
-## Feature 8 Categories/Add Category/Edit Category/Delete Category
+### Profile Page
 
-### Description feature  8
+![Profile Page ](binge_reviews/static/images/readme/features/authentication/profile_page.png)
 
+
+### User Stories Feature 6
+
+- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
+- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile.
+- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
+- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile.
 
 
 <br>
+
+## Feature 7 Search
+
+
+### Description feature 7
+
+- A user can search for reviews by film name
+
+
+### Search
+
+![Search ](binge_reviews/static/images/readme/features/reviews/search.png)
+
+
+### User Stories Feature 7
+
+- User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
+- User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
+
+<br>
+
+## Feature 8 Admin Rules
+
+### Description feature  8
+
+- As an admin user, they can delete all reviews, even a review not owned by them.
+- The Admin is also able to add new categories into the db, these categories, are then available for selection when submitting reviews.
+
+
+### Categories
+
+![Categories](binge_reviews/static/images/readme/features/categories/categories.png)
+
+
+### User Stories Feature 8
+
+- User Story 8.1: As an Admin user I can delete reviews left by other users,
+- User Story 8.2: As an Admin user I can delete and edit categories
+
+<br>
+
 
 # Features to implement
 
@@ -573,6 +681,7 @@ To deploy this application to Heroku, run the following steps.
     - https://www.youtube.com/watch?v=tSfdQJvTKmk&t=528s
 - Getting to grips with flask, i found this channel extremely helpful
     -https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz
+- For the validation of the form s I found this video very helpful - https://www.youtube.com/watch?v=CYlNJpltjMM&t=6s
 
 <br>
 
