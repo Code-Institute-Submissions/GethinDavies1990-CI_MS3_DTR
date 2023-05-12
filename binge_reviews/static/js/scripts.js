@@ -1,3 +1,4 @@
+// Credit, this video was very helpful to implement this - https://www.youtube.com/watch?v=CYlNJpltjMM&t=6s
 let forms = document.querySelectorAll('.validate-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');

@@ -162,17 +162,17 @@ client = boto3.client('s3',
 - User Story 3.3: As a regular user if I encounter an error with the application starting up I am navigated to a 404 error page
 - User Story 3.4: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page
 - User Story 3.5: As a regular user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
-- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favorite film and profile image, and I am redirected to the profile page.
 - User Story 4.2: As a regular user my username must be a minimum of 5 characters, and a max of 25 characters.
 - User Story 4.3: As a regular user my password must be a minimum of 8 characters.
 - User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
 - User Story 4.5: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/reviews page, and the navigation bar is updated with three options with a logo, Home, Reviews, Login, Register
-- User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review decription content, and rate the film out of 5.
+- User Story 5.1: Add Review - As a regular user I can add a Review by adding a Film Name, Upload a Review Image, add a Review Title, Select a category for the film, add the review description content, and rate the film out of 5.
 - User Story 5.2: Edit Review - As a regular user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 - User Story 5.3: Delete Review - As a regular user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As a regular user I can view a review by clicking on the 'Full review' button
-- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favorite Film, and Author Bio.
+- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favorite Film
 - User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile.
 - User Story 7: Search - As a regular user I can search on text for the review name, film name. And the result will display those information
 
@@ -190,7 +190,7 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 3.3: As an Admin user if I encounter an error with the application starting up I am navigated to a 404 error page
 - User Story 3.4: As an Admin user if I encounter an error with the application starting up I am navigated to a 500 error page
 - User Story 3.5: As an Admin user if I encounter an error when using the application(adding a review, category or registering), a message is displayed
-- User Story 4.1: As an Admin user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+- User Story 4.1: As an Admin user I can register for an account by providing my username, password, first name, last name, favorite film and profile image, and I am redirected to the profile page.
 - User Story 4.2: As an Admin user my username must be a minimum of 5 characters, and a max of 25 characters.
 - User Story 4.3: As an Admin user my password must be a minimum of 8 characters.
 - User Story 4.4: As an Admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
@@ -199,8 +199,8 @@ The user stories overlap with regular users and admin users. The admin user does
 - User Story 5.2: Edit Review - As an Admin user I can edit a review by uploading a review image, updating the fFilm name, updating the review title, Updating the selected category, Updating the review description, and editing the rating.
 - User Story 5.3: Delete Review - As an Admin user I can delete a review I created by confirming I want to delete
 - User Story 5.4: View Review - As an Admin user I can view a review by clicking on the 'Full review' button
-- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favorite Film, and Author Bio.
+- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favorite Film
 - User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile.
 - User Story 7: Search - As a admin user I can search on text for the review name, film name. And the result will display those information
 - User Story 8.1: As an Admin user I can delete reviews left by other users,
@@ -416,7 +416,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 ![Login](binge_reviews/static/images/readme/features/authentication/login_page.png)
 <br>
 
-- The User can register for an account by entering their Username, Password, First Name, Last Name, Favourite Film, Profile Image.
+- The User can register for an account by entering their Username, Password, First Name, Last Name, Favorite Film, Profile Image.
 - All fields are required, and they will be notified with a flash message if the username already exists in the database.
     <details><summary>Flash Message</summary>
     <img src="binge_reviews/static/images/readme/features/flash-messages/username-exists.jpg">
@@ -426,7 +426,7 @@ Below the featured review section the last 4 published reviews are displayed, th
 ### User Stories Feature 3
 
 
-- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favourite film and profile image, and I am redirected to the profile page.
+- User Story 4.1: As a regular user I can register for an account by providing my username, password, first name, last name, favorite film and profile image, and I am redirected to the profile page.
 - User Story 4.2: As a regular user my username must be a minimum of 5 characters, and a max of 25 characters.
 - User Story 4.3: As a regular user my password must be a minimum of 8 characters.
 - User Story 4.4: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the users profile page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed
@@ -494,11 +494,11 @@ Description feature 5
 
 ### User Stories Feature 6
 
-- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.1: As a regular user I can view my profile page: Username, First Name, Last Name, Favorite Film, and Author Bio.
+- User Story 6.2: As a regular user I can update my profile details: Username, Password, First Name, Last Name, Favorite Film
 - User Story 6.3: As a regular user I can delete my account. The user will be asked to confirm deletion of their profile.
-- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favourite Film, and Author Bio.
-- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favourite Film
+- User Story 6.1: As a admin user I can view my profile page: Username, First Name, Last Name, Favorite Film, and Author Bio.
+- User Story 6.2: As a admin user I can update my profile details: Username, Password, First Name, Last Name, Favorite Film
 - User Story 6.3: As a admin user I can delete my account. The user will be asked to confirm deletion of their profile.
 
 
@@ -547,13 +547,13 @@ Description feature 5
 
 # Features to implement
 
-- I am happy with what I have implemented in the timeframe I had to produce this project, there is some future features I would like to add.
+- I am happy with what I have implemented in the timescale I had to produce this project, there is some future features I would like to add.
 
 Number | Feature
  ------------ | ------- |
 1 | Social sharing of a memory on facebook, twitter  |
 2 | Integrate the IMDB API, this is an api
-3 | Include Music, Televsion sections
+3 | Include Music, Television sections
 4 | Include the ability to like a review
 5 | Leave comments on a review
 6 | View the authors profile page
@@ -689,7 +689,7 @@ To deploy this application to Heroku, run the following steps.
 
 - Images, the images used on the website were mainly from google images.
 - Google fonts, was used for the typography, 'Rubik' and 'Poppins' were the fonts installed
-- Logo, The logo was created by myself in Adobe Ilustrator
+- Logo, The logo was created by myself in Adobe Illustrator
 - The reviews generated for testing purposes were from Empire Reviews - https://www.empireonline.com/movies/reviews/
 
 <br>

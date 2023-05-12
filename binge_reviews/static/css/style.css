@@ -61,7 +61,6 @@ a {
     position: relative;
 }
 
-
 /* form validation */
 
 .input-control {
@@ -71,11 +70,11 @@ a {
 
 .input-control input {
     border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-size: 16px;
-	padding: 10px;
-	width: 100%;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
 }
 
 .input-control input:focus {
@@ -94,7 +93,7 @@ a {
     background-color: #000;
     color: #fff;
     border: 2px solid #f0f0f0;
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .input-control textarea:focus {
@@ -191,15 +190,15 @@ a {
 
 /* Carousel */
 
-.button-link > a{
-        width: 180px;
-        border-radius: 30px;
-        height: 35px;
-        font-size: 16px;
-        font-weight: 600;
-        background-color: #C11562;
-        border: 1px solid #fff;
-        color: #Fff;
+.button-link>a {
+    width: 180px;
+    border-radius: 30px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #C11562;
+    border: 1px solid #fff;
+    color: #Fff;
 }
 
 .card {
@@ -207,7 +206,6 @@ a {
     border: 2px solid #28282B;
     color: #fff;
 }
-
 
 /* Reviews/Homepage */
 
@@ -271,11 +269,9 @@ a {
     object-fit: cover;
 }
 
-
 .review-img {
     object-fit: cover;
 }
-
 
 .film-title {
     font-size: 2.5rem;
@@ -531,7 +527,6 @@ a {
     border: 1px solid none;
 }
 
-
 label {
     padding: 10px;
 }
@@ -580,9 +575,9 @@ select:-webkit-autofill:focus {
     border-top: none;
     border-left: none;
     border-right: none;
-  -webkit-text-fill-color: #F01D7F;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #F01D7F;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .register-login-card input:hover {
@@ -594,13 +589,12 @@ select:-webkit-autofill:focus {
     border: #000;
 }
 
-.list-group-item > a {
+.list-group-item>a {
     color: #Fff;
     background-color: #F01D7F;
     padding: 1px 3px;
     width: 150px;
 }
-
 
 /* Form */
 form {
